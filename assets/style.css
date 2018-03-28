@@ -9,16 +9,9 @@ body {
 	background: #040809fc
 	/*color: #eee;*/
 }
-.overlay {
-	transition: .5s ease;
-}
-.name:hover .overlay {
+
+.name {
 	color: #eee;
 	/*color: #00000;*/
-	font-size: 10pc;
-	opacity:1;		
-}
-.bird {
-	transform: translate(-50%, -50%);
- 	-ms-transform: translate(-50%, -50%);
+	font-size: 10pc;		
 }
