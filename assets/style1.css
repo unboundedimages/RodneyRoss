@@ -10,6 +10,7 @@ body {
   color: #eee;
   font-size: 10pc;
   /*text-align: right;*/
+  padding-bottom: 6%;
 }
 .image {
   display: block;
@@ -34,6 +35,19 @@ body {
   opacity: 1;
 }
 
+/********/
+input {
+  background-color: #060a0b;
+  color: #eee;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 3%
+}
+
+a{
+  color: red;
+  font-size: 18px;
+}
 /*.text {
   color: white;
   font-size: 10pc;
