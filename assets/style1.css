@@ -1,11 +1,16 @@
 body {
-  background: #040809fc;
+  background: #060a0b;
 }
 .container {
   position: relative;
   width: 50%;
+  left: 50%;
 }
-
+.name {
+  color: #eee;
+  font-size: 10pc;
+  /*text-align: right;*/
+}
 .image {
   display: block;
   width: 100%;
@@ -21,7 +26,7 @@ body {
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: .5s ease;
+  transition: .9s ease;
   background-color: #060a0b;
 }
 
@@ -29,7 +34,7 @@ body {
   opacity: 1;
 }
 
-.text {
+/*.text {
   color: white;
   font-size: 10pc;
   position: absolute;
@@ -38,4 +43,4 @@ body {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
-}
+}*/
