@@ -38,6 +38,7 @@ body {
 /********/
 .chicken {
   float:left;
+  padding-right: 8%;
   
 }
 
@@ -65,8 +66,15 @@ a{
   background: #eee;
 }
 
+.loginB {
+  padding: 12px 8px;
+}
 
-
+button {
+  border-radius: 8px;
+  background-color: #060a0b;
+  color: #eee;
+}
 
 /*.text {
   color: white;
