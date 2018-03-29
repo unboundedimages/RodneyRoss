@@ -36,6 +36,11 @@ body {
 }
 
 /********/
+.chicken {
+  float:left;
+  
+}
+
 input {
   background-color: #060a0b;
   color: #eee;
@@ -48,6 +53,21 @@ a{
   color: red;
   font-size: 18px;
 }
+
+.home {
+  color: white;
+  width: 20%;
+  padding-left: 3%;
+  padding-top: 3%;
+}
+
+.home:hover {
+  background: #eee;
+}
+
+
+
+
 /*.text {
   color: white;
   font-size: 10pc;
