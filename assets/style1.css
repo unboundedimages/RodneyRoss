@@ -13,9 +13,9 @@ body {
   /*text-align: right;*/
   padding-bottom: 6%;
 }
-.image {
+img {
   display: block;
-  width: 100%;
+  width: 40%;
   height: auto;
 }
 
@@ -32,9 +32,9 @@ body {
   background-color: #060a0b;
 }
 
-.container:hover .overlay {
+/*.container:hover .overlay {
   opacity: 1;
-}
+}*/
 
 .intro:hover .overlay {
   opacity: 1;
