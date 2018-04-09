@@ -28,9 +28,10 @@ body:hover .overlay {
 	opacity: 1;
 }
 
-.chicken {
+.egg {
   float:left;
   padding-right: 8%;
+
   
 }
 .name {
@@ -39,3 +40,4 @@ body:hover .overlay {
   /*text-align: right;*/
   padding-bottom: 6%;
 }
+
