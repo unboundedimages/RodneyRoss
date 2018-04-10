@@ -13,7 +13,7 @@ body {
   /*text-align: right;*/
   padding-bottom: 6%;
 }
-.name2 {
+#name2 {
   color: #eee;
   font-size: 8pc;
   /*text-align: right;*/
@@ -58,7 +58,16 @@ input {
   color: #eee;
   padding-top: 1%;
   padding-bottom: 1%;
-  padding-left: 3%
+  padding: 12%,3%;
+  text-align: center;
+}
+textarea {
+  background-color: #060a0b;
+  color: #eee;
+  text-align: justify-all;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 1%;
 }
 
 a {
@@ -83,6 +92,7 @@ button {
   background-color: #060a0b;
   color: #eee;
 }
+
 
 /*.text {
   color: white;
