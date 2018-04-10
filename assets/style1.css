@@ -81,9 +81,17 @@ a {
   padding-left: 3%;
   padding-top: 3%;
 }
-
+.backbutton{
+  width:20%;
+  margin-top: -40%;
+  padding-left: 3%;
+}
 
 .loginB {
+  padding: 12px 8px;
+}
+
+.loginC {
   padding: 12px 8px;
 }
 
@@ -93,6 +101,16 @@ button {
   color: #eee;
 }
 
+
+/*.clear {
+  clear:both;
+}*/
+
+.loginC {
+  /*float: right;*/
+  margin-left: 75%;
+  margin-top: -2%;
+}
 
 /*.text {
   color: white;
