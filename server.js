@@ -1,17 +1,18 @@
 const express= require ('express');
-const bodyParser= require('body-parser');
+	  bodyParser= require ('body-parser');
+	  session= require ('express-session');
+	  PORT = process.env.PORT || 8080;
+	  //middleware
+  let app = express();
+	  app.use(bodyParser.urlencoded({ extended: false }));
+	  app.use(bodyParser.json());
+	  app.use(express.static("public"));
 
-const app = express();
+	  //test server
+	  app.get('/', function(req,res){
+	  	res.send("The server is working")
+	  });
 
-app.use(bodyParser.json());
-
-app.set('views', __dirname + '/views');
-app.set('view engine', 'html');
-app.use(express.static(__dirname+'/views'));
-
-const server = app.listen(5000);
-
-app.get('/', function(){
-	res.render('index');
-});
-
+	  app.listen(PORT, function() {
+	  	console.log("App listening on PORT" + PORT)
+	  })
