@@ -14,7 +14,8 @@
 	<div class="clear"></div>
 		<form action="" method="post" class="signUp">
 			<input class = "names" type="text" name="First Name" placeholder="First Name" title="Enter your first name" id="firstName" onkeydown="return alphaOnly(event);">
-			<input class = "names" type="text" name="Last Name" placeholder="Last Name" title="Enter your last name" id="lastName" onkeydown="return alphaOnly(event);"><p>
+			<input type="text" name="Last Name" placeholder="Last Name" title="Enter your last name" id="lastName" pattern="[A-Za-z]"><p>
+			<!-- <input class = "names" type="text" name="Last Name" placeholder="Last Name" title="Enter your last name" id="lastName" onkeydown="return alphaOnly(event);"><p> -->	
 			<input type="email" name="email" placeholder="email address" title="Enter a valid email address" id="email">
 			<input type="password" name="password" placeholder="password" pattern=".{7,}" title="Must contain at least 7 characters or more" id="pw">
 			<h2>How did you hear about me:</h2>
@@ -27,17 +28,5 @@
 		<a href="SignIn.html"><img src="images/backbutton.svg" class="backbutton" title="Back to log in screen"></a>
 	</div>	
 </body>
-<script>
-	function alphaOnly(event) {
-	// alert(event + "somethingelse")
-  var key = event.keyCode;
-  var formula = (key >= 65 && key <= 90) || key == 8 || key == 189 || key == '' || key == 9 || (key >= 37 && key <= 40) || key == 18 || key == 16  || key == 20 || key == 13; 
-  
- if (!formula) {
-	alert("you have entered an invalid character.  Please check the field and try again.")
-}
-return (formula);
-};
-
-</script>
+<script type="text/javascript" src="public/names.js"></script>
 </html>
