@@ -10,7 +10,7 @@ const sequelize = require('sequelize');
   let app = express();
 	  app.use(bodyParser.urlencoded({ extended: false }));
 	  app.use(bodyParser.json());
-	  app.use(express.static("."));
+	  app.use(express.static("public"));
 	  app.use(session({
 	  	// secret: function makeid() {
 				//   var text = "";

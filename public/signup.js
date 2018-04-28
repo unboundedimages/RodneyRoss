@@ -3,12 +3,14 @@ console.log('this is postName '+ postName)
 
 function postName(e){
 	e.preventDefault();
+
 	let name = document.getElementsByClassName("names").value;
-		params = "name="+name;
-		console.log("this is params= " + params)
+		// params = "name="+name;
+		// console.log("this is params= " + params)
+		console.log("this is name: " + name)
 
 		xhr = new XMLHttpRequest();
-		xhr.open("POST",'/server', true);
+		xhr.open("POST","/api/signup", true);
 		
 		xhr.setRequestHeader('Conenet-type', 'application/x-www-form-urlencoded');
 
@@ -16,7 +18,7 @@ function postName(e){
         console.log(this.responseText);
       }
 
-      xhr.send(params);
+      xhr.send(name);
 
 
 }

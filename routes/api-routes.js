@@ -9,7 +9,7 @@ let db = require("../models");
     	app.post("/api/signup", function(req, res) {
     		console.log(req.body);
     		db.User.create({
-    			username: req.body.username,
+    			// username: req.body.username,
     			email: req.body.email,
     			password: req.body.password
     		}).then(function() {
@@ -32,7 +32,7 @@ let db = require("../models");
     		else {
     			//sendback the user's username email and id.
     			res.json({
-    				username: req.user.username,
+    				// username: req.user.username,
     				email: req.user.email,
     				id: req.user.id
     			});
