@@ -1,12 +1,15 @@
 document.getElementById('signUp').addEventListener('submit', postName);
+console.log('this is postName '+ postName)
 
 function postName(e){
 	e.preventDefault();
 	let name = document.getElementsByClassName("names").value;
 		params = "name="+name;
 		console.log("this is params= " + params)
+
 		xhr = new XMLHttpRequest();
-		xhr.open("POST",'./server', true);
+		xhr.open("POST",'/server', true);
+		
 		xhr.setRequestHeader('Conenet-type', 'application/x-www-form-urlencoded');
 
 		xhr.onload = function(){
