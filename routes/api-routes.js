@@ -32,8 +32,8 @@ let db = require("../models");
     		else {
     			//sendback the user's username email and id.
     			res.json({
-    				username: req.user.username
-    				email.req.user.email,
+    				username: req.user.username,
+    				email: req.user.email,
     				id: req.user.id
     			});
 

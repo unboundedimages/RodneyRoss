@@ -3,29 +3,33 @@ const express = require ('express');
 	  session = require ('express-session');
 	  passport = require ('./config/passport');	  
 	  PORT = process.env.PORT || 8080;
+	  path = require('path');
+const sequelize = require('sequelize');	  
   let db = require ('./models');		  
 	  //middleware that will handle authentication
   let app = express();
 	  app.use(bodyParser.urlencoded({ extended: false }));
 	  app.use(bodyParser.json());
-	  app.use(express.static("public"));
+	  app.use(express.static("."));
 	  app.use(session({
-	  	secret: function makeid() {
-				  var text = "";
-				  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+	  	// secret: function makeid() {
+				//   var text = "";
+				//   var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-				  for (var i = 0; i < 8; i++)
-				    text += possible.charAt(Math.floor(Math.random() * possible.length));
+				//   for (var i = 0; i < 8; i++)
+				//     text += possible.charAt(Math.floor(Math.random() * possible.length));
 
-				  return text;
-				}
-				makeid(),
+				//   return text;
+				// makeid()
+				// }
+				// ,
+		secret: "sfsdufddsljfs",
 		resave: true,
-		saveUninitialzed: true		
+		saveUninitialized: true		
 
 	  }));
 	  app.use(passport.initialize());
-	  app.use(passpoer.session());
+	  app.use(passport.session());
 
 	  //routes
 	  require("./routes/html-routes.js")(app);

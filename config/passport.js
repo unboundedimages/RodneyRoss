@@ -1,6 +1,6 @@
 const passport = require('passport');
 	  LocalStrategy = require('passport-local').Strategy;
-	  db = require('models');
+	  db = require('../models');
 
 passport.use(new LocalStrategy(
 	{
@@ -25,7 +25,8 @@ passport.use(new LocalStrategy(
 			return done(null, dbUser);
 		});
 	}
-	))};
+	));
+
 
 // this portion of the boiler plate keeps the authentication state across HTTP requests
 
