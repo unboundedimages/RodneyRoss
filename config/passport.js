@@ -27,8 +27,17 @@ passport.use(new LocalStrategy(
 	}
 	));
 
+// // Require bcrypt for hashing
+// const bcrypt = require("bcrypt-nodejs");
+// //method for User model
+// 	User.prototype.validPassword = function(password) {
+// 		return bcrypt.compareSync(password, this.password);
+// 	};
+// User.hook("beforeCreate", function(user){
+// 		user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
+// 	});
 
-// this portion of the boiler plate keeps the authentication state across HTTP requests
+// // this portion of the boiler plate keeps the authentication state across HTTP requests
 
 passport.serializeUser(function(user, cb) {
 	cb(null, user);

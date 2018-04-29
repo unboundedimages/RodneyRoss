@@ -1,6 +1,3 @@
-// Require bcrypt for hashing
-const bcrypt = require("bcrypt-nodejs");
-
 module.exports = function (sequelize, DataTypes) {
 	let User = sequelize.define("User", {
 
@@ -9,10 +6,24 @@ module.exports = function (sequelize, DataTypes) {
 		// 	allowNull: false,
 		// 	unique: true,
 		// },
+		id: {
+            autoIncrement: true,
+            primaryKey: true,
+            type: DataTypes.INTEGER
+        },
+
+        firstname: {
+            type: DataTypes.STRING,
+            notEmpty: true
+        },
+
+        lastname: {
+            type: DataTypes.STRING,
+            notEmpty: true
+        },
 
 		email: {
 			type: DataTypes.STRING,
-			// allowNull: false, //this means the  field cannot be skipped.
 			unique: true,
 			validate: {
 				isEmail: true
@@ -22,16 +33,18 @@ module.exports = function (sequelize, DataTypes) {
 		password: {
 			type: DataTypes.STRING,
 			allowNull: false //password can't be blank
-		}
-	});
+		},
 
-	//method for User model
-	User.prototype.validPassword = function(password) {
-		return bcrypt.compareSync(password, this.password);
-	};
+		last_login: {
+            type: DataTypes.DATE
+        },
 
-	User.hook("beforeCreate", function(user){
-		user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
+        status: {
+            type: DataTypes.ENUM('active', 'inactive'),
+            defaultValue: 'active'
+        }
+
 	});
+		
 	return User;
 };
