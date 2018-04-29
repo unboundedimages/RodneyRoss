@@ -1,5 +1,5 @@
-document.getElementById('signUp').addEventListener('submit', postName);
-console.log('this is postName '+ postName)
+// document.getElementById('signUp').addEventListener('submit', postName);
+// console.log('this is postName '+ postName)
 
 function postName(e){
 	e.preventDefault();
