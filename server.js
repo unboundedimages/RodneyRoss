@@ -9,7 +9,7 @@ const sequelize = require('sequelize');
 	  //middleware that will handle authentication
   let app = express();
 	  app.use(bodyParser.urlencoded({ extended: false }));
-	  app.use(bodyParser.json());
+	  app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 	  app.use(express.static("public"));
 	  app.use(session({
 	  	// secret: function makeid() {
@@ -32,13 +32,10 @@ const sequelize = require('sequelize');
 	  app.use(passport.session());
 
 	  //routes
-	  require("./routes/html-routes.js")(app);
-	  require("./routes/api-routes.js")(app);
-
-	  //test server
-	  app.get('/', function(req,res){
-	  	res.send("The server is working")
-	  });
+	  require("./routes/html-routes.js")(app, passport);
+	  require("./routes/api-routes.js")(app, passport);
+	  require("./config/passport.js");
+ 
 
 	  db.sequelize.sync().then(function(){
 	  	app.listen(PORT, function() {
@@ -47,4 +44,7 @@ const sequelize = require('sequelize');
 	  	});
 	  });
 
-	  
+	  //test server
+	  app.get('/', function(req,res){
+	  	res.redirect('/SignIn')
+	  });
