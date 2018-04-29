@@ -17,12 +17,11 @@ module.exports = function(passport, user) {
     function(req, email, password, done) { //callback function
     	var generateHash = function(password) { // hashes password
 
-     		return bCrypt.hashSync(password, bCrypt.genSaltSync(10), null);
+     		return bCrypt.hashSync(password, bCrypt.genSaltSync(10), null); 
+				}; 
+			}
  
-}; 
-}
- 
-));
+	));
  
 }
 
