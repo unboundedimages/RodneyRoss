@@ -11,24 +11,24 @@
 		<img src="images/chicken.png" class="chicken" title="Back to welcome page">
 	</a>
 	<div class="scoll" style="overflow-y: scroll; height:500px">
-	<div class="name" title=" Click here scroll down with your arrow keys to see the rest of the log in screen or press tab">Create a Log in</div>
-	<div class="clear"></div>
+		<div class="name" title=" Click here scroll down with your arrow keys to see the rest of the log in screen or press tab">Create a Log in</div>
+		<div class="clear"></div>
 		<form action="signup" method="post" id="signUp">
 			<input class= "names" type="text" name="First Name" placeholder="First Name" title="Enter your first name" id="firstName" onkeydown="return alphaOnly(event);" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false" >
 			<input type="text" name="Last Name" placeholder="Last Name" title="Enter your last name" id="lastName" onkeydown="return alphaOnly(event);" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false" class= "names"><p>
-			<!-- <input class = "names" type="text" name="Last Name" placeholder="Last Name" title="Enter your last name" id="lastName" onkeydown="return alphaOnly(event);" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false"><p> -->	
-			<input type="email" name="email" placeholder="email address" title="Enter a valid email address" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false" class= "names">
-			<input type="password" name="password" placeholder="password" pattern=".{7,}" title="Must contain at least 7 characters or more" id="pw" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false" class= "names">
-			<h2>How did you hear about me:</h2>
-			<textarea name="message" rows="10" cols="45" placeholder="How did you hear about me?" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false"></textarea>
-			<p>
-			<button class="loginC" type="submit" value="Submit">ENTER</button>			
-		</form>
-	</div>	
-	<div class="home">
-		<a href="SignIn.html"><img src="images/backbutton.svg" class="backbutton" title="Back to log in screen"></a>
-	</div>	
-</body>
-<script type="text/javascript" src="names.js"></script>
-<script type="text/javascript" src="signup.js"></script>
-</html>
+				<!-- <input class = "names" type="text" name="Last Name" placeholder="Last Name" title="Enter your last name" id="lastName" onkeydown="return alphaOnly(event);" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false"><p> -->	
+					<input type="email" name="email" placeholder="email address" title="Enter a valid email address" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false" class= "names">
+					<input type="password" name="password" placeholder="password" pattern=".{7,}" title="Must contain at least 7 characters or more" id="password" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false" class= "names">
+					<h2>How did you hear about me:</h2>
+					<textarea name="message" rows="10" cols="45" placeholder="How did you hear about me?" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false"></textarea>
+					<p>
+						<button class="loginC" type="submit" value="Submit">ENTER</button>			
+					</form>
+				</div>	
+				<div class="home">
+					<a href="SignIn.html"><img src="images/backbutton.svg" class="backbutton" title="Back to log in screen"></a>
+				</div>	
+			</body>
+			<script type="text/javascript" src="names.js"></script>
+			<script type="text/javascript" src="signup.js"></script>
+			</html>

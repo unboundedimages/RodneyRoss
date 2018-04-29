@@ -1,27 +1,50 @@
+let DEBUG = false;
+
 document.getElementById('signUp').addEventListener('submit', postName);
-console.log('this is postName '+ postName)
+DEBUG && console.log('this is postName '+ postName)
 
 function postName(e){
 	e.preventDefault();
 
-	let name = document.getElementsByClassName("names").value;
-		// params = "name="+name;
-		// console.log("this is params= " + params)
-		console.log("this is name: " + name)
+	//let name = document.getElementsByClassName("names").value;
+	var userObject = {
+		firstname: document.getElementById('firstName').value,
+		lastname:  document.getElementById('lastName').value,
+		email: document.getElementById('email').value,
+		password: document.getElementById('password').value
+	};
+	
+	console.log("The user object is");
+	console.log(userObject);
 
-		let xhr = new XMLHttpRequest();
-		xhr.open("POST","/server", true);
-		
-		xhr.setRequestHeader('Conenet-type', 'application/x-www-form-urlencoded');
+	let xhr = new XMLHttpRequest();
+	xhr.open("POST","/api/signup", true);
+	
+	xhr.setRequestHeader('Conenet-type', 'application/x-www-form-urlencoded');
 
-		xhr.onload = function(){
-        console.log(this.responseText);
-      }
+	xhr.onload = function(){
+		console.log(this.responseText);
+	}
+	/*
+	1) when you send request to api - you have to use full path to the api, sometimes (if you will you express router) you will even have to extend you path with router path
+	3) you need to send a  user object to the server (I mean full set of user data) because you configured you model way which it will not accept not full set of data and will not create a row in DB. 
 
-      xhr.send(name);
+	So, if you will use jquery for sending data, or will create a proper pure JS script (you already have it, but you have to type in every variable what you want to send to the server)
+	you will get it working. At least I think everythink else is fine at the moment. 
 
 
-}
+	You would not be able to post something to your DB, because your model config - you need to send names, password, and email at the same time. 
+	And you are not getting data on the server side because of client-side script needs to be extended also
+
+	 xhr.send({ form: 'data' });  - google "how to send form data with xhr again"
+	 */
+	 xhr.send(
+		//todo EXTEND SCRIPT here
+		userObject
+		);
+
+
+	}
 
 // document.addEventListener("DOMContentLoaded", function(event){
 // 	let s_up = document.getElementsByClassName("form.signUp");
