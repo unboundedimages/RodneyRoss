@@ -14,6 +14,13 @@ module.exports = function(passport, user) {
         passReqToCallback: true // allows us to pass back the entire request to the callback
  
     },
+    function(req, email, password, done) { //callback function
+    	var generateHash = function(password) { // hashes password
+
+     		return bCrypt.hashSync(password, bCrypt.genSaltSync(10), null);
+ 
+}; 
+}
  
 ));
  
