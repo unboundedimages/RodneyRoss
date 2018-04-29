@@ -21,6 +21,7 @@ function postName(e){
 	xhr.open("POST","/api/signup", true);
 	
 	xhr.setRequestHeader('Conenet-type', 'application/x-www-form-urlencoded');
+	// xhr.setRequestHeader('Conenet-type', 'application/json');
 
 	xhr.onload = function(){
 		console.log(this.responseText);
@@ -41,6 +42,7 @@ function postName(e){
 	 xhr.send(
 		//todo EXTEND SCRIPT here
 		userObject
+		// {form: "userObject" }
 		);
 
 
