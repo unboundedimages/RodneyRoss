@@ -1,48 +1,21 @@
-const passport = require('passport');
-	  LocalStrategy = require('passport-local').Strategy;
-	  db = require('../models');
+var bCrypt = require('bcrypt-nodejs');
 
-passport.use(new LocalStrategy(
-	{
-		usernameField: "email"
-	},
-	function(email, password, done) {
-		db.User.findOne({
-			where: {
-				email: email
-			}
-		}).then(function(dbUser) {
-			if (!dbUser) {
-				return done(null, false, {
-					message: "Incorrect username or create an account if you don't have one"
-				});
-			}
-			else if (!dbUser.validPassword(passowrd)) {
-				return done(null, false, {
-					message: "Incorrect username or password.  Please try again"
-				});
-			}
-			return done(null, dbUser);
-		});
-	}
-	));
+module.exports = function(passport, user) {
+	//initialize the passport-local strategy, and the user model, which will be passed as an argument.
+	var User = user;
+    var LocalStrategy = require('passport-local').Strategy;
 
-// // Require bcrypt for hashing
-// const bcrypt = require("bcrypt-nodejs");
-// //method for User model
-// 	User.prototype.validPassword = function(password) {
-// 		return bcrypt.compareSync(password, this.password);
-// 	};
-// User.hook("beforeCreate", function(user){
-// 		user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
-// 	});
+    //define our custom strategy with our instance of the LocalStrategy
+    passport.use('local-signup', new LocalStrategy(
+ 
+    {
+        usernameField: 'email',
+        passwordField: 'password',
+        passReqToCallback: true // allows us to pass back the entire request to the callback
+ 
+    },
+ 
+));
+ 
+}
 
-// // this portion of the boiler plate keeps the authentication state across HTTP requests
-
-passport.serializeUser(function(user, cb) {
-	cb(null, user);
-});
-passport.deserializeUser(function(obj, cb) {
-	cb(null,obj);
-});
- module.exports = passport;
