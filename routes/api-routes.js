@@ -29,6 +29,9 @@ module.exports = function(app) {
       //TODO
       email: req.body.email,
       password: req.body.password,
+      lastname: req.body.lastname,
+      firstname: req.body.firstname
+
 
     }).then(function() {
       res.redirect(307, "/api/login");
