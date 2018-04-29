@@ -8,7 +8,7 @@ const sequelize = require('sequelize');
   let db = require ('./models');		  
 	  //middleware that will handle authentication
   let app = express();
-	  app.use(bodyParser.urlencoded({ extended: false }));
+	  app.use(bodyParser.urlencoded({ extended: true }));
 	  app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 	  app.use(express.static("public"));
 	  app.use(session({
