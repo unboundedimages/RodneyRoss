@@ -12,7 +12,7 @@ module.exports = function (sequelize, DataTypes) {
 
 		email: {
 			type: DataTypes.STRING,
-			allowNull: false, //this means the  field cannot be skipped.
+			// allowNull: false, //this means the  field cannot be skipped.
 			unique: true,
 			validate: {
 				isEmail: true
