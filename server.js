@@ -10,7 +10,7 @@ const sequelize = require('sequelize');
   let app = express();
 	  app.use(bodyParser.urlencoded({ extended: true }));
 	  app.use(bodyParser.json({ type: "application/vnd.api+json" }));
-	  app.use(express.static("public"));
+	  app.use(express.static(path.join(__dirname, 'public')));
 	  app.use(session({
 	  	// secret: function makeid() {
 				//   var text = "";
@@ -34,7 +34,6 @@ const sequelize = require('sequelize');
 	  //routes
 	  require("./routes/html-routes.js")(app, passport);
 	  require("./routes/api-routes.js")(app, passport);
-	  require("./config/passport.js");
  
 
 	  db.sequelize.sync().then(function(){

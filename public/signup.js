@@ -1,5 +1,5 @@
-// document.getElementById('signUp').addEventListener('submit', postName);
-// console.log('this is postName '+ postName)
+document.getElementById('signUp').addEventListener('submit', postName);
+console.log('this is postName '+ postName)
 
 function postName(e){
 	e.preventDefault();
@@ -9,8 +9,8 @@ function postName(e){
 		// console.log("this is params= " + params)
 		console.log("this is name: " + name)
 
-		xhr = new XMLHttpRequest();
-		xhr.open("POST","/api/signup", true);
+		let xhr = new XMLHttpRequest();
+		xhr.open("POST","/server", true);
 		
 		xhr.setRequestHeader('Conenet-type', 'application/x-www-form-urlencoded');
 
