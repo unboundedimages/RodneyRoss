@@ -19,7 +19,7 @@ app.set('view engine', '.hbs');
 
 //routes
 //require route from auth.js and pass it through as an arguement.
-var authRoute = require('./app/routes/auth.js')(app); // this comes from the app arguenent that's in auth.js
+var authRoute = require('./routes/auth.js')(app); // this comes from the app arguenent that's in auth.js
 		
 
   app.use(bodyParser.urlencoded({ extended: true }));
@@ -41,14 +41,11 @@ var authRoute = require('./app/routes/auth.js')(app); // this comes from the app
             saveUninitialized: true     
 
         }));
-  app.use(passport.initialize());
+  // app.use(passport.initialize());
   app.use(express.static(path.join(__dirname, 'public')));
-  app.use(passport.session());
+  // app.use(passport.session());
 
   //routes
-  require("./routes/html-routes.js")(app, passport);
-  require("./routes/api-routes.js")(app, passport);
-
 
   db.sequelize.sync().then(function(){
     app.listen(PORT, function() {
