@@ -1,49 +1,50 @@
 const express = require ('express');
-	  bodyParser = require ('body-parser');
-	  session = require ('express-session');
-	  passport = require ('./config/passport');	  
-	  PORT = process.env.PORT || 8080;
-	  path = require('path');
-const sequelize = require('sequelize');	  
-  let db = require ('./models');		  
-	  //middleware that will handle authentication
-  let app = express();
-	  app.use(bodyParser.urlencoded({ extended: true }));
-	  app.use(bodyParser.json({ type: "application/vnd.api+json" }));
-	  app.use(express.static(path.join(__dirname, 'public')));
-	  app.use(session({
-	  	// secret: function makeid() {
-				//   var text = "";
-				//   var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+app = express();
+passport = require ('./config/passport');     
+session = require ('express-session');
+bodyParser = require ('body-parser');
+PORT = process.env.PORT || 8080;
+path = require('path');
+sequelize = require('sequelize');     
+let db = require ('./models');        
+      //middleware that will handle authentication
 
-				//   for (var i = 0; i < 8; i++)
-				//     text += possible.charAt(Math.floor(Math.random() * possible.length));
+      app.use(bodyParser.urlencoded({ extended: true }));
+      app.use(bodyParser.json());
+      app.use(session({
+        // secret: function makeid() {
+                //   var text = "";
+                //   var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-				//   return text;
-				// makeid()
-				// }
-				// ,
-		secret: "sfsdufddsljfs",
-		resave: true,
-		saveUninitialized: true		
+                //   for (var i = 0; i < 8; i++)
+                //     text += possible.charAt(Math.floor(Math.random() * possible.length));
 
-	  }));
-	  app.use(passport.initialize());
-	  app.use(passport.session());
+                //   return text;
+                // makeid()
+                // }
+                // ,
+                secret: "sfsdufddsljfs",
+                resave: true,
+                saveUninitialized: true     
 
-	  //routes
-	  require("./routes/html-routes.js")(app, passport);
-	  require("./routes/api-routes.js")(app, passport);
- 
+            }));
+      app.use(passport.initialize());
+      app.use(express.static(path.join(__dirname, 'public')));
+      app.use(passport.session());
 
-	  db.sequelize.sync().then(function(){
-	  	app.listen(PORT, function() {
-	  	// console.log("App listening on PORT" + PORT)
-	  	console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
-	  	});
-	  });
+      //routes
+      require("./routes/html-routes.js")(app, passport);
+      require("./routes/api-routes.js")(app, passport);
 
-	  //test server
-	  app.get('/', function(req,res){
-	  	res.redirect('/SignIn')
-	  });
+
+      db.sequelize.sync().then(function(){
+        app.listen(PORT, function() {
+        // console.log("App listening on PORT" + PORT)
+        console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+    });
+    });
+
+      //test server
+      app.get('/', function(req,res){
+        res.redirect('/SignIn')
+    });
