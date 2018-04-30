@@ -23,15 +23,13 @@ function postName(e){
 	xhr.setRequestHeader('Conenet-type', 'application/x-www-form-urlencoded');
 	// xhr.setRequestHeader('Conenet-type', 'application/json');
 
-	// xhr.onload = function(){
-	// 	console.log("this is the onload========="+this.responseText);
-	// }
+	xhr.onload = function(){
+		if(this.status == 200){
+			console.log("this is the onload========="+this.responseText);
+		}
+	}
 
-	xhr.onreadystatechange = function() {//Call a function when the state changes.
-		if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
-        // Request finished. Do processing here.
-    }
-}
+	
 
 
 
@@ -51,7 +49,7 @@ function postName(e){
 	 */
 	 xhr.send(
 		//todo EXTEND SCRIPT here
-		userObject
+		
 		// {form: "userObject" }
 		);
 

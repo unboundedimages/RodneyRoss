@@ -1,4 +1,7 @@
-module.exports = function (sequelize, Sequelize) {
+var bcrypt = require("bcrypt-nodejs");
+
+
+module.exports = function (sequelize, DataTypes) {
 	let User = sequelize.define("User", {
 
 		// username: {
@@ -9,22 +12,22 @@ module.exports = function (sequelize, Sequelize) {
 		id: {
 			autoIncrement: true,
 			primaryKey: true,
-			type: Sequelize.INTEGER
+			type: DataTypes.INTEGER
 
 		},
 
 		firstname: {
-			type: Sequelize.STRING,
+			type: DataTypes.STRING,
 			notEmpty: true
 		},
 
 		lastname: {
-			type: Sequelize.STRING,
+			type: DataTypes.STRING,
 			notEmpty: true
 		},
 
 		email: {
-			type: Sequelize.STRING,
+			type: DataTypes.STRING,
 			unique: true,
 			allowNull: false,
 			validate: {
@@ -34,7 +37,7 @@ module.exports = function (sequelize, Sequelize) {
 		},
 
 		password: {
-			type: Sequelize.STRING,
+			type: DataTypes.STRING,
 			allowNull: false,
 			validate: {
 				notNull: { args: true, msg: "You must enter a password" },
@@ -43,14 +46,16 @@ module.exports = function (sequelize, Sequelize) {
 		},
 
 		last_login: {
-			type: Sequelize.DATE
-		},
-
-		status: {
-			type: Sequelize.ENUM('active', 'inactive'),
-			defaultValue: 'active'
+			type: DataTypes.DATE
 		}
 
+	});
+	User.prototype.validPassword = function(password) {
+		return bcrypt.compareSync(password, this.password);
+	};
+
+	User.hook("beforeCreate", function(user) {
+		user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
 	});
 
 	return User;
