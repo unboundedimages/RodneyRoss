@@ -16,6 +16,10 @@ app.engine('hbs', exphbs({
     extname: '.hbs'
 }));
 app.set('view engine', '.hbs');
+
+//routes
+//require route from auth.js and pass it through as an arguement.
+var authRoute = require('./app/routes/auth.js')(app); // this comes from the app arguenent that's in auth.js
 		
 
   app.use(bodyParser.urlencoded({ extended: true }));
