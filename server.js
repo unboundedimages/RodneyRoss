@@ -11,7 +11,7 @@ const express = require ('express');
  	  	db = require ('./models');
       //middleware that will handle authentication
 		////////////////////////////////////////////
-app.set('views', './app/views')
+app.set('views', './views')
 app.engine('hbs', exphbs({
     extname: '.hbs'
 }));
