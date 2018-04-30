@@ -5,7 +5,8 @@ session = require ('express-session');
 bodyParser = require ('body-parser');
 PORT = process.env.PORT || 8080;
 path = require('path');
-sequelize = require('sequelize');     
+sequelize = require('sequelize');
+env = require('dotenv').load();     
 let db = require ('./models');        
       //middleware that will handle authentication
 
