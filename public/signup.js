@@ -17,15 +17,25 @@ function postName(e){
 	console.log("The user object is");
 	console.log(userObject);
 
-	let xhr = new XMLHttpRequest();
+	var xhr = new XMLHttpRequest();
 	xhr.open("POST","/api/signup", true);
 	
 	xhr.setRequestHeader('Conenet-type', 'application/x-www-form-urlencoded');
 	// xhr.setRequestHeader('Conenet-type', 'application/json');
 
-	xhr.onload = function(){
-		console.log(this.responseText);
-	}
+	// xhr.onload = function(){
+	// 	console.log("this is the onload========="+this.responseText);
+	// }
+
+	xhr.onreadystatechange = function() {//Call a function when the state changes.
+		if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+        // Request finished. Do processing here.
+    }
+}
+
+
+
+
 	/*
 	1) when you send request to api - you have to use full path to the api, sometimes (if you will you express router) you will even have to extend you path with router path
 	3) you need to send a  user object to the server (I mean full set of user data) because you configured you model way which it will not accept not full set of data and will not create a row in DB. 

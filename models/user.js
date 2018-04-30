@@ -1,5 +1,5 @@
 module.exports = function (sequelize, Sequelize) {
-	let User = sequelize.define("user", {
+	let User = sequelize.define("User", {
 
 		// username: {
 		// 	type: DataTypes.STRING,
@@ -7,46 +7,51 @@ module.exports = function (sequelize, Sequelize) {
 		// 	unique: true,
 		// },
 		id: {
-            autoIncrement: true,
-            primaryKey: true,
-            type: Sequelize.INTEGER
-           
-        },
+			autoIncrement: true,
+			primaryKey: true,
+			type: Sequelize.INTEGER
 
-        firstname: {
-            type: Sequelize.STRING,
-            notEmpty: true
-        },
+		},
 
-        lastname: {
-            type: Sequelize.STRING,
-            notEmpty: true
-        },
+		firstname: {
+			type: Sequelize.STRING,
+			notEmpty: true
+		},
+
+		lastname: {
+			type: Sequelize.STRING,
+			notEmpty: true
+		},
 
 		email: {
 			type: Sequelize.STRING,
-			// unique: true,
+			unique: true,
 			allowNull: false,
 			validate: {
+				notNull: { args: true, msg: "You must enter a name" },
 				isEmail: true
 			}
 		},
 
 		password: {
 			type: Sequelize.STRING,
-			allowNull: false	
+			allowNull: false,
+			validate: {
+				notNull: { args: true, msg: "You must enter a password" },
+				notEmpty: true, min: 6
+			}	
 		},
 
 		last_login: {
-            type: Sequelize.DATE
-        },
+			type: Sequelize.DATE
+		},
 
-        status: {
-            type: Sequelize.ENUM('active', 'inactive'),
-            defaultValue: 'active'
-        }
+		status: {
+			type: Sequelize.ENUM('active', 'inactive'),
+			defaultValue: 'active'
+		}
 
 	});
-		
+
 	return User;
 };
