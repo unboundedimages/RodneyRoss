@@ -14,3 +14,9 @@ exports.dashboard = function(req, res) {
     res.render('dashboard');
  
 }
+//controller for logging out and protecting route
+exports.logout = function(req, res) {
+    req.session.destroy(function(err) {
+        res.redirect('/');
+    });
+}
