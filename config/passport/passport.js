@@ -54,4 +54,15 @@ module.exports = function(passport, user) {
 			});
 		}
 	));
+
+		// create a serialize and deserialize function
+		// to save a user ID in the session and manage 
+		// retrieving the user details when needed.
+
+		//serialize
+		passport.serializeUser(function(user, done) {
+		 
+		    done(null, user.id);
+		 
+		});
  }
