@@ -61,8 +61,16 @@ module.exports = function(passport, user) {
 
 		//serialize
 		passport.serializeUser(function(user, done) {
-		 
 		    done(null, user.id);
-		 
 		});
  }
+ // deserialize user 
+ passport.deserializeUser(function(id, done) {
+     User.findById(id).then(function(user) {
+         if (user) {
+             done(null, user.get());
+         } else {
+             done(user.errors, null);
+         }
+     });
+ });
