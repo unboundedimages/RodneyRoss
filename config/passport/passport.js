@@ -66,8 +66,10 @@ module.exports = function(passport, user) {
  }
  // deserialize user 
  passport.deserializeUser(function(id, done) {
+		//The Sequelize findById promise is to get the user data.
      User.findById(id).then(function(user) {
          if (user) {
+		//To get the User object from this instance, we use the Sequelize getter function like this: user.get()
              done(null, user.get());
          } else {
              done(user.errors, null);
