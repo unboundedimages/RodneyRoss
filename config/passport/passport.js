@@ -70,7 +70,7 @@ module.exports = function(passport, user) {
          if (user) {
 		//To get the User object from this instance, we use the Sequelize getter function like this: user.get()
              done(null, user.get());
-         } else {
+         }else {
              done(user.errors, null);
          }
      });

@@ -14,22 +14,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 //For Passport
 app.use(session({
-    // secret: function makeid() {
-            //   var text = "";
-            //   var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-            //   for (var i = 0; i < 8; i++)
-            //     text += possible.charAt(Math.floor(Math.random() * possible.length));
-
-            //   return text;
-            // makeid()
-            // }
-            // ,
-            secret: "sfsdufddsljfs",
+            secret: "fdjdjdjdjdjdjdjd",
             resave: true,
             saveUninitialized: true     
 
         }));
+app.use(passport.initialize());///////////////////////////////////
+app.use(passport.session());
 
 // For HBS
 app.set('views', './views')
@@ -45,7 +36,7 @@ app.get('/', function(req, res) {
 });
 
 //models
-let models = require("./models")
+let models = require("./models");
 
 //routes
 //require route from auth.js and pass it through as an arguement.

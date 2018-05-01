@@ -18,13 +18,13 @@ module.exports = function(sequelize, Sequelize) {
             notEmpty: true
         },
  
-        username: {
-            type: Sequelize.TEXT
-        },
+        // username: {
+        //     type: Sequelize.TEXT
+        // },
  
-        about: {
-            type: Sequelize.TEXT
-        },
+        // about: {
+        //     type: Sequelize.TEXT
+        // },
  
         email: {
             type: Sequelize.STRING,
