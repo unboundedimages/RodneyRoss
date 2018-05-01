@@ -11,7 +11,7 @@ module.exports = function(passport, user) {
     { //declare what request (req) fields our usernameField and passwordField (passport variables) are. 
     	usernameField: 'email',
     	passwordField: 'password',
-      passReqToCallback: true // allows us to pass back the entire request to the callback
+      	passReqToCallback: true // allows us to pass back the entire request to the callback
     },
     function(req, email, password, done) { //callback function with arguments that store user details.
     	var generateHash = function(password) { // hashes password
@@ -63,7 +63,6 @@ module.exports = function(passport, user) {
 		passport.serializeUser(function(user, done) {
 		    done(null, user.id);
 		});
- }
  // deserialize user 
  passport.deserializeUser(function(id, done) {
 		//The Sequelize findById promise is to get the user data.
@@ -76,3 +75,47 @@ module.exports = function(passport, user) {
          }
      });
  });
+
+
+//LOCAL SIGNIN
+passport.use('local-signin', new LocalStrategy(
+ 
+    {
+    // by default, local strategy uses username and password, we will override with email
+   	 	usernameField: 'email',
+    	passwordField: 'password',
+    	passReqToCallback: true // allows us to pass back the entire request to the callback
+    },
+ 
+    function(req, email, password, done) {
+ 
+        var User = user;
+		//the isValidPassword function compares the password entered with the bCrypt comparison
+		// method since we stored our password with bcrypt.
+        var isValidPassword = function(userpass, password) {
+            return bCrypt.compareSync(password, userpass);
+        }
+        User.findOne({
+            where: {email: email}
+        }).then(function(user) {
+            if (!user) {
+                return done(null, false, {
+                    message: 'Email does not exist'
+                });
+            }
+            if (!isValidPassword(user.password, password)) {
+                return done(null, false, {
+                    message: 'Incorrect password.'
+                });
+            }
+            var userinfo = user.get();
+            return done(null, userinfo);
+        }).catch(function(err) {
+            console.log("Error:", err);
+            return done(null, false, {
+                message: 'Something went wrong with your Signin'
+            });
+        });
+      }
+  ));
+}// end of module export
