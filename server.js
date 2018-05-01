@@ -1,6 +1,6 @@
 const express = require ('express');
 	  	app = express();
-	  	passport = require ('./config/passport/passport');
+	  	passport = require ('passport');
 	  	session = require ('express-session');
 	  	bodyParser = require ('body-parser');
 	  	env = require('dotenv').load();
@@ -64,10 +64,6 @@ models.sequelize.sync().then(function(){
 	}).catch(function(err){
 		console.log("No connection to db.")
 	});
-
-  // app.use(passport.initialize());
-  app.use(express.static(path.join(__dirname, 'public')));
-  // app.use(passport.session());
 
   //test server
   app.get('/', function(req,res){
