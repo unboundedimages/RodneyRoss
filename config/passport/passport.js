@@ -11,9 +11,8 @@ module.exports = function(passport, user) {
     { //declare what request (req) fields our usernameField and passwordField (passport variables) are. 
     	usernameField: 'email',
     	passwordField: 'password',
-        passReqToCallback: true // allows us to pass back the entire request to the callback
-
-      },
+      passReqToCallback: true // allows us to pass back the entire request to the callback
+    },
     function(req, email, password, done) { //callback function with arguments that store user details.
     	var generateHash = function(password) { // hashes password
 
