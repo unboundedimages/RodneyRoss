@@ -32,7 +32,7 @@ app.set('view engine', '.hbs');
 app.get('/', function(req, res) {
  
     // res.send('You are here ↔');
-	res.render('signin')
+	res.render('welcome')
  
 });
 
