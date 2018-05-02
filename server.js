@@ -6,6 +6,7 @@ const express = require ('express');
 	  	env = require('dotenv').load();
 	  	exphbs = require('express-handlebars');	
 	  	PORT = process.env.PORT || 8080;
+	  	path = require("path");
 
 ////////////////////////////////////////////////////////
 ///////middleware that will handle authentication///////
@@ -21,12 +22,10 @@ app.use(session({
         }));
 app.use(passport.initialize());///////////////////////////////////
 app.use(passport.session());
-
+app.use(express.static(path.join(__dirname, '/public'))); // for the css
 // For HBS
 app.set('views', './views')
-app.engine('hbs', exphbs({
-    extname: '.hbs'
-}));
+app.engine('hbs', exphbs({ extname: '.hbs'}));  //alternative exphbs({ defaultLayout: "main" }));
 app.set('view engine', '.hbs');
 
 app.get('/', function(req, res) {
@@ -59,5 +58,5 @@ models.sequelize.sync().then(function(){
 
   //test server
   app.get('/', function(req,res){
-    res.redirect('/SignIn')
+    res.redirect('/signin')
 });
