@@ -17,6 +17,13 @@ module.exports = function(app, passport) {
             failureRedirect: '/signin'
         }
     ));
+	
+	app.get('/logout', function(req,res){ // for logout to provent access to dashboard/Port once logged out.  First part in clearing browswer cache
+	 	req.logout();
+		req.session.destroy();
+		res.redirect('/');
+	});	
+
 	//custom middleware to protect route
 	function isLoggedIn(req, res, next) {
 	    if (req.isAuthenticated())
