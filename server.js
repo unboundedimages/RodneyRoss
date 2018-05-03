@@ -23,7 +23,10 @@ app.use(session({
 app.use(passport.initialize());///////////////////////////////////
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, '/public'))); // for the css
-
+app.use(function(req, res, next) { // for logout
+  res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
+  next();
+}); 
 // For HBS
 app.set('views', './views')
 // app.engine('hbs', exphbs({ extname: '.hbs'}));  //alternative exphbs({ defaultLayout: "main" }));

@@ -18,8 +18,8 @@ module.exports = function(sequelize, Sequelize) {
             notEmpty: true
         },
  
-        // username: {
-        //     type: Sequelize.TEXT
+        // comment: {
+        //     type: Sequelize.STRING
         // },
  
         // about: {
