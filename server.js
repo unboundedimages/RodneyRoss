@@ -26,7 +26,8 @@ app.use(express.static(path.join(__dirname, '/public'))); // for the css
 
 // For HBS
 app.set('views', './views')
-app.engine('hbs', exphbs({ extname: '.hbs'}));  //alternative exphbs({ defaultLayout: "main" }));
+// app.engine('hbs', exphbs({ extname: '.hbs'}));  //alternative exphbs({ defaultLayout: "main" }));
+app.engine('hbs', exphbs({defaultLayout: 'main.hbs'}));
 app.set('view engine', '.hbs');
 
 app.get('/', function(req, res) {
