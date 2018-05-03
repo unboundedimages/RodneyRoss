@@ -24,6 +24,11 @@ app.use(passport.initialize());///////////////////////////////////
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, '/public'))); // for the css
 
+// app.use((res,req,next)=>{
+// 	res.(req.isAuthenticated = res.isAuthenticated);
+// 	next();
+// })
+
 // For HBS
 app.set('views', './views')
 // app.engine('hbs', exphbs({ extname: '.hbs'}));  //alternative exphbs({ defaultLayout: "main" }));
