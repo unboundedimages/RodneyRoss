@@ -18,17 +18,6 @@ module.exports = function(app, passport) {
         }
     ));
 	
-	// app.get('/logout', function(req,res){
-	// 	// req.logout();
-	// 	req.destroy();
-	// 	res.redirect('/');
-	// })	
-	
-	// app.use(function(req, res, next) { // for logout
-	//   res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
-	//   next();
-	// }); 
-	
 	//custom middleware to protect route
 	function isLoggedIn(req, res, next) {
 	    if (req.isAuthenticated())
