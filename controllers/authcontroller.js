@@ -10,8 +10,8 @@ exports.signin = function(req, res) {
  
 }
 //controller for dashboard
-exports.dashboard = function(req, res) {
-    res.render('dashboard');
+exports.Port = function(req, res) {
+    res.render('Port');
  
 }
 //controller for logging out and protecting route

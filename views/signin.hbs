@@ -6,14 +6,14 @@
 	<title>Sign In</title>
 </head>
 <body>
-	<a href="index.html">
+	<a href="/">
 		<img src="images/chicken.png" class="chicken" title="Back to welcome page">
 	</a>
 	<div class="name">Please Sign in</div>
-	<form action="/GET">
-	<input type="email" name="username" placeholder="you@site.com" title="Enter the email address used during registration">
-	<input type="password" name="password" placeholder="password" title="Your password must be a minimumn of 8 characters or more.">
-	<button class="loginB" type="submit">SUBMIT</button>
+		<form name="signin" method="post" action="signin">
+		<input type="email" name="email" placeholder="you@site.com" title="Enter the email address used during registration">
+		<input type="password" name="password" placeholder="password" title="Your password must be a minimumn of 8 characters or more.">
+		<button class="loginB" type="submit" value="Sign In">SUBMIT</button>
 	</form>
 	<div>
 		<p>
@@ -22,7 +22,7 @@
 
 	
 	<div class="home">
-		<a href="index.html"><img src="images/home.png" class="home" title="back to welcome page"></a>
+		<a href="/"><img src="images/home.png" class="home" title="back to welcome page"></a>
 	</div>	
 </body>
 </html>

@@ -39,7 +39,8 @@ module.exports = function(sequelize, Sequelize) {
         },
  
         last_login: {
-            type: Sequelize.DATE
+            type: Sequelize.DATE,
+            defaultValue: Sequelize.NOW
         },
  
         status: {
