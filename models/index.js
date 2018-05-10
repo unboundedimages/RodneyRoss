@@ -6,7 +6,7 @@ var Sequelize = require("sequelize");
 var env = process.env.NODE_ENV || "development";
 var config = require(path.join(__dirname, '..', 'config', 'config.json'))[env];
 // var sequelize = new Sequelize(config.database, config.username, config.password, config); // where it says config, per the doc, this needs to be set to { operatorsAliases: false }  I've put this in the config file that it's reading from.
-var sequelize = new Sequelize(process.env.dbn, process.env.DB_USER, process.env.dbp, config);
+var sequelize = new Sequelize(process.env.dbn, process.env.dbu, process.env.dbp, config);
 var db = {};
  
  

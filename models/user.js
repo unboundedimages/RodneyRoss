@@ -18,14 +18,10 @@ module.exports = function(sequelize, Sequelize) {
             notEmpty: true
         },
  
-        // comment: {
-        //     type: Sequelize.STRING
-        // },
- 
-        // about: {
-        //     type: Sequelize.TEXT
-        // },
- 
+        comment: {
+            type: Sequelize.STRING
+        },
+
         email: {
             type: Sequelize.STRING,
             validate: {

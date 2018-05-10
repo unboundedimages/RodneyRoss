@@ -1,12 +1,11 @@
 {
   "development": {
-    "username": "process.env.DB_USER",
+    "username": "process.env.dbu",
     "password": "process.env.dbp",
-    "database": "process.env.dbn",
+    "database": "user_auth_db",
+    "host":"127.0.0.1",
     "dialect": "mysql",
-    "operatorsAliases": false
-	
-    
+    "operatorsAliases": false    
   },
   "test": {
     "username": "",
