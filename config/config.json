@@ -1,9 +1,8 @@
 {
   "development": {
-    "username": "root",
-    "password": "majid158",
-    "database": "user_auth_db",
-    "host": "127.0.0.1",
+    "username": "process.env.DB_USER",
+    "password": "process.env.dbp",
+    "database": "process.env.dbn",
     "dialect": "mysql",
     "operatorsAliases": false
 	
