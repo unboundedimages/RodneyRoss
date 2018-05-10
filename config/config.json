@@ -2,7 +2,6 @@
   "development": {
     "username": "process.env.dbu",
     "password": "process.env.dbp",
-    "database": "user_auth_db",
     "host":"127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false    
