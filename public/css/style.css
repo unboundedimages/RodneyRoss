@@ -7,6 +7,12 @@ body {
   width: 50%;
   left: 50%;
 }
+.nameW {
+  color: #eee;
+  font-size: 8pc;
+  /*text-align: right;*/
+  padding-bottom: 6%;
+}
 .name {
   color: #eee;
   font-size: 10pc;
