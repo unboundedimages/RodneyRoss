@@ -1,6 +1,6 @@
 var bCrypt = require('bcrypt-nodejs'); //hashes
 
-module.exports = function(passport, user, loginLog) {
+module.exports = function(passport, user) {
 	//initialize the passport-local strategy, and the user model, which will be passed as an argument.
 	var User = user;
 	var LocalStrategy = require('passport-local').Strategy;
@@ -110,20 +110,8 @@ passport.use('local-signin', new LocalStrategy(
                 });
             }
             var userinfo = user.get();
-			var loginData = 
-			{
-				timeIn : req.body.time
-			}
-			User.create(loginData).then(function(User,loggedIn){ 
-						if (!User) {
-							return done(null, false);
-						}
-						if (User) {
-							return done(null, User);
-						}
-					});
             return done(null, userinfo);
-        }).then.catch(function(err) {
+        }).catch(function(err) {
             console.log("Error:", err);
             return done(null, false, {
                 message: 'Something went wrong with your Signin'
