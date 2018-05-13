@@ -33,12 +33,7 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.STRING,
             allowNull: false
         },
- 
-        last_login: {
-            type: Sequelize.DATE,
-            defaultValue: Sequelize.NOW
-        },
- 
+		
         status: {
             type: Sequelize.ENUM('active', 'inactive'),
             defaultValue: 'active'
@@ -46,6 +41,9 @@ module.exports = function(sequelize, Sequelize) {
  
  
     });
+User.associate = function(models){
+	User.hasMany(models.loginLog)
+}
  
     return User;
  
