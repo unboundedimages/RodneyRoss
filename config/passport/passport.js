@@ -12,7 +12,7 @@ module.exports = function(passport, user) {
     	usernameField: 'email',
     	passwordField: 'password',
       	passReqToCallback: true // allows us to pass back the entire request to the callback
-    },
+      },
     function(req, email, password, done) { //callback function with arguments that store user details.
     	var generateHash = function(password) { // hashes password
 
@@ -54,7 +54,7 @@ module.exports = function(passport, user) {
 				}
 			});
 		}
-	));
+		));
 
 		// create a serialize and deserialize function
 		// to save a user ID in the session and manage 
@@ -62,61 +62,66 @@ module.exports = function(passport, user) {
 
 		//serialize
 		passport.serializeUser(function(user, done) {
-		    done(null, user.id);
+			done(null, user.id);
 		});
  // deserialize user 
  passport.deserializeUser(function(id, done) {
 		//The Sequelize findById promise is to get the user data.
-     User.findById(id).then(function(user) {
-         if (user) {
+		User.findById(id).then(function(user) {
+			if (user) {
 		//To get the User object from this instance, we use the Sequelize getter function like this: user.get()
-             done(null, user.get());
-         }else {
-             done(user.errors, null);
-         }
-     });
- });
+		done(null, user.get());
+	}else {
+		done(user.errors, null);
+	}
+});
+	});
 
 
 //LOCAL SIGNIN
 passport.use('local-signin', new LocalStrategy(
- 
-    {
+
+{
     // by default, local strategy uses username and password, we will override with email
-   	 	usernameField: 'email',
-    	passwordField: 'password',
+    usernameField: 'email',
+    passwordField: 'password',
     	passReqToCallback: true // allows us to pass back the entire request to the callback
     },
- 
+    
     function(req, email, password, done) {
- 
-        var User = user;
+    	
+    	var User = user;
 		//the isValidPassword function compares the password entered with the bCrypt comparison
 		// method since we stored our password with bcrypt.
-        var isValidPassword = function(userpass, password) {
-            return bCrypt.compareSync(password, userpass);
-        }
-        User.findOne({
-            where: {email: email}
-        }).then(function(user) {
-            if (!user) {
-                return done(null, false, {
-                    message: 'Email does not exist'
-                });
-            }
-            if (!isValidPassword(user.password, password)) {
-                return done(null, false, {
-                    message: 'Incorrect password.'
-                });
-            }
-            var userinfo = user.get();
-            return done(null, userinfo);
-        }).catch(function(err) {
-            console.log("Error:", err);
-            return done(null, false, {
-                message: 'Something went wrong with your Signin'
-            });
-        });
-      }
-  ));
+		var isValidPassword = function(userpass, password) {
+			return bCrypt.compareSync(password, userpass);
+		}
+		User.findOne({
+			where: {email: email}
+		}).then(function(user) {
+
+			user.update({ last_login: Date.now() }).then(function(data) {
+				console.log(data);
+			})
+
+			if (!user) {
+				return done(null, false, {
+					message: 'Email does not exist'
+				});
+			}
+			if (!isValidPassword(user.password, password)) {
+				return done(null, false, {
+					message: 'Incorrect password.'
+				});
+			}
+			var userinfo = user.get();
+			return done(null, userinfo);
+		}).catch(function(err) {
+			console.log("Error:", err);
+			return done(null, false, {
+				message: 'Something went wrong with your Signin'
+			});
+		});
+	}
+	));
 }// end of module export
