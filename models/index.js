@@ -30,7 +30,7 @@ Object.keys(db).forEach(function(modelName) {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-// db.users = require('../models/user.js')(sequelize, Sequelize);  
-// db.loginLog = require('../models/loginLog.js')(sequelize,Sequelize);
+db.users = require('../models/user.js')(sequelize, Sequelize);  
+db.loginLog = require('../models/loginLog.js')(sequelize,Sequelize);
  
 module.exports = db;

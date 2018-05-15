@@ -37,7 +37,8 @@ module.exports = function(sequelize, Sequelize) {
 		last_login: {
 			type: Sequelize.DATE,
 			defaultValue: Sequelize.NOW,
-			unique: true
+			// unique: true,
+			increment: true,			
 		},
 
 		status: {
@@ -45,17 +46,13 @@ module.exports = function(sequelize, Sequelize) {
 			defaultValue: 'active'
 		}
 
-
 	});
-	
-	User.associate = function(models) {
-		User.hasMany(models.LoginLog, { foreignKey: 'last_login', sourceKey: 'last_login', scope: {
-			commentable: 'post'
-		} });
 
+
+	User.associate = (models) => {
+		User.hasMany(models.LoginLog, { 
+			foreignKey: 'last_login'
+		});
 	};
-
-
 	return User;
-
 }

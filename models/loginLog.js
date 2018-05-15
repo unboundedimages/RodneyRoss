@@ -1,12 +1,12 @@
 module.exports = function(sequelize, DataTypes) {
 	var LoginLog = sequelize.define("LoginLog", {
-		time: {
-			type: DataTypes.TIME
-		},
+		// time: {
+		// 	type: DataTypes.TIME
+		// },
 
-		date: {
-			type: DataTypes.DATE
-		},
+		// date: {
+		// 	type: DataTypes.DATE
+		// },
 
 		last_login: {
 			type: DataTypes.DATE,
@@ -15,8 +15,10 @@ module.exports = function(sequelize, DataTypes) {
 		}
 
 	});
-	LoginLog.associate = function(models) {
-		LoginLog.belongsTo(models.user, { foreignKey: 'last_login', targetKey: 'last_login' });
+	LoginLog.associate = (models) => {
+		LoginLog.hasMany(models.user, {
+			foreignKey: 'email', 
+		});
 	};
 	return LoginLog;
 }

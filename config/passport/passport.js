@@ -91,7 +91,7 @@ passport.use('local-signin', new LocalStrategy(
     },
     
     function(req, email, password, done) {
-    	
+    	var Logs = loginLog;
     	var User = user;
 		//the isValidPassword function compares the password entered with the bCrypt comparison
 		// method since we stored our password with bcrypt.
@@ -103,12 +103,33 @@ passport.use('local-signin', new LocalStrategy(
 				email: email,
 				// inclue: [models.Logs]
 			}
-		}).then(function(user) {
+		}).then(user => {
 
-			user.update({ last_login: Date.now() }).then(function(data, res) {
-				console.log(data);
+			// user.update({ last_login: Date.now() }).then(function(data, res) {
+			// 	console.log(data);
+			// 	// res.JSON(data);
+			// });
+
+			return 	user.increment('last_login', {by:1}).then( user => {
+				console.log("-------------------")
+				console.log("increment " + user);
+				console.log("-------------------")
 				// res.JSON(data);
+
+				user.update({ last_login: Date.now() }).then(function(data, res) {
+					console.log("update " + data);
+			// 	// res.JSON(data);
+		})
 			});
+
+			// User.update({ last_login: Date.now() }).then(function(newTime, created) {
+			// 	console.log(data);
+			// 	if (newTime) {
+			// 		return done(null, newTime);
+			// 	}
+			// 	// res.JSON(data);
+			// });
+
 
 			// Timeline.create({ range: [] });
 			// loginLog.create({ last_login: Date.now() }).then(function(data) {
@@ -130,14 +151,31 @@ passport.use('local-signin', new LocalStrategy(
 					message: 'Incorrect password.'
 				});
 			}
-			var userinfo = user.get();
-			return done(null, userinfo);
-		}).catch(function(err) {
-			console.log("Error:", err);
-			return done(null, false, {
-				message: 'Something went wrong with your Signin'
-			});
-		});
-	}
-	));
+
+///////////////////////////////////////
+
+var userinfo = user.get();
+return done(null, userinfo);
+}).catch(function(err) {
+	console.log("Error:", err);
+	return done(null, false, {
+		message: 'Something went wrong with your Signin'
+	});
+});
+
+// Logs.findOne({
+// 	where: {
+// 		last_login: last_login
+// 	}
+// }).then(function(lstlgn) {
+// 	var lstlgn = {
+// 		last_login : req.body.last_login
+// 	};
+// 	Logs.create(lstlgn).then(function(newTime, created){
+// 		console.log(newTime)
+// 	});
+// });
+
+}
+));
 }// end of module export
