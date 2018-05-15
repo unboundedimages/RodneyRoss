@@ -11,13 +11,12 @@ module.exports = function(sequelize, DataTypes) {
 		last_login: {
 			type: DataTypes.DATE,
 			defaultValue: DataTypes.NOW,
-			unique: true
-					// autoIncrement: true
-				}
+			// unique: true
+		}
 
-			});
-	LoginLog.associate = function(models){
-		LoginLog.belongsTo(models.user);
-	}
+	});
+	LoginLog.associate = function(models) {
+		LoginLog.belongsTo(models.user, { foreignKey: 'last_login', targetKey: 'last_login' });
+	};
 	return LoginLog;
 }

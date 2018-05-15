@@ -47,6 +47,14 @@ module.exports = function(sequelize, Sequelize) {
 
 
 	});
+	
+	User.associate = function(models) {
+		User.hasMany(models.LoginLog, { foreignKey: 'last_login', sourceKey: 'last_login', scope: {
+			commentable: 'post'
+		} });
+
+	};
+
 
 	return User;
 

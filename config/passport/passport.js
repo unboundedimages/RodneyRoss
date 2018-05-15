@@ -1,7 +1,8 @@
 var bCrypt = require('bcrypt-nodejs'); //hashes
 
-module.exports = function(passport, user) {
+module.exports = function(passport, user, loginLog) {
 	//initialize the passport-local strategy, and the user model, which will be passed as an argument.
+	var Logs = loginLog;
 	var User = user;
 	var LocalStrategy = require('passport-local').Strategy;
 
@@ -40,7 +41,8 @@ module.exports = function(passport, user) {
 						password: userPassword,
 						firstname: req.body.firstname,
 						lastname: req.body.lastname,
-						comment: req.body.comment
+						comment: req.body.comment,
+						// last_login: req.body.last_login
 
 					};
 					User.create(data).then(function(newUser, created) { 
@@ -97,12 +99,26 @@ passport.use('local-signin', new LocalStrategy(
 			return bCrypt.compareSync(password, userpass);
 		}
 		User.findOne({
-			where: {email: email}
+			where: {
+				email: email,
+				// inclue: [models.Logs]
+			}
 		}).then(function(user) {
 
-			user.update({ last_login: Date.now() }).then(function(data) {
+			user.update({ last_login: Date.now() }).then(function(data, res) {
 				console.log(data);
-			})
+				// res.JSON(data);
+			});
+
+			// Timeline.create({ range: [] });
+			// loginLog.create({ last_login: Date.now() }).then(function(data) {
+			// 	console.log(data);
+			// })
+
+			// user.create({ last_login: Date.now() }).then(function(data) {
+			// 	console.log(data);
+			// })
+
 
 			if (!user) {
 				return done(null, false, {
