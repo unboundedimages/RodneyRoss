@@ -103,24 +103,18 @@ passport.use('local-signin', new LocalStrategy(
 				email: email,
 				// inclue: [models.Logs]
 			}
-		}).then(user => {
-
-			// user.update({ last_login: Date.now() }).then(function(data, res) {
+		}).then(function(user) {
+			// return null;
+			user.update({ last_login: Date.now() }).then(function(data, res) {
+				console.log(data);
+				// return null;
+				// res.JSON(data);
+			});
+			// return
+			// User.create({ last_login: Date.now() }).then(function(data, res) {
 			// 	console.log(data);
 			// 	// res.JSON(data);
 			// });
-
-			return 	user.increment('last_login', {by:1}).then( user => {
-				console.log("-------------------")
-				console.log("increment " + user);
-				console.log("-------------------")
-				// res.JSON(data);
-
-				user.update({ last_login: Date.now() }).then(function(data, res) {
-					console.log("update " + data);
-			// 	// res.JSON(data);
-		})
-			});
 
 			// User.update({ last_login: Date.now() }).then(function(newTime, created) {
 			// 	console.log(data);

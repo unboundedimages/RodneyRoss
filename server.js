@@ -58,10 +58,10 @@ app.engine('hbs', exphbs({defaultLayout: 'main.hbs'}));
 app.set('view engine', '.hbs');
 
 app.get('/', function(req, res) {
-	
+
     // res.send('You are here ↔');
     res.render('welcome')
-    
+
 });
 
 app.get('/auth/linkedin',
@@ -74,6 +74,7 @@ function(req, res){
 let models = require("./models");
 
 //routes
+// require('./controllers/logincontroller.js')(app, passport);
 //require route from auth.js and pass it through as an arguement.
 let authRoute = require('./routes/auth.js')(app, passport); // this comes from the model.export arguenent in auth.js
 
