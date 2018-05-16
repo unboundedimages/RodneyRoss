@@ -10,7 +10,7 @@ window.onload = function welcomes() {
 		if (i == welcome.length) i=	0;
 	}, 2000);
 
-let iAm = ["I am", "انا", "我是", "Меня зовут", "Yo soy", "Ich bin", "Sono", "Jag är", "Je suis"]
+	let iAm = ["I am", "انا", "我是", "Меня зовут", "Yo soy", "Ich bin", "Sono", "Jag är", "Je suis"]
 	let r = 0;
 	setInterval(function() {
 		document.getElementById("me").innerHTML = iAm[r ++];
@@ -21,4 +21,3 @@ let iAm = ["I am", "انا", "我是", "Меня зовут", "Yo soy", "Ich bin
 
 
 
-welcomes();

@@ -29,8 +29,12 @@ module.exports = function(passport, user, loginLog) {
 				if (user)
 				{
 					return done(null, false, {
-						message: 'That email is already taken'
+						message: 'Unauthorized Username or Password, please try again.'
 					});
+					// return done.status(401).json({
+					// 	message: "Invalid Username or password, please try again"
+					// })
+
 
 				} 
 				else{
