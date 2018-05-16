@@ -21,11 +21,6 @@ module.exports = function(sequelize, DataTypes) {
 		}
 
 	});
-	// LoginLog.associate = (models) => {
-	// 	LoginLog.hasMany(models.user, {
-	// 		foreignKey: 'email', 
-	// 	});
-	// };
 
 	LoginLog.associate = (models) => {
 

@@ -42,8 +42,6 @@ module.exports = function(passport, user, loginLog) {
 						firstname: req.body.firstname,
 						lastname: req.body.lastname,
 						comment: req.body.comment,
-						// last_login: req.body.last_login
-
 					};
 					User.create(data).then(function(newUser, created) { 
 						if (!newUser) {
@@ -101,39 +99,12 @@ passport.use('local-signin', new LocalStrategy(
 		User.findOne({
 			where: {
 				email: email,
-				// inclue: [models.Logs]
 			}
 		}).then(function(user) {
-			// return null;
+
 			user.update({ last_login: Date.now() }).then(function(data, res) {
 				console.log(data);
-				// return null;
-				// res.JSON(data);
 			});
-			// return
-			// User.create({ last_login: Date.now() }).then(function(data, res) {
-			// 	console.log(data);
-			// 	// res.JSON(data);
-			// });
-
-			// User.update({ last_login: Date.now() }).then(function(newTime, created) {
-			// 	console.log(data);
-			// 	if (newTime) {
-			// 		return done(null, newTime);
-			// 	}
-			// 	// res.JSON(data);
-			// });
-
-
-			// Timeline.create({ range: [] });
-			// loginLog.create({ last_login: Date.now() }).then(function(data) {
-			// 	console.log(data);
-			// })
-
-			// user.create({ last_login: Date.now() }).then(function(data) {
-			// 	console.log(data);
-			// })
-
 
 			if (!user) {
 				return done(null, false, {
@@ -149,27 +120,15 @@ passport.use('local-signin', new LocalStrategy(
 ///////////////////////////////////////
 
 var userinfo = user.get();
+
 return done(null, userinfo);
+
 }).catch(function(err) {
 	console.log("Error:", err);
 	return done(null, false, {
 		message: 'Something went wrong with your Signin'
 	});
 });
-
-// Logs.findOne({
-// 	where: {
-// 		last_login: last_login
-// 	}
-// }).then(function(lstlgn) {
-// 	var lstlgn = {
-// 		last_login : req.body.last_login
-// 	};
-// 	Logs.create(lstlgn).then(function(newTime, created){
-// 		console.log(newTime)
-// 	});
-// });
-
 }
 ));
 }// end of module export

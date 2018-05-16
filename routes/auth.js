@@ -1,5 +1,4 @@
 //we import the auth controller and define the signup route
-// var logincontroller = require ('../controllers/logincontroller')
 var authController = require('../controllers/authcontroller.js');
 module.exports = function(app, passport) {
 	app.get('/signup', authController.signup);
@@ -17,7 +16,7 @@ module.exports = function(app, passport) {
     	failureRedirect: '/signin'
     }
     ));
-    
+
 	//custom middleware to protect route
 	function isLoggedIn(req, res, next) {
 		if (req.isAuthenticated())
