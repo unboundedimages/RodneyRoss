@@ -4,6 +4,7 @@ module.exports = function(app) {
 
 	app.post("/signin", function(req, res) {
 		db.LoginLog.create(req.body).then(function(dbLoginLog) {
+			// res.json(dbLoginLog);
 			res.render('Port')
 		});
 	});
@@ -16,6 +17,7 @@ module.exports = function(app) {
 				last_login: req.body.last_login
 			}
 		}).then(function(dbLoginLog) {
+			// res.json(dbLoginLog);
 			res.render('Port')
 		});
 	});

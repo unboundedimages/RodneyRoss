@@ -1,7 +1,8 @@
 var bCrypt = require('bcrypt-nodejs'); //hashes
 
-module.exports = function(passport, user) {
+module.exports = function(passport, user, loginLog) {
 	//initialize the passport-local strategy, and the user model, which will be passed as an argument.
+	var Logs = loginLog;
 	var User = user;
 	var LocalStrategy = require('passport-local').Strategy;
 
@@ -40,8 +41,7 @@ module.exports = function(passport, user) {
 						password: userPassword,
 						firstname: req.body.firstname,
 						lastname: req.body.lastname,
-						comment: req.body.comment
-
+						comment: req.body.comment,
 					};
 					User.create(data).then(function(newUser, created) { 
 						if (!newUser) {
@@ -89,7 +89,7 @@ passport.use('local-signin', new LocalStrategy(
     },
     
     function(req, email, password, done) {
-    	
+    	var Logs = loginLog;
     	var User = user;
 		//the isValidPassword function compares the password entered with the bCrypt comparison
 		// method since we stored our password with bcrypt.
@@ -97,12 +97,14 @@ passport.use('local-signin', new LocalStrategy(
 			return bCrypt.compareSync(password, userpass);
 		}
 		User.findOne({
-			where: {email: email}
+			where: {
+				email: email,
+			}
 		}).then(function(user) {
 
-			user.update({ last_login: Date.now() }).then(function(data) {
+			user.update({ last_login: Date.now() }).then(function(data, res) {
 				console.log(data);
-			})
+			});
 
 			if (!user) {
 				return done(null, false, {
@@ -114,14 +116,19 @@ passport.use('local-signin', new LocalStrategy(
 					message: 'Incorrect password.'
 				});
 			}
-			var userinfo = user.get();
-			return done(null, userinfo);
-		}).catch(function(err) {
-			console.log("Error:", err);
-			return done(null, false, {
-				message: 'Something went wrong with your Signin'
-			});
-		});
-	}
-	));
+
+///////////////////////////////////////
+
+var userinfo = user.get();
+
+return done(null, userinfo);
+
+}).catch(function(err) {
+	console.log("Error:", err);
+	return done(null, false, {
+		message: 'Something went wrong with your Signin'
+	});
+});
+}
+));
 }// end of module export

@@ -1,6 +1,6 @@
 module.exports = function(sequelize, Sequelize) {
 
-	var User = sequelize.define('user', {
+	var User = sequelize.define('User', {
 
 		id: {
 			autoIncrement: true,
@@ -37,7 +37,8 @@ module.exports = function(sequelize, Sequelize) {
 		last_login: {
 			type: Sequelize.DATE,
 			defaultValue: Sequelize.NOW,
-			unique: true
+			// unique: true,
+			increment: true,			
 		},
 
 		status: {
@@ -45,9 +46,13 @@ module.exports = function(sequelize, Sequelize) {
 			defaultValue: 'active'
 		}
 
-
 	});
 
-	return User;
 
+	User.associate = (models) => {
+		User.hasMany(models.LoginLog, { 
+			foreignKey: 'last_login'
+		});
+	};
+	return User;
 }
