@@ -25,7 +25,7 @@ module.exports = function(sequelize, DataTypes) {
 
 		LoginLog.belongsTo(models.User, {
 			foreignKey: {
-				allowNull: false
+				allowNull: true
 			}
 		});
 	};
