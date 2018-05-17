@@ -74,7 +74,7 @@ function(req, res){
 let models = require("./models");
 
 //routes
-require('./routes/loginRoute.js')(app);
+require('./routes/loginRoute.js')(app, passport);
 //require route from auth.js and pass it through as an arguement.
 let authRoute = require('./routes/auth.js')(app, passport); // this comes from the model.export arguenent in auth.js
 
@@ -82,7 +82,7 @@ let authRoute = require('./routes/auth.js')(app, passport); // this comes from t
 require('./config/passport/passport.js')(passport, models.user, models.loginLog);
 
 // Sync to database
-models.sequelize.sync({force: false}).then(function(){ //this line is relative to user.js in the models folder setting the value to true will drop the db/table
+models.sequelize.sync({force: true}).then(function(){ //this line is relative to user.js in the models folder setting the value to true will drop the db/table
 	database:"process.env.dbn"
 	app.listen(PORT, function() {
 		console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
