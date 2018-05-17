@@ -1,19 +1,22 @@
 var db = require("../models");
+var Port = require("../views/Port");
 var authController = require('../controllers/authcontroller.js');
 module.exports = function(app, passport) {
 	app.get('/signin', authController.signin);
+	app.get('/Port',isLoggedIn, authController.Port);
 
-	app.post('/signin', passport.authenticate('local-signin', { //route for posting to /signin.
-		function(req, res) {
-			db.LoginLog.create(req.body).then(function(dbLoginLog) {
+	app.post('/signin', passport.authenticate('local-signin'),  //route for posting to /signin.
+	function(req, res) {
+		
+		db.LoginLog.create(req.body).then(function(dbLoginLog) {
 			// res.json(dbLoginLog);
+			// return res.sucessRedirect('Port');
+			// res.failureRedirect('signin')
+			// res.redirect('Port' + req.body.last_login)
 			res.render('Port')
 		});
-	// }
-	successRedirect: '/Port',
-	failureRedirect: '/signin',
-}
-));
+	}
+	);
 	// .then(function(req, res) {
 	// 	db.LoginLog.create(req.body).then(function(dbLoginLog) {
 	// 		// res.json(dbLoginLog);
