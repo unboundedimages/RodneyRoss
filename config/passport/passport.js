@@ -107,6 +107,20 @@ passport.use('local-signin', new LocalStrategy(
 			}
 		}).then(function(user) {
 
+
+			if (!user) {
+				console.log("wrong username or password");//add modal
+				return done(null, false, {
+					message: 'Email does not exist'
+				});
+			}
+			if (!isValidPassword(user.password, password)) {
+				console.log("wrong username or password");//add modal
+				return done(null, false, {
+					message: 'Incorrect password.'
+				});
+			}
+
 			user.update({ last_login: Date.now() }).then(function(data, res) {
 				console.log(data);
 			});
@@ -114,18 +128,6 @@ passport.use('local-signin', new LocalStrategy(
 
 			db.LoginLog.create(req.body).then(function(dbLoginLog) {
 			});
-
-			if (!user) {
-				return done(null, false, {
-					message: 'Email does not exist'
-				});
-			}
-			if (!isValidPassword(user.password, password)) {
-				return done(null, false, {
-					message: 'Incorrect password.'
-				});
-			}
-
 ///////////////////////////////////////
 
 var userinfo = user.get();
