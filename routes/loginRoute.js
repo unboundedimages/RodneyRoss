@@ -1,21 +1,15 @@
 var db = require("../models");
 var Port = require("../views/Port");
 var authController = require('../controllers/authcontroller.js');
-module.exports = function(app, passport) {
+// module.exports = function(app, passport) {
 	app.get('/signin', authController.signin);
 	app.get('/Port',isLoggedIn, authController.Port);
 
-	app.post('/signin', passport.authenticate('local-signin'),  //route for posting to /signin.
-	function(req, res) {
-		
-		db.LoginLog.create(req.body).then(function(dbLoginLog) {
-			// res.json(dbLoginLog);
-			// return res.sucessRedirect('Port');
-			// res.failureRedirect('signin')
-			// res.redirect('Port' + req.body.last_login)
-			res.render('Port')
-		});
-	}
+	app.post('/signin', logInLog, passport.authenticate('local-signin', {
+            successRedirect: '/Port', //this will change to a success page and then redirect to the sign in when this website is upgraded
+            failureRedirect: '/signup'
+        }),  //route for posting to /signin.
+	
 	);
 	// .then(function(req, res) {
 	// 	db.LoginLog.create(req.body).then(function(dbLoginLog) {
@@ -45,4 +39,11 @@ module.exports = function(app, passport) {
 		res.redirect('/signin');
 	}
 
+}
+
+
+function logInLog(req, res, next) {
+
+	db.LoginLog.create(req.body).then(function(dbLoginLog) {
+	});
 }

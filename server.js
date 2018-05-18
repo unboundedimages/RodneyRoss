@@ -74,7 +74,7 @@ function(req, res){
 let models = require("./models");
 
 //routes
-require('./routes/loginRoute.js')(app, passport);
+// require('./routes/loginRoute.js')(app, passport);
 //require route from auth.js and pass it through as an arguement.
 let authRoute = require('./routes/auth.js')(app, passport); // this comes from the model.export arguenent in auth.js
 

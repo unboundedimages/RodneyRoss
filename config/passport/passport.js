@@ -1,4 +1,5 @@
 var bCrypt = require('bcrypt-nodejs'); //hashes
+var db = require("../../models");
 
 module.exports = function(passport, user, loginLog) {
 	//initialize the passport-local strategy, and the user model, which will be passed as an argument.
@@ -108,6 +109,10 @@ passport.use('local-signin', new LocalStrategy(
 
 			user.update({ last_login: Date.now() }).then(function(data, res) {
 				console.log(data);
+			});
+			// req.body.last_login = Date.now()
+
+			db.LoginLog.create(req.body).then(function(dbLoginLog) {
 			});
 
 			if (!user) {
