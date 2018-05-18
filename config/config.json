@@ -1,23 +1,24 @@
 {
-  "development": {
-    "username": "process.env.dbu",
-    "password": "process.env.dbp",
-    "host":"127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false    
-  },
-  "test": {
-    "username": "",
-    "password": null,
-    "database": "",
-    "host": "",
-    "dialect": "mysql"
-  },
-  "production": {
-    "username": "",
-    "password": null,
-    "database": "",
-    "host": "",
-    "dialect": "mysql"
-  }
+	"development": {
+		"username": "process.env.dbu",
+		"password": "process.env.dbp",
+		"host":"127.0.0.1",
+		"dialect": "mysql",
+		"timezone": "-04:00",
+		"operatorsAliases": false    
+	},
+	"test": {
+		"username": "",
+		"password": null,
+		"database": "",
+		"host": "",
+		"dialect": "mysql"
+	},
+	"production": {
+		"username": "",
+		"password": null,
+		"database": "",
+		"host": "",
+		"dialect": "mysql"
+	}
 }
