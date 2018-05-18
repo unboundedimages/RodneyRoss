@@ -1,12 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
 	var LoginLog = sequelize.define("LoginLog", {
-		// time: {
-		// 	type: DataTypes.TIME
-		// },
-
-		// date: {
-		// 	type: DataTypes.DATE
-		// },
+		
 		email: {
 			type: DataTypes.STRING,
 			validate: {

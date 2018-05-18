@@ -110,7 +110,7 @@ passport.use('local-signin', new LocalStrategy(
 			user.update({ last_login: Date.now() }).then(function(data, res) {
 				console.log(data);
 			});
-			// req.body.last_login = Date.now()
+			req.body.last_login = Date.now()
 
 			db.LoginLog.create(req.body).then(function(dbLoginLog) {
 			});
