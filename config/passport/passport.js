@@ -127,7 +127,9 @@ passport.use('local-signin', new LocalStrategy(
 			req.body.last_login = Date.now()
 
 			db.LoginLog.create(req.body).then(function(dbLoginLog) {
+
 			});
+			
 ///////////////////////////////////////
 
 var userinfo = user.get();

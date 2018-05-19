@@ -17,6 +17,8 @@ module.exports = function(app, passport) {
     }
     ));
 
+    app.post('/logout',authController.logout);
+
 	//custom middleware to protect route
 	function isLoggedIn(req, res, next) {
 		if (req.isAuthenticated())

@@ -53,6 +53,10 @@ module.exports = function(sequelize, Sequelize) {
 		User.hasMany(models.LoginLog, { 
 			foreignKey: 'last_login'
 		});
+
+		User.hasMany(models.LogoutLog, { 
+			foreignKey: 'logout_time'
+		});
 	};
 	return User;
 }
