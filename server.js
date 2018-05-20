@@ -78,7 +78,7 @@ let models = require("./models");
 let authRoute = require('./routes/auth.js')(app, passport); // this comes from the model.export arguenent in auth.js
 
 //load passport strategies
-require('./config/passport/passport.js')(passport, models.user, models.loginLog);
+require('./config/passport/passport.js')(passport, models.user, models.loginLog, models.logoutLog);
 
 // Sync to database
 models.sequelize.sync({force: false}).then(function(){ //this line is relative to user.js in the models folder setting the value to true will drop the db/table

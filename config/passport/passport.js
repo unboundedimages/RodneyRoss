@@ -53,6 +53,9 @@ module.exports = function(passport, user, loginLog) {
 							return done(null, false);
 						}
 						if (newUser) {
+							var db = require("../../models");
+							db.LoginLog.create(req.body).then(function(dbLogoutLog){
+							});
 							return done(null, newUser);
 						}
 					});
@@ -127,19 +130,25 @@ passport.use('local-signin', new LocalStrategy(
 			req.body.last_login = Date.now()
 
 			db.LoginLog.create(req.body).then(function(dbLoginLog) {
-			});
-///////////////////////////////////////
 
+			});
+
+///////////////////////////////////////
 var userinfo = user.get();
 
 return done(null, userinfo);
-
 }).catch(function(err) {
+
 	console.log("Error:", err);
+
 	return done(null, false, {
 		message: 'Something went wrong with your Signin'
 	});
+
 });
+
 }
+
 ));
+
 }// end of module export
