@@ -50,13 +50,9 @@ module.exports = function(sequelize, Sequelize) {
 
 
 	User.associate = (models) => {
-		User.hasMany(models.LoginLog, { 
-			foreignKey: 'last_login'
-		});
+		User.hasMany(models.LoginLog);
 
-		User.hasMany(models.LogoutLog, { 
-			foreignKey: 'logout_time'
-		});
+		User.hasMany(models.LogoutLog);
 	};
 	return User;
 }

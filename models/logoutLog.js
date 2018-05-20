@@ -10,11 +10,7 @@ module.exports = (sequelize,DataTypes) => {
 
 	LogoutLog.associate = (models) => {
 
-		LogoutLog.belongsTo(models.User, {
-			foreignKey: {
-				allowNull: true
-			}
-		});
+		LogoutLog.belongsTo(models.User);
 	};
 	return LogoutLog;
 };
