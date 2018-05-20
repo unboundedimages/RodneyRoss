@@ -3,14 +3,18 @@ module.exports = (sequelize,DataTypes) => {
 
 		logout_time: {
 			type: DataTypes.DATE,
-			defaultValue: DataTypes.NOW
+			defaultValue: DataTypes.NOW,
+			allowNull: false
 		}
 	});
 
 	LogoutLog.associate = (models) => {
 
-		LogoutLog.belongsTo(models.User);
-
+		LogoutLog.belongsTo(models.User, {
+			foreignKey: {
+				allowNull: true
+			}
+		});
 	};
 	return LogoutLog;
 };
