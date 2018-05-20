@@ -18,11 +18,7 @@ module.exports = function(sequelize, DataTypes) {
 
 	LoginLog.associate = (models) => {
 
-		LoginLog.belongsTo(models.User, {
-			foreignKey: {
-				allowNull: true
-			}
-		});
+		LoginLog.belongsTo(models.User);
 	};
 	return LoginLog;
 }
