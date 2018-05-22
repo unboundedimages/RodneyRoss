@@ -29,16 +29,9 @@ exports.Port = function(req, res) {
 		var youAre = {
 			userName: req.user.firstname
 		};
-		console.log("ururururururururururururururururururururururururururururu")
-		console.log("ururururururururururururururururururururururururururururu")
-		console.log("ururururururururururururururururururururururururururururu")
-		console.log("ururururururururururururururururururururururururururururu")
-		console.log(youAre)
 
 		res.render('Port', youAre);
 	});
-
-	// res.render('Port');
 
 }
 //controller for logging out and protecting route
@@ -79,14 +72,9 @@ exports.modals = function(req,res) {
 		var youAre = {
 			userName: req.user.firstname
 		};
-		console.log("ururururururururururururururururururururururururururururu")
-		console.log("ururururururururururururururururururururururururururururu")
-		console.log("ururururururururururururururururururururururururururururu")
-		console.log("ururururururururururururururururururururururururururururu")
-		console.log(youAre)
 
 		res.render('partials/modals', youAre)
-		// res.render('Port', youAre);
+
 	});
 	
 }
