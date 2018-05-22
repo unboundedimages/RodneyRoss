@@ -16,7 +16,29 @@ exports.signin = function(req, res) {
 }
 //controller for dashboard
 exports.Port = function(req, res) {
-	res.render('Port');
+	console.log("this is req from authcontroller.js: ", req)
+	var path = require('path');
+	var db = require('../models');
+	db.loginLog.findAll({
+
+		where: {
+			id: req.user.id
+		} 
+	}).then(function(data) {
+		// console.log(data)
+		var youAre = {
+			userName: req.user.firstname
+		};
+		console.log("ururururururururururururururururururururururururururururu")
+		console.log("ururururururururururururururururururururururururururururu")
+		console.log("ururururururururururururururururururururururururururururu")
+		console.log("ururururururururururururururururururururururururururururu")
+		console.log(youAre)
+
+		res.render('Port', youAre);
+	});
+
+	// res.render('Port');
 
 }
 //controller for logging out and protecting route
@@ -44,5 +66,27 @@ exports.logout = function(req, res, next) {
 }
 
 exports.modals = function(req,res) {
-	res.render('partials/modals')
+	console.log("this is req from authcontroller.js: ", req)
+	var path = require('path');
+	var db = require('../models');
+	db.loginLog.findAll({
+
+		where: {
+			id: req.user.id
+		} 
+	}).then(function(data) {
+		// console.log(data)
+		var youAre = {
+			userName: req.user.firstname
+		};
+		console.log("ururururururururururururururururururururururururururururu")
+		console.log("ururururururururururururururururururururururururururururu")
+		console.log("ururururururururururururururururururururururururururururu")
+		console.log("ururururururururururururururururururururururururururururu")
+		console.log(youAre)
+
+		res.render('partials/modals', youAre)
+		// res.render('Port', youAre);
+	});
+	
 }

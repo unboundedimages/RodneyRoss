@@ -6,7 +6,7 @@ window.onload = function welcomes() {
 		// let randd = Math.floor(6);
 		// document.getElementById("name2").innerHTML = welcome[rand];
 		//alternatively set this loop up with .map instead of random
-		document.getElementById("name2").innerHTML = welcome[i ++];	
+		document.getElementById("name2","name3").innerHTML = welcome[i ++];	
 		if (i == welcome.length) i=	0;
 	}, 2000);
 

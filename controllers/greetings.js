@@ -1,38 +1,35 @@
-//show user name on port dashboard
-//get dependencies
-//setup route
-// pull user first name from user.js in models
-
-let db = require('../models');
-express = require('express');
-router = express.Router();
-path = require('path');
+// var db = require('../models');
+// var express = require('express');
+// var router = express.Router();
+// var path = require('path');
 
 
-router.get("/Port", function(req,res){
-	if(!req.user) {
-		res.redirect('/signin');
-	}
+// router.get("/Port", function(req,res){
+// 	console.log("this is req from greetings " + req)
 
-	db.loginLogs.findAll({
+// 	if(!req.User) {
+// 		res.redirect('/signin');
+// 	}
 
-		where: {
-			userId: req.User.id
-		} 
-	}).then((data)=>{
-		console.log(data)
-		var youAre = {
-			userName: req.User.firstname
-		};
-		console.log("ururururururururururururururururururururururururururururu")
-		console.log("ururururururururururururururururururururururururururururu")
-		console.log("ururururururururururururururururururururururururururururu")
-		console.log("ururururururururururururururururururururururururururururu")
-		console.log(youAre)
+// 	db.loginLog.findAll({
 
-		res.render("greetings", youAre);
-	});
+// 		where: {
+// 			id: req.User.id
+// 		} 
+// 	}).then(function(data) {
+// 		console.log(data)
+// 		var youAre = {
+// 			userName: req.user.firstname
+// 		};
+// 		console.log("ururururururururururururururururururururururururururururu")
+// 		console.log("ururururururururururururururururururururururururururururu")
+// 		console.log("ururururururururururururururururururururururururururururu")
+// 		console.log("ururururururururururururururururururururururururururururu")
+// 		console.log(youAre)
 
-});
+// 		res.render("Port", youAre);
+// 	});
 
-module.exports = router;
+// });
+
+// module.exports = router;
