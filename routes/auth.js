@@ -17,6 +17,8 @@ module.exports = function(app, passport) {
     }
     ));
 
+    app.get('/modals', isLoggedIn, authController.modals);
+
     app.post('/logout',authController.logout);
 
 	//custom middleware to protect route

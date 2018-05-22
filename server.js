@@ -46,6 +46,7 @@ app.use(session({
 app.use(passport.initialize());///////////////////////////////////
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, '/public'))); // for the css
+
 app.use(function(req, res, next) { // for logout - speaks to authcontrollers
 	res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
 	next();
@@ -54,7 +55,11 @@ app.use(function(req, res, next) { // for logout - speaks to authcontrollers
 // For HBS
 app.set('views', './views')
 // app.engine('hbs', exphbs({ extname: '.hbs'}));  //alternative exphbs({ defaultLayout: "main" }));
-app.engine('hbs', exphbs({defaultLayout: 'main.hbs'}));
+app.engine('hbs', exphbs({
+	defaultLayout: 'main.hbs',
+	layoutsDir: __dirname + '/views/layouts/',
+	partialsDir: __dirname + '/views/partials'
+}));
 app.set('view engine', '.hbs');
 
 app.get('/', function(req, res) {
@@ -92,6 +97,7 @@ models.sequelize.sync({force: false}).then(function(){ //this line is relative t
 });
 
   //test server
-  app.get('/', function(req,res){
-  	res.redirect('/signin')
+  app.get('/', function(req, res) {
+  	res.redirect('/signin');
   });
+
