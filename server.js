@@ -54,7 +54,11 @@ app.use(function(req, res, next) { // for logout - speaks to authcontrollers
 // For HBS
 app.set('views', './views')
 // app.engine('hbs', exphbs({ extname: '.hbs'}));  //alternative exphbs({ defaultLayout: "main" }));
-app.engine('hbs', exphbs({defaultLayout: 'main.hbs'}));
+app.engine('hbs', exphbs({
+	defaultLayout: 'main.hbs',
+	layoutsDir: __dirname + '/views/layouts/',
+	partialsDir: __dirname + '/views/partials'
+}));
 app.set('view engine', '.hbs');
 
 app.get('/', function(req, res) {
