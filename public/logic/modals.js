@@ -1,11 +1,14 @@
 function modal(event) {
 	// Get the modal
 
+	if(event.keyCode === 13) {
+		alert("you pressed the ENTER KEY BOY")
+	}
 
 	// var modal = document.getElementById('myModal');
 
 	// // Get the button that opens the modal
-	// var btn = document.getElementById("myBtn") 
+	var btn = document.getElementById("myBtn") 
 
 
 
@@ -13,17 +16,14 @@ function modal(event) {
 	// var span = document.getElementsByClassName("close")[0];
 
 	// // When the user clicks the button, open the modal 
-	// btn.onclick = function(event) {
+	btn.onclick = function(event) {
 		// var key = event.keyCode;
 		// formula = (key == 13)
-		if(event.keyCode === 13) {
-			alert("you pressed the ENTER KEY BOY")
-		}
 		// return (formula);
 
 		// modal.style.display = "block";
-		// alert("button is active"s)
-	// }
+		alert("button is active")
+	}
 
 	// // When the user clicks on <span> (x), close the modal
 	// span.onclick = function() {
