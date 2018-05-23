@@ -1,21 +1,44 @@
 
 
-	<a href="/">
-		<img src="images/chicken.png" class="chicken" title="Back to welcome page">
-	</a>
-	<div class="name">Please Sign in</div>
-		<form name="signin" method="post" action="signin">
-		<input type="email" name="email" placeholder="you@site.com" title="Enter the email address used during registration" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false">
-		<input type="password" name="password" placeholder="password" title="Your password must be a minimumn of 8 characters or more." pattern=".{7,}" title="Must contain at least 7 characters or more" id="pw" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false">
-		<button class="loginB" type="submit" value="Submit">SUBMIT</button>
-	</form>
-	<div>
-		<p>
-	<a href="Signup" title="Create an account to gain access.">Register to Access</a>
+<a href="/">
+	<img src="images/chicken.png" class="chicken" title="Back to welcome page">
+</a>
+<div class="name">Please Sign in</div>
+<form name="signin" method="post" action="signin">
+	<input id="enter1" onkeydown="return modal(event)" type="email" name="email" placeholder="you@site.com" title="Enter the email address used during registration" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false">
+	<input id="enter2" onkeydown="return modal(event)" type="password" name="password" placeholder="password" title="Your password must be a minimumn of 8 characters or more." pattern=".{7,}" title="Must contain at least 7 characters or more" id="pw" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false">
+	<button id= "myBtn" class="loginB" type="submit" value="Submit">SUBMIT</button>
+</form>
+<div>
+	<p>
+		<a href="Signup" title="Create an account to gain access.">Register to Access</a>
 	</div>
 
 	
 	<div class="home">
 		<a href="/"><img src="images/home.png" class="home" title="back to welcome page"></a>
-	</div>	
+	</div>
 
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<div class="modal-header">
+				<span class="close">&times;</span>
+				<h2>You entered an invalid: <p>username or password</h2>
+				</div>
+				<div class="modal-body">
+					<span>
+						<input type="email	" name="email">
+						<input type="password" name="password">
+					</span>
+				</div>
+				<div class="modal-footer">
+					<h3>Please try again</h3>
+				</div>
+			</div>
+			{{!-- <img src="/images/egg2.png"> --}}
+		</div>	
+
+		<script type="text/javascript" src="logic/modals.js"></script>
