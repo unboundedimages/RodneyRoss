@@ -1,9 +1,9 @@
 function modal(event) {
 	// Get the modal
 
-	if(event.keyCode === 13) {
-		alert("you pressed the ENTER KEY BOY")
-	}
+	// if(event.keyCode === 13) {
+	// 	alert("you pressed the ENTER KEY BOY")
+	// }
 
 	var modal = document.getElementById('myModal');
 
@@ -28,10 +28,10 @@ function modal(event) {
 	// }
 
 	// // When the user clicks anywhere outside of the modal, close it
-	// window.onclick = function(event) {
-	// 	if (event.target == modal) {
-	// 		modal.style.display = "none";
-	// 	}
-	// }
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
 
 }

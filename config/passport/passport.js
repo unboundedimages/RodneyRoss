@@ -121,9 +121,11 @@ passport.use('local-signin', new LocalStrategy(
 			}
 			if (!isValidPassword(user.password, password)) {
 				console.log("wrong username or password");//add modal
-				return done(null, false, {
-					message: 'Incorrect password.'
-				});
+				return modals
+				
+				// return done(null, false, {
+				// 	message: 'Incorrect password.'
+				// });
 			}
 
 			user.update({ last_login: Date.now() }).then(function(data, res) {
