@@ -5,7 +5,7 @@ function modal(event) {
 		alert("you pressed the ENTER KEY BOY")
 	}
 
-	// var modal = document.getElementById('myModal');
+	var modal = document.getElementById('myModal');
 
 	// // Get the button that opens the modal
 	var btn = document.getElementById("myBtn") 
@@ -17,11 +17,8 @@ function modal(event) {
 
 	// // When the user clicks the button, open the modal 
 	btn.onclick = function(event) {
-		// var key = event.keyCode;
-		// formula = (key == 13)
-		// return (formula);
-
-		// modal.style.display = "block";
+		
+		modal.style.display = "block";
 		alert("button is active")
 	}
 

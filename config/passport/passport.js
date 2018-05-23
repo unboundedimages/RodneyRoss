@@ -1,6 +1,6 @@
 var bCrypt = require('bcrypt-nodejs'); //hashes
 var db = require("../../models");
-
+var modals = require("../../public/logic/modals.js")
 module.exports = function(passport, user, loginLog) {
 	//initialize the passport-local strategy, and the user model, which will be passed as an argument.
 	var Logs = loginLog;
@@ -113,9 +113,11 @@ passport.use('local-signin', new LocalStrategy(
 
 			if (!user) {
 				console.log("wrong username or password");//add modal
-				return done(null, false, {
-					message: 'Email does not exist'
-				});
+				return modals
+
+				// return done(null, false, {
+				// 	message: 'Email does not exist'
+				// });
 			}
 			if (!isValidPassword(user.password, password)) {
 				console.log("wrong username or password");//add modal
