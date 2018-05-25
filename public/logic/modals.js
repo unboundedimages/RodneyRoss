@@ -1,7 +1,7 @@
 function modal(event) {
 	console.log("+++++++++++++++++++++++++++++++++++++")
 	console.log("+++++++++++++++++++++++++++++++++++++")
-	console.log("this is modals event: ", event)
+	console.log("this is modals event: ", event);
 	var modal = document.getElementById('myModal');
 
 	// // Get the button that opens the modal
@@ -14,17 +14,8 @@ function modal(event) {
 
 	// // When user submits form, open modal if error
 	myForm.onsubmit = function(event) {
-		modal.style.display = "block";
-	}
 
-
-	// // When the user clicks the button, open the modal 
-	btn.onclick = function(event) {
-		// if(event = 400 ) {break }
-		
-		// alert("button is active")
 		modal.style.display = "block";
-		
 	}
 
 	// // When the user clicks on <span> (x), close the modal
