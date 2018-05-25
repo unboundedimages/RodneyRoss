@@ -1,3 +1,19 @@
+#hello {
+	font-size: 25px;
+	float: right;
+	/* text-align: center; */
+}
+
+#hi {
+	margin: 0;
+}
+
+#l_o {
+	background-color: #ff1616;
+	margin: 0;
+	float: right;
+	margin-right: 4%;
+}
 /* Add a black background color to the top navigation */
 .topnav {
 	background-color: #333;
@@ -17,23 +33,21 @@
 
 /* Change the color of links on hover */
 .topnav a:hover {
-	background-color: #ddd;
+	background-color: #ffeb04;
 	color: black;
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
-	background-color: #4CAF50;
+	background-color: #ff1616;
 	color: white;
 }
 
-#hello {
-	font-size: 25px;
-	float: right;
-	padding-right: 8%;
-	/* text-align: center; */
+#ur_Nme {
+	color: red;
 }
 
-#hi {
-	margin: 0;
+#ur_Nme:hover {
+	/*background-color: red;*/
+	color: black;
 }
