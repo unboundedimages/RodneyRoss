@@ -97,7 +97,6 @@ models.sequelize.sync({force: false}).then(function(){ //this line is relative t
 });
 
   //test server
-  app.get('/', function(req, res) {
-  	res.redirect('/signin');
-  });
-
+  // app.get('/', function(req, res) {
+  // 	res.redirect('/signin');
+  // });

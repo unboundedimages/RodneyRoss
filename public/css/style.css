@@ -12,43 +12,43 @@ body {
 	height:20px;
 	width: 4%;
 	}*/
-.nameW {
-	color: #eee;
-	font-size: 8pc;
-	/*text-align: right;*/
-	padding-bottom: 6%;
-}
-.name {
-	color: #eee;
-	font-size: 10pc;
-	/*text-align: right;*/
-	padding-bottom: 6%;
-}
-#name2 {
-	color: #eee;
-	font-size: 8pc;
-	/*text-align: right;*/
-	padding-bottom: 7%;
-	margin-top: -3%;
-}
-img {
-	display: block;
-	width: 40%;
-	height: auto;
-}
+	.nameW {
+		color: #eee;
+		font-size: 8pc;
+		/*text-align: right;*/
+		padding-bottom: 6%;
+	}
+	.name {
+		color: #eee;
+		font-size: 10pc;
+		/*text-align: right;*/
+		padding-bottom: 6%;
+	}
+	#name2 {
+		color: #eee;
+		font-size: 8pc;
+		/*text-align: right;*/
+		padding-bottom: 7%;
+		margin-top: -3%;
+	}
+	img {
+		display: block;
+		width: 40%;
+		height: auto;
+	}
 
-.overlay {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 100%;
-	width: 100%;
-	opacity: 0;
-	transition: .9s ease;
-	background-color: #060a0b;
-}
+	.overlay {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		transition: .9s ease;
+		background-color: #060a0b;
+	}
 
 /*.container:hover .overlay {
   opacity: 1;
@@ -72,6 +72,16 @@ img {
   	padding: 12%,3%;
   	text-align: center;
   }
+
+  .modal_body_input {
+  	background-color: #060a0b;
+  	color: #eee;
+  	padding-top: 1%;
+  	padding-bottom: 1%;
+  	padding: 12%,3%;
+  	text-align: center;
+  }
+
   textarea {
   	background-color: #060a0b;
   	color: #eee;
