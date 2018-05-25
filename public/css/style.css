@@ -1,6 +1,7 @@
 body {
 	background: #060a0b;
 	color: #eee;
+	overflow-y:hidden;
 }
 .container {
 	position: relative;
