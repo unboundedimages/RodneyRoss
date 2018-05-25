@@ -100,4 +100,3 @@ models.sequelize.sync({force: false}).then(function(){ //this line is relative t
   app.get('/', function(req, res) {
   	res.redirect('/signin');
   });
-

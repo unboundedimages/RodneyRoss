@@ -112,21 +112,32 @@ passport.use('local-signin', new LocalStrategy(
 
 
 			if (!user) {
+				var modals = require("../../public/logic/modals.js")
+
+				console.log("wrong username or password");//add modal
+				return modals
+
+			}
+
+			// } else {
+
+			// 	return done(null, user.get());
+
+			if (!isValidPassword(user.password, password)) {
+				var modals = require("../../public/logic/modals.js")
 				console.log("wrong username or password");//add modal
 				return modals
 
 				// return done(null, false, {
-				// 	message: 'Email does not exist'
-				// });
-			}
-			if (!isValidPassword(user.password, password)) {
-				console.log("wrong username or password");//add modal
-				return modals
-				
-				// return done(null, false, {
 				// 	message: 'Incorrect password.'
 				// });
+
 			}
+			// else {
+
+			// 	return done(null,user.get());
+
+			// }
 
 			user.update({ last_login: Date.now() }).then(function(data, res) {
 				// console.log(data);
