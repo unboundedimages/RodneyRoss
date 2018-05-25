@@ -1,6 +1,20 @@
-<h1>Hello {{userName}}, welcome to my site.</h1>
+<div class="topnav">
+	<div>
+		<a class="active" href="#home">Home</a>
+		<a href="#news">News</a>
+		<a href="#contact">Contact</a>
+		<a href="#about">About</a>
+	</div>
+	<div id="l_o">
+		<a href="/logout"><b>Logout</b></a>
+	</div>
+	<div id="hello">
+		{{!-- <a href="#"><h3 id="hi">Hello {{userName}} welcome to my site.</h3></a> --}}
+		<a href="#">Hello <b id="ur_Nme">{{userName}}</b> welcome to my site.</a>
+	</div>
+</div>
 
-<a href="/logout"><button class="loginB">LOGOUT</button></a>
+{{!-- <a href="/logout"><button class="loginB">LOGOUT</button></a> --}}
 {{!-- <a href="/logout"><button class="loginB"><span><img src="/images/chicken.png" id="eggy">LOGOUT</span></button></a> --}}
 
 
