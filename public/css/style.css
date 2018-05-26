@@ -118,7 +118,7 @@ body {
   }
 
   button {
-  	border-radius: 8px;
+  	/*border-radius: 8px;*/
   	background-color: #060a0b;
   	color: #eee;
   }
