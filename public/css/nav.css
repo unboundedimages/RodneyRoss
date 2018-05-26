@@ -21,6 +21,14 @@
 	max-width: 5.5%;
 	padding-top: 5px;
 }
+
+#med_chk {
+	float: left;
+	max-height: auto;
+	max-width: 500px;
+	padding: 3%;
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
 	background-color: #333;
@@ -47,8 +55,10 @@
 #drp_clr_bdy {
 	color: black;
 	display: block;
+	float: right;
 	margin-left: 5%;
 	margin-right: 5%;
+	max-width: 40%;
 	padding-top: 30px;
 	text-align: justify;
 }
