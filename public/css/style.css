@@ -120,6 +120,7 @@ body {
   button {
   	/*border-radius: 8px;*/
   	background-color: #060a0b;
+  	border-width: 0;
   	color: #eee;
   }
 

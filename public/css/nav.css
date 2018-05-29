@@ -137,3 +137,19 @@ img, #med_chk {
 	/*background-color: red;*/
 	color: red;
 }
+
+/*Buttos inside of the nav dropdown area*/
+.inside_drpdown_btn {
+	background-color: red;
+	height: 48px;
+	outline: none;
+	width: 90px;
+	cursor: pointer;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	overflow: hidden;
+}
+
+.inside_drpdown_btn:hover {
+	background-color: #700000;
+} 
