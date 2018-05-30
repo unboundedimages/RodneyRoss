@@ -1,0 +1,19 @@
+.si_name {
+	float: right;
+	font-variant: small-caps;
+	font-size: 426%;
+	height: 400px;
+	margin-right:10%;
+	margin-top: 10%;
+	max-width: 72%;
+	/*overflow: auto;*/
+}
+
+#enter1, #enter2 {
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+
+.register {
+	margin-top: -10%;
+}

@@ -70,3 +70,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 	background-color:#ff0000bf;
 	color: white;
 }
+
+#myBtn2 {
+	float:right;
+	margin-top: 3%
+}

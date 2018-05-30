@@ -5,7 +5,7 @@ function modal(event) {
 	var modal = document.getElementById('myModal');
 
 	// // Get the button that opens the modal
-	var btn = document.getElementById("myBtn") 
+	var btn = document.getElementsByClassName("myBtn") 
 
 	var myForm = document.getElementById("getForm")
 	

@@ -1,33 +1,33 @@
-{{!-- 
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8"> --}}
-	<link rel="stylesheet" href="css/style.css" type="text/css">
-	<title>Sign Up</title>
-{{!-- </head>
-<body> --}}
-	<a href="/">
-		<img src="images/chicken.png" class="chicken" title="Back to welcome page">
-	</a>
-	<div class="scoll" style="overflow-y: scroll; height:500px">
-	<div class="name" title=" Click here scroll down with your arrow keys to see the rest of the log in screen or press tab">Create a Log in</div>
-	<div class="clear"></div>
-		<form action="signup" method="post" id="signUp">
-			<input class= "names" type="text" name="firstname" placeholder="First Name" title="Enter your first name" id="firstName" onkeydown="return alphaOnly(event);" {{!-- pattern="[^0-9]+[^,./]+[{}]+[-=]+[`]+" --}} title="Invalid input" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false" >
-			<input type="text" name="lastname" placeholder="Last Name" title="Enter your last name" id="lastName" onkeydown="return alphaOnly(event);" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false" class= "names"><p>
-			<!-- <input class = "names" type="text" name="Last Name" placeholder="Last Name" title="Enter your last name" id="lastName" onkeydown="return alphaOnly(event);" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false"><p> -->	
+
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<title>Sign Up</title>
+
+<a href="/">
+	<img src="images/chicken.png" class="chicken" title="Back to welcome page">
+</a>
+<div class="scoll">
+	<div class="name" title=" Click here scroll down with your arrow keys to see the rest of the log in screen or press tab"><div id= "big_C">Create</div><br><div id="lil_a"> &#13; A &#13;  log &#13;  in</div>
+</div>
+<div class="clear"></div>
+<form action="signup" method="post" id="signUp">
+	<input class= "names" type="text" name="firstname" placeholder="First Name" title="Enter your first name" id="firstName" onkeydown="return alphaOnly(event);" {{!-- pattern="[^0-9]+[^,./]+[{}]+[-=]+[`]+" --}} title="Invalid input" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false" >
+	<input type="text" name="lastname" placeholder="Last Name" title="Enter your last name" id="lastName" onkeydown="return alphaOnly(event);" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false" class= "names"><p>
+		<!-- <input class = "names" type="text" name="Last Name" placeholder="Last Name" title="Enter your last name" id="lastName" onkeydown="return alphaOnly(event);" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false"><p> -->	
 			<input type="email" name="email" placeholder="email address" title="Enter a valid email address" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false" class= "names">
 			<input type="password" name="password" placeholder="password" pattern=".{7,}" title="Must contain at least 7 characters or more" id="pw" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false" class= "names">
 			<h2>How did you hear about me:</h2>
 			<textarea name="comment" rows="10" cols="45" placeholder="How did you hear about me?" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false" form="signUp"></textarea>
 			<p>
-			<button class="loginC" type="submit" value="Submit">ENTER</button>			
-		</form>
-	</div>	
-	<div class="home">
-		<a href="SignIn"><img src="images/backbutton.svg" class="backbutton" title="Back to log in screen"></a>
-	</div>	
+				<button id="loginC" class="inside_drpdown_btn" type="submit" value="Submit">
+					ENTER
+				</button>	
+			</p>
+		</p>
+	</form>
+</div>	
+<div class="home">
+	<a href="SignIn"><img src="images/backbutton.svg" class="backbutton" title="Back to log in screen"></a>
+</div>	
 {{!-- </body> --}}
 <script type="text/javascript" src="/logic/names.js"></script>
 {{!-- </html> --}}

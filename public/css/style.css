@@ -3,53 +3,80 @@ body {
 	color: #eee;
 	overflow-y:hidden;
 }
-.container {
-	position: relative;
-	width: 50%;
-	left: 50%;
+
+.scoll {
+	max-width: 30%;
+	width:auto;
+	height: 500px;
+	overflow: auto;
+	text-align: justify;
 }
 
-/*#eggy {
-	height:20px;
-	width: 4%;
-	}*/
-	.nameW {
-		color: #eee;
-		font-size: 8pc;
-		/*text-align: right;*/
-		padding-bottom: 6%;
-	}
-	.name {
-		color: #eee;
-		font-size: 10pc;
-		/*text-align: right;*/
-		padding-bottom: 6%;
-	}
-	#name2 {
-		color: #eee;
-		font-size: 8pc;
-		/*text-align: right;*/
-		padding-bottom: 7%;
-		margin-top: -3%;
-	}
-	img {
-		display: block;
-		width: 40%;
-		height: auto;
-	}
+#big_C {
+	margin-left:-20px;
+}
 
-	.overlay {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		height: 100%;
-		width: 100%;
-		opacity: 0;
-		transition: .9s ease;
-		background-color: #060a0b;
-	}
+.name, #big_C {
+	float:left;
+	font-size: 110%;
+	font-variant: small-caps;
+	width:100%;
+	display: inline-block;
+	text-align: center;
+	padding-bottom: 11%;
+	/*text-align: justify;*/
+}
+#lil_a {
+	float:left;
+	font-size: 80%;
+	text-align: center;
+	font-variant: small-caps;
+	padding-bottom: 5%;
+	/*margin-right: 10%;*/
+}
+
+h2 {font-variant: small-caps;}
+.nameW {
+	color: #eee;
+	font-size: 8pc;
+	/*text-align: right;*/
+	padding-bottom: 6%;
+}
+.name {
+	color: #eee;
+	/*display: block;*/
+	font-size: 555%;
+	text-align: justify;
+	margin-top:40px;
+	/*text-align: right;*/
+	padding-bottom: 6%;
+}
+
+#name2 {
+	color: #eee;
+	font-size: 8pc;
+	/*text-align: right;*/
+	padding-bottom: 7%;
+	margin-top: -3%;
+}
+img {
+	display: block;
+	width: 40%;
+	height: auto;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .9s ease;
+	background-color: #060a0b;
+}
 
 /*.container:hover .overlay {
   opacity: 1;
@@ -65,6 +92,12 @@ body {
 
   }
 
+  .names {
+  	padding-top: 4%;
+  	padding-bottom: 4%;
+  	padding: 12%,3%;
+  }
+
   input {
   	background-color: #060a0b;
   	color: #eee;
@@ -77,8 +110,8 @@ body {
   .modal_body_input {
   	background-color: #060a0b;
   	color: #eee;
-  	padding-top: 1%;
-  	padding-bottom: 1%;
+  	padding-top: 3%;
+  	padding-bottom: 3%;
   	padding: 12%,3%;
   	text-align: center;
   }
@@ -90,6 +123,7 @@ body {
   	padding-left: 2%;
   	padding-right: 2%;
   	padding-top: 1%;
+  	max-width: 87%;
   }
 
   a {
@@ -113,8 +147,10 @@ body {
   	padding: 12px 8px;
   }
 
-  .loginC {
+  #loginC {
+  	float: right;
   	padding: 12px 8px;
+  	margin-right: 32px;
   }
 
   button {
