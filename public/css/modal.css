@@ -75,3 +75,16 @@ body {font-family: Arial, Helvetica, sans-serif;}
 	float:right;
 	margin-top: 3%
 }
+
+#myBtn2 {
+	background-color: black;
+}
+
+#myBtn2:hover {
+	/*background-color: #333;*/
+	color: red;
+}
+
+#myBtn2:after {
+	background: #7f0000;
+}
