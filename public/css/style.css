@@ -3,36 +3,25 @@ body {
 	color: #eee;
 	overflow-y:hidden;
 }
-
-.scoll {
-	max-width: 30%;
-	width:auto;
-	height: 500px;
+form {
+	height:300px;
 	overflow: auto;
-	text-align: justify;
 }
+.chicken {
+	float:left;
+	padding-right: 8%;
 
-#big_C {
-	margin-left:-20px;
 }
 
 .name, #big_C {
-	float:left;
-	font-size: 110%;
-	font-variant: small-caps;
-	width:100%;
-	display: inline-block;
-	text-align: center;
-	padding-bottom: 11%;
+	/*float:left;*/
+	/*font-size: 110%;*/
+	
+	/*width:100%;*/
+	
+	/*text-align: center;*/
+	
 	/*text-align: justify;*/
-}
-#lil_a {
-	float:left;
-	font-size: 80%;
-	text-align: center;
-	font-variant: small-caps;
-	padding-bottom: 5%;
-	/*margin-right: 10%;*/
 }
 
 h2 {font-variant: small-caps;}
@@ -86,11 +75,6 @@ img {
   	opacity: 1;
   }
   /********/
-  .chicken {
-  	float:left;
-  	padding-right: 8%;
-
-  }
 
   .names {
   	padding-top: 4%;
@@ -142,6 +126,7 @@ img {
   	float: right;
   	padding: 12px 8px;
   	margin-right: 32px;
+  	margin-bottom: 50px;
   }
 
   button {
@@ -172,17 +157,3 @@ img {
   	border-radius: 10px;
   	background: #060a0b;
   }
-/*.text {
-  color: white;
-  font-size: 10pc;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-  }*/
-
-  /**********Signup.html****/
-
-

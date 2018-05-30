@@ -1,0 +1,33 @@
+.scroll {
+	float:right;
+	font-size:.85vw;
+	height: 400px;
+	margin-right:15%;
+	max-width: 30%;
+	margin-top: 10.3%;/*overflow: auto;*/
+	width: 72%;
+	/*margin-top: 7%;*/
+}
+
+.name {
+	display: inline-block;
+}
+
+#big_C {
+	float:left;
+	font-variant: small-caps;
+	font-size: 90%;
+	/*margin-left: -2%;*/
+	/*margin-top: 14%;*/
+	padding-bottom: 11%;
+	text-align: center;
+}
+
+#lil_a {
+	float:left;
+	font-size: 80%;
+	text-align: center;
+	font-variant: small-caps;
+	padding-bottom: 5%;
+	/*margin-right: 10%;*/
+}
