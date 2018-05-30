@@ -3,9 +3,10 @@
 	font-size:.85vw;
 	height: 400px;
 	margin-right:15%;
-	max-width: 30%;
+	max-width: 32%;
 	margin-top: 10.3%;/*overflow: auto;*/
-	width: 72%;
+	width: 82%;
+	overflow: hidden;
 	/*margin-top: 7%;*/
 }
 
@@ -29,10 +30,34 @@
 	text-align: center;
 	font-variant: small-caps;
 	padding-bottom: 5%;
-	/*margin-right: 10%;*/
 }
 
 #signUp { /*///form///*/
 	height:300px;
+	width:100%;
 	overflow: auto;
+}
+
+#names1, #names2, #names3, #names4 { /*input field*/
+	padding-top: 4%;
+	padding-bottom: 4%;
+	padding-left: 3%;
+	padding-right: 3%;
+	padding: 12%,5%;
+}
+
+#names2, #names4 {
+	margin-left: 2.9%;
+}
+
+#loginC { /*submit button*/
+	margin-right: 60px;
+	margin-bottom: 84px;
+}
+
+/*scroll bar*/
+::-webkit-scrollbar{
+	width: 2px;
+	/*height: 10px;*/
+	padding-top: 40px;
 }
