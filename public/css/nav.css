@@ -137,3 +137,39 @@ img, #med_chk {
 	/*background-color: red;*/
 	color: red;
 }
+
+/*Buttos inside of the nav dropdown area*/
+.inside_drpdown_btn {
+	position:relative;
+	background-color: red;
+	height: 48px;
+	outline: none;
+	width: 90px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.inside_drpdown_btn:after {
+	content:"";
+	background: yellow;
+	display: block;
+	position: absolute;
+	padding-top: 300%;
+	padding-left: 250%;
+	margin-left: -70px;
+	margin-top: -120%;
+	opacity: 0;
+	transition: all 1s
+}
+
+.inside_drpdown_btn:active:after {
+	padding: 0;
+	margin: 0;
+	opacity: 1;
+	transition: 0s
+}
+.inside_drpdown_btn:hover {
+	background-color: #700000;
+} 

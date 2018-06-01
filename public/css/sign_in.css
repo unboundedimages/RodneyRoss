@@ -1,0 +1,32 @@
+.si_name {
+	float: right;
+	font-variant: small-caps;
+	font-size: 426%;
+	height: 400px;
+	margin-right:15.5%;
+	margin-top: 13%;
+	max-width: 72%;
+	/*overflow: auto;*/
+}
+
+#enter1, #enter2 {
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+
+.register {
+	margin-top: -14%;
+	text-shadow: 2px 2px 30px #ff000029;
+}
+
+.regi_:hover {
+	color: #f8e504;
+}
+
+a.regi_ {
+	text-decoration: none;
+}
+
+#regi_button:active {
+	transform: translateY(4px);
+}

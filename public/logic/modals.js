@@ -2,10 +2,10 @@ function modal(event) {
 	console.log("+++++++++++++++++++++++++++++++++++++")
 	console.log("+++++++++++++++++++++++++++++++++++++")
 	console.log("this is modals event: ", event);
-	var modal = document.getElementById('myModal');
+	var modal = document.getElementById("myModal");
 
 	// // Get the button that opens the modal
-	var btn = document.getElementById("myBtn") 
+	var btn = document.getElementsByClassName("myBtn") 
 
 	var myForm = document.getElementById("getForm")
 	

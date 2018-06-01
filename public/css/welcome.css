@@ -1,0 +1,38 @@
+.greetings {
+	float:right;
+	max-height: 500px;
+	width: 600px;
+	margin-right: 53px;
+}
+
+#me {
+	margin-bottom: -11%;
+	padding-top: 22%;
+	
+}
+
+#rod {
+	font-size: 600%;
+	padding-bottom:17%;
+	margin-bottom: 2%
+}
+.nameW {
+	color: #eee;
+	font-size: 400%	;
+	height: 115px;
+	/*max-height: 146px;*/
+	padding-bottom: 6%;
+
+}
+
+#name2 {
+	color: #eee;
+	/*font-size: 8pc;*/
+	/*text-align: right;*/
+	padding-bottom: 7%;
+	/*margin-top: -3%;*/
+}
+
+.nameW, #name2, #me{
+	font-variant: small-caps;
+}

@@ -3,18 +3,19 @@
 <a href="/">
 	<img src="images/chicken.png" class="chicken" title="Back to welcome page">
 </a>
-<div class="name">Please Sign in</div>
-<form id="getForm" onsubmit="return modal(event)" name="signin" method="post" action="signin">
-	<input id="enter1" type="email" name="email" placeholder="you@site.com" title="Enter the email address used during registration" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false">
-	<input id="enter2" type="password" name="password" placeholder="password" title="Your password must be a minimumn of 8 characters or more." pattern=".{7,}" title="Must contain at least 7 characters or more" id="pw" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false">
-	<button id="myBtn" class="loginB" type="submit" value="Submit">SUBMIT</button>
-</form>
-<div>
-	<p>
-		<a href="SignUp" title="Create an account to gain access.">Register to Access</a>
+<div class="si_name">Please Sign in
+	<form id="getForm" onsubmit="return modal(event)" name="signin" method="post" action="signin">
+		<input id="enter1" type="email" name="email" placeholder="you@site.com" title="Enter the email address used during registration" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false">
+		<input id="enter2" type="password" name="password" placeholder="password" title="Your password must be a minimumn of 8 characters or more." pattern=".{7,}" title="Must contain at least 7 characters or more" id="pw" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false">
+		<button id="myBtn1" class="inside_drpdown_btn" type="submit" value="Submit">ENTER</button>
+	</form>
+
+	<div class="register">
+		<p>
+			<button id="regi_button"><a href="SignUp" title="Create an account to gain access." class="regi_">Register to Access</a></button>
+		</div>
 	</div>
 
-	
 	<div class="home">
 		<a href="/"><img src="images/home.png" class="home" title="back to welcome page"></a>
 	</div>
@@ -33,9 +34,9 @@
 
 						<form name="signin" method="post" action="signin">
 
-							<input class="modal_body_input" type="email" name="email">
-							<input class="modal_body_input" type="password" name="password">
-							<button class="myBtn1" class="loginB" type="submit" value="Submit">SUBMIT</button>
+							<input class="modal_body_input"type="email" name="email" placeholder="you@site.com" title="Enter the email address used during registration" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false"> &#13; &#13;
+							<input class="modal_body_input" class="space" type="password" name="password" placeholder="password" title="Your password must be a minimumn of 8 characters or more." pattern=".{7,}" title="Must contain at least 7 characters or more" id="pw" onCopy="return false" onDrag="return false" onPaste="return false" autocomplete=off onDrop="return false">
+							<button id="myBtn2" class="inside_drpdown_btn" type="submit" value="Submit">ENTER</button>
 
 						</form>
 					</span>
