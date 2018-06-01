@@ -82,14 +82,24 @@ img {
   	text-align: center;
   }
 
+  input[type=text], [type=password], [type=email] {
+  	background: transparent;
+  	border: none;
+  	border-bottom: 1px solid yellow;
+  }
+
   textarea {
   	background-color: #060a0b;
+  	border-bottom: 1px solid #ebdf44;
+  	border-left: none;
+  	border-right: 1px solid #ebdf44;
+  	border-top: none;
   	color: #eee;
   	text-align: justify-all;
   	padding-left: 2%;
   	padding-right: 2%;
   	padding-top: 1%;
-  	width: 92.5%;
+  	width: 88.6%;
   }
 
   a {
@@ -112,20 +122,20 @@ img {
   .loginB {
   	padding: 12px 8px;
   }
-
+/*
   #loginC {
   	float: right;
   	padding: 12px 8px;
   	margin-right: 32px;
   	margin-bottom: 50px;
-  }
+  	}*/
 
-  button {
-  	/*border-radius: 8px;*/
-  	background-color: #060a0b;
-  	border-width: 0;
-  	color: #eee;
-  }
+  	button {
+  		/*border-radius: 8px;*/
+  		background-color: #060a0b;
+  		border-width: 0;
+  		color: #eee;
+  	}
 
 
 /*.clear {

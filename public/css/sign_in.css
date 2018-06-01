@@ -3,7 +3,7 @@
 	font-variant: small-caps;
 	font-size: 426%;
 	height: 400px;
-	margin-right:10%;
+	margin-right:12%;
 	margin-top: 13%;
 	max-width: 72%;
 	/*overflow: auto;*/
@@ -16,4 +16,17 @@
 
 .register {
 	margin-top: -10%;
+	text-shadow: 2px 2px 30px #ff000029;
+}
+
+.regi_:hover {
+	color: #f8e504;
+}
+
+a.regi_ {
+	text-decoration: none;
+}
+
+#regi_button:active {
+	transform: translateY(4px);
 }
