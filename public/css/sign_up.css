@@ -10,6 +10,10 @@
 	/*margin-top: 7%;*/
 }
 
+.how {
+	margin-top: 7%;
+}
+
 .name {
 	display: inline-block;
 }
@@ -19,8 +23,8 @@
 	font-variant: small-caps;
 	font-size: 90%;
 	/*margin-left: -2%;*/
-	/*margin-top: 14%;*/
-	padding-bottom: 11%;
+	margin-top: 1%;
+	/*padding-bottom: 11%;*/
 	text-align: center;
 }
 
@@ -41,13 +45,13 @@
 #names1, #names2, #names3, #names4 { /*input field*/
 	padding-top: 4%;
 	padding-bottom: 4%;
-	padding-left: 2%;
-	padding-right: 2%;
+	padding-left: 3%;
+	padding-right: 3%;
 	padding: 12%,5%;
 }
 
 #names2, #names4 {
-	margin-left: 2.9%;
+	margin-left: 5.9%;
 }
 
 #loginC { /*submit button*/
