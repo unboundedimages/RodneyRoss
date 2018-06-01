@@ -22,12 +22,7 @@ body {
 }
 
 h2 {font-variant: small-caps;}
-.nameW {
-	color: #eee;
-	font-size: 8pc;
-	/*text-align: right;*/
-	padding-bottom: 6%;
-}
+
 .name {
 	color: #eee;
 	/*display: block;*/
@@ -38,13 +33,6 @@ h2 {font-variant: small-caps;}
 	padding-bottom: 6%;
 }
 
-#name2 {
-	color: #eee;
-	font-size: 8pc;
-	/*text-align: right;*/
-	padding-bottom: 7%;
-	margin-top: -3%;
-}
 img {
 	display: block;
 	width: 40%;
