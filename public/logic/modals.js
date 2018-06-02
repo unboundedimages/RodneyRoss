@@ -1,11 +1,11 @@
-function modal(event) {
-	console.log("+++++++++++++++++++++++++++++++++++++")
-	console.log("+++++++++++++++++++++++++++++++++++++")
-	console.log("this is modals event: ", event);
+onload = function modal(event) {
+	// console.log("+++++++++++++++++++++++++++++++++++++")
+	// console.log("+++++++++++++++++++++++++++++++++++++")
+	// console.log("this is modals event: ", event);
 	var modal = document.getElementById("myModal");
-
+	console.log("this is the modal var", modal)
 	// // Get the button that opens the modal
-	var btn = document.getElementsByClassName("myBtn") 
+	var btn = document.getElementById("submit", "submit2") 
 
 	var myForm = document.getElementById("getForm")
 	
@@ -14,8 +14,14 @@ function modal(event) {
 
 	// // When user submits form, open modal if error
 	myForm.onsubmit = function(event) {
+		console.log("this is the sumbit event", event);
+		setTimeout(function(){
+			var popup = modal.style.display = "block";
+			if(popup === true) {
+				return(popup)
+			}
 
-		modal.style.display = "block";
+		}, 1000);
 	}
 
 	// // When the user clicks on <span> (x), close the modal

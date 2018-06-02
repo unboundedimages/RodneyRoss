@@ -17,6 +17,7 @@
 .register {
 	margin-top: -14%;
 	text-shadow: 2px 2px 30px #ff000029;
+	outline-color: red;
 }
 
 .regi_:hover {
@@ -25,8 +26,13 @@
 
 a.regi_ {
 	text-decoration: none;
+	outline-color: red;
+}
+a.regi_button {
+	outline-color: red;
 }
 
 #regi_button:active {
 	transform: translateY(4px);
+	outline-color: red;
 }
