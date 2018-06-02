@@ -15,7 +15,13 @@ onload = function modal(event) {
 	// // When user submits form, open modal if error
 	myForm.onsubmit = function(event) {
 		console.log("this is the sumbit event", event);
-		modal.style.display = "block";
+		setTimeout(function(){
+			var popup = modal.style.display = "block";
+			if(popup === true) {
+				return(popup)
+			}
+
+		}, 1000);
 	}
 
 	// // When the user clicks on <span> (x), close the modal

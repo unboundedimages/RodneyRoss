@@ -16,7 +16,7 @@ exports.signin = function(req, res) {
 }
 //controller for dashboard
 exports.Port = function(req, res) {
-	console.log("this is req from authcontroller.js: ", req)
+	// console.log("this is req from authcontroller.js: ", req)
 	var path = require('path');
 	var db = require('../models');
 	db.loginLog.findAll({
