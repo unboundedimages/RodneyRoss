@@ -67,6 +67,7 @@ img {
   	padding-top: 1%;
   	padding-bottom: 1%;
   	padding: 12%,3%;
+  	outline-color: red;
   	text-align: center;
   }
 
@@ -83,10 +84,11 @@ img {
   	border-right: 1px solid #ebdf44;
   	border-top: none;
   	color: #eee;
-  	text-align: justify-all;
+  	outline-color: red;
   	padding-left: 2%;
   	padding-right: 2%;
   	padding-top: 1%;
+  	text-align: justify-all;
   	width: 88.6%;
   }
 
@@ -123,6 +125,7 @@ img {
   		background-color: #060a0b;
   		border-width: 0;
   		color: #eee;
+  		outline-color: red;
   	}
 
 
