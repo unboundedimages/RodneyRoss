@@ -183,6 +183,16 @@ img, #med_chk {
 	background-color: #700000;
 } 
 
+#how {
+	font-variant: small-caps;
+	/*font-size: 40%;*/
+	position:absolute;
+	margin-left:30%;
+	margin-top: 8%;
+	/*margin-left: -70px;*/
+
+}	
+
 /*/////////////////////////////////////*/
 /*///////// sticky images /////////////*/
 /*/////////////////////////////////////*/
@@ -211,7 +221,7 @@ img, #med_chk {
 	width: 300%;
 	margin-right: 60px;
 	margin-left: -12%;
-	margin-top:-16%;
+	margin-top:-14%;
 }
 
 #new_clr:hover {
