@@ -30,11 +30,19 @@ img, #med_chk {
 	padding: 3%;
 }
 
+/*/////////////////////////////////////*/
+/*///////////navbar///////////////////*/
 /* Add a black background color to the top navigation */
 .topnav {
 	background-color: #333;
 	overflow: hidden;
 	overflow-y:hidden;
+	margin-bottom: 0.5%;
+	margin-top: -0.5%;
+	margin-left: -0.5%;
+	margin-right: -0.5%;
+	/*padding-left:0.5%;*/
+	padding-top:0.5%;
 }
 
 .dropdown {
@@ -47,7 +55,7 @@ img, #med_chk {
 	border: none;
 	outline: none;
 	color: white;
-	padding: 14px 16px;
+	padding: 14px 16px; /*///button sizes*/
 	background-color: inherit;
 	font-family: inherit;
 	margin: 0;
@@ -60,7 +68,7 @@ img, #med_chk {
 	margin-left: 5%;
 	margin-right: 5%;
 	max-width: 40%;
-	padding-top: 30px;
+	padding-top: 30px; /*//pushes down content inside of tab dropdown*/
 	text-align: justify;
 	scroll-behavior: smooth;
 	height: 500px;
@@ -87,7 +95,8 @@ img, #med_chk {
 	right: 0;
 	background-color: #ffeb04;
 	color: black;
-	min-width: 160px;
+	/*min-width: 10px;*/
+	width:100%; /*///width of the dropdown tabs body*/
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
 }
@@ -197,6 +206,14 @@ img, #med_chk {
 }
 
 #starburst {
+	/*float: left;*/
 	height: auto;
-	width: 100%;
+	width: 300%;
+	margin-right: 60px;
+	margin-left: -12%;
+	margin-top:-16%;
+}
+
+#new_clr:hover {
+	background-color:#ebdf44;
 }
