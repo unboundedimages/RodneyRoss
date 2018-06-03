@@ -181,21 +181,15 @@ img, #med_chk {
 #bak_bak {
 	height: auto;
 	width: 18%;
-	margin-top: 19%;
+	margin-top: 17%;
 	position: absolute;
-	margin-left: 64%;
+	margin-left: 66%;
 }
 
 #call_me {
 	height: auto;
-	height: 1200px;
-	width: 1300px;
-	width: 60%;
+	width: 307%;
 	margin-left:-10%;
-	margin-right: 20px;
-	margin-top: -18%;
+	margin-right: 60px;
+	margin-top: -25%;
 }
-
-
-#starburst:hover  p {
-	display: block;
