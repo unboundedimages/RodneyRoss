@@ -173,3 +173,29 @@ img, #med_chk {
 .inside_drpdown_btn:hover {
 	background-color: #700000;
 } 
+
+/*/////////////////////////////////////*/
+/*///////// sticky images /////////////*/
+/*/////////////////////////////////////*/
+
+#bak_bak {
+	height: auto;
+	width: 18%;
+	margin-top: 19%;
+	position: absolute;
+	margin-left: 64%;
+}
+
+#call_me {
+	height: auto;
+	height: 1200px;
+	width: 1300px;
+	width: 60%;
+	margin-left:-10%;
+	margin-right: 20px;
+	margin-top: -18%;
+}
+
+
+#starburst:hover  p {
+	display: block;
