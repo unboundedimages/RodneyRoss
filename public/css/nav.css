@@ -190,9 +190,24 @@ img, #med_chk {
 	margin-left:30%;
 	margin-top: 3.4%;
 	/*margin-left: -70px;*/
-
 }	
 
+#joke {
+	font-size: 11px;
+	font-weight:normal;
+}
+
+.digits {
+	color:red;
+	/*font-weight: normal;*/
+	font-size: 16px;
+}
+
+.hearts {
+	/*color: #2B794F;*/
+	/*text-shadow: 10px 14px 15px #552803, 1px 1px 2px black;*/
+	color: red; 
+}
 /*/////////////////////////////////////*/
 /*///////// sticky images /////////////*/
 /*/////////////////////////////////////*/
@@ -225,6 +240,6 @@ img, #med_chk {
 	margin-top:-14%;
 }
 
-#new_clr:hover {
+/*#new_clr:hover {
 	background-color:#ebdf44;
-}
+}*/
