@@ -22,7 +22,7 @@
 	padding-top: 5px;
 }
 /*Chicken in About dropdown*/
-img, #med_chk {
+img, .med_chk {
 	float: left;
 	max-height: auto;
 	max-width: 500px;
@@ -147,6 +147,11 @@ img, #med_chk {
 	color: red;
 }
 
+.buttonsss {
+	position:absolute;
+	/*margin-top:25.55%;*/ /*shrinks and stays relative original layout - good for mobile responsive..maybe*/
+	margin-top:349px;  /*stays in same location when screen resizes*/
+}
 /*Buttos inside of the nav dropdown area*/
 .inside_drpdown_btn {
 	position:relative;
@@ -216,15 +221,6 @@ img, #med_chk {
 /*///////// sticky images /////////////*/
 /*/////////////////////////////////////*/
 
-/*#bak_bak {
-	display: none;
-	height: auto;
-	width: 25%;
-	margin-top: 17%;
-	position: absolute;
-	margin-left: 70%;
-	}*/
-
 #call_me {
 	display: none;
 	height: auto;
@@ -238,10 +234,10 @@ img, #med_chk {
 	/*float: left;*/
 	/*display: none;*/
 	height: auto;
-	width: 300%;
-	margin-right: 60px;
-	margin-left: -3%;
-	margin-top:-14%;
+	width: 200%;
+	margin-right: 10px;
+	margin-left: 17%;
+	margin-top:-4%;
 }
 
 /*#new_clr:hover {
