@@ -12,4 +12,11 @@
 		hideStarburst.style.display = "none";
 		hidehow2.style.display = "none";
 	}
+	let emailBtn = document.getElementById('email_btn');
+	// let hideBakBak = document.getElementById('bak_bak');
+	emailBtn.onclick = () => {
+		bak_bak.style.display = "none";
+		imgs.style.display = "none";
+		hideStarburst.style.display = "block";
+	}
 })();
