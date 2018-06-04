@@ -216,14 +216,14 @@ img, #med_chk {
 /*///////// sticky images /////////////*/
 /*/////////////////////////////////////*/
 
-#bak_bak {
+/*#bak_bak {
 	display: none;
 	height: auto;
 	width: 25%;
 	margin-top: 17%;
 	position: absolute;
 	margin-left: 70%;
-}
+	}*/
 
 #call_me {
 	display: none;
@@ -240,7 +240,7 @@ img, #med_chk {
 	height: auto;
 	width: 300%;
 	margin-right: 60px;
-	margin-left: -12%;
+	margin-left: -3%;
 	margin-top:-14%;
 }
 
