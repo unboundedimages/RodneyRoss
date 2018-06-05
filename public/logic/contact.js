@@ -3,10 +3,11 @@
 (call_me = () => {
 	let phoneBtn = document.getElementById('phone_btn');
 	let joke = document.getElementById("joke");
+	let  email = document.getElementById("email");
 	(phoneBtn.onclick = () => {
 		
 		if (joke.style.display === "none") {
-			
+			email.style.display ="none";
 			joke.style.display ="block";
 			
 		} else { 
@@ -21,8 +22,11 @@
 
 		if (joke.style.display = "block") {
 			joke.style.display = "none";
+			email.style.display ="block";
+		} 
+
+		if (email.stye.display = "block") {
+			email.style.display = "none";
 		}
-		imgs.style.display = "none";
-		hideStarburst.style.display = "block";
 	}
 })();
