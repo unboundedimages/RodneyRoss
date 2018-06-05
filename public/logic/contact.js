@@ -7,7 +7,7 @@
 	(phoneBtn.onclick = () => {
 		
 		if (joke.style.display === "none") {
-			email.style.display ="none";
+			// email.style.display ==="none";
 			joke.style.display ="block";
 			
 		} else { 
@@ -18,15 +18,17 @@
 
 	let emailBtn = document.getElementById('email_btn');
 	// let hideBakBak = document.getElementById('bak_bak');
-	emailBtn.onclick = () => {
+	(emailBtn.onclick = () => {
 
-		if (joke.style.display = "block") {
-			joke.style.display = "none";
-			email.style.display ="block";
+		if (joke.style.display === "block") {
+			joke.style.display = "none" ,
+			email.style.display =="block";
 		} 
 
-		if (email.stye.display = "block") {
+		if (email.style.display === "none") {
+			email.style.display = "block";
+		} else {
 			email.style.display = "none";
 		}
-	}
+	})();
 })();
