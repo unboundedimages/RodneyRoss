@@ -31,3 +31,10 @@
 		}
 	})();
 })();
+
+(resume = () => {
+	let resumeBtn = document.getElementById('resume');
+	resumeBtn.onclick = () => {
+		window.open('/images/Resume.pdf', 'newwindow', 'width=100%', 'height=auto'); return false;
+	};
+})();
