@@ -2,12 +2,13 @@
 //displays phone number sticky
 (call_me = () => {
 	let phoneBtn = document.getElementById('phone_btn');
+	let emailBtn = document.getElementById('email_btn');
 	let joke = document.getElementById("joke");
 	let  email = document.getElementById("email");
 	(phoneBtn.onclick = () => {
 		
 		if (joke.style.display === "none") {
-			// email.style.display ==="none";
+			email.style.display ="none";
 			joke.style.display ="block";
 			
 		} else { 
@@ -16,8 +17,6 @@
 		}
 	})();
 
-	let emailBtn = document.getElementById('email_btn');
-	// let hideBakBak = document.getElementById('bak_bak');
 	(emailBtn.onclick = () => {
 
 		if (joke.style.display === "block") {
@@ -31,4 +30,11 @@
 			email.style.display = "none";
 		}
 	})();
+})();
+
+(resume = () => {
+	let resumeBtn = document.getElementById('resume');
+	resumeBtn.onclick = () => {
+		window.open('/images/Resume.pdf', 'newwindow', 'width=100%', 'height=auto'); return false;
+	};
 })();
