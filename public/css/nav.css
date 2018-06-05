@@ -202,6 +202,9 @@ img, .med_chk {
 	font-weight:normal;
 }
 
+#joke:after {
+	transition: all 1s
+}
 .digits {
 	color:red;
 	/*font-weight: normal;*/
