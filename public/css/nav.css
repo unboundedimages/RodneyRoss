@@ -236,15 +236,19 @@ img, .med_chk {
 }
 
 #starburst {
-	/*float: left;*/
-	/*display: none;*/
 	height: auto;
 	width: 200%;
 	margin-right: 10px;
 	margin-left: 17%;
 	margin-top:-4%;
+	overflow: none;
+	position: static;
 }
 
-/*#new_clr:hover {
-	background-color:#ebdf44;
-}*/
+/*////////////////////////////////*/
+/*/////////// pdf ///////////////*/
+/*//////////////////////////////*/
+
+#resume {
+	position: absolute;
+}
