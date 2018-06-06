@@ -10,7 +10,7 @@
 		if (joke.style.display === "none") {
 			email.style.display ="none";
 			joke.style.display ="block";
-			
+			how2.style.display = "block";
 		} else { 
 
 			joke.style.display ="none";
@@ -25,7 +25,8 @@
 		} 
 
 		if (email.style.display === "none") {
-			email.style.display = "block";
+			how2.style.display = "none";
+			email.style.display = "inline-block";
 		} else {
 			email.style.display = "none";
 		}

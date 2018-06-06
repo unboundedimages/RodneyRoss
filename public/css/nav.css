@@ -207,6 +207,15 @@ img, .med_chk {
 	display: none;
 }
 
+.email_img {
+	height:auto;
+	width:215px;
+	margin-left: 20px;
+	margin-top: -15px;
+	margin-bottom: -60px;
+	padding-bottom: 33px
+}
+
 .digits {
 	color:red;
 	/*font-weight: normal;*/
