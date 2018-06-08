@@ -1,5 +1,4 @@
 <div class="topnav">
-	<div id="clock"></div>
 	<div>
 		<a class="active" href="#home">Home</a>
 		{{!-- <a href="#news">News</a> --}}
@@ -129,6 +128,8 @@
 <div id="bigChken">
 	<img src="/images/chicken.png">
 </div>
-<iframe src="https://www.youtube.com/embed/0ir1l0K2ask" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<div id="clock" onload="amPm()"></div>
+{{!-- <iframe src="https://www.youtube.com/embed/0ir1l0K2ask" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> --}}
 
 <script type="text/javascript" src="logic/contact.js"></script>
+<script type="text/javascript" src="logic/ampm.js"></script>

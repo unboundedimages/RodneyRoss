@@ -1,20 +1,20 @@
-let amPm = () = > {
-	let now = new Date();
-	let h = now.getHours();
-	let m = now.getMinutes();
-	let s = now.getSeconds();
+onload = amPm =() => {
+	let time = new Date();
+	let h = time.getHours();
+	let m = time.getMinutes();
+	let s = time.getSeconds();
 	m = checkTime(m);
 	s = checkTime(s);
 
 
-	document.getElementsByTagName('ampm').innerHTML =
+	document.getElementById('clock').innerHTML =
 	h + ":" + m + ":" + s;
 	let t = setTimeout(amPm, 500);
 }
 
-checktime(i) = > {
+checkTime = (i) => {
 	if(i < 10) {
 		i = "0" + i
 	};
 	return i;
-}
+};
