@@ -276,6 +276,29 @@ iframe {
 	margin-left:-61px;
 	width:7%;
 }
+
+#red_welcome {
+	color:red;
+	display: inline-block;
+	margin: 0;
+}
+
+.fade {
+	content: "";
+	width: 100%;
+	height: 150px;
+	display: block;
+	position: absolute;
+	background: rgba(150, 123, 19, 1);
+	background: -webkit-gradient(linear, 0% 20% 50% 100%, from(rgba(225, 235, 4, 1)), to(rgba(225, 4, 4, 0.31)));
+	background: -webkit-linear-gradient(top, transparent, #ffeb04, #ffeb04);
+	background: -moz-linear-gradient(top, rgba(225, 235, 4, 1), rgba(225, 4, 4, 0.31));
+	background: -ms-linear-gradient(top, rgba(225, 235, 4, 1), rgba(225, 4, 4, 0.31));
+	background: -o-linear-gradient(top, rgba(1225, 235, 4, 1), rgba(225, 4, 4, 0.31));
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+}	
 /*////////////////////////////////*/
 /*/////////// pdf ///////////////*/
 /*//////////////////////////////*/

@@ -6,7 +6,7 @@ onload = amPm =() => {
 	let tz = h - 12;
 	m = checkTime(m);
 	s = checkTime(s);
-	
+
 	fixTime = () => {
 		if (h < 13) {
 			return h;
@@ -25,8 +25,8 @@ onload = amPm =() => {
 	fixTime() + ":" + m + ":" + s + " " + showAmPm();
 	let t = setTimeout(amPm, 500);
 }
-
-checkTime = (i) => {
+// add zero in front of numbers < 10
+checkTime = (i) => { 
 	if(i < 10) {
 		i = "0" + i
 	};
