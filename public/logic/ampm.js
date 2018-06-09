@@ -8,7 +8,7 @@ onload = amPm =() => {
 
 
 	document.getElementById('clock').innerHTML =
-	h + ":" + m + ":" + s;
+	h + ":" + m + ":" + s + " " + showAmPm();
 	let t = setTimeout(amPm, 500);
 }
 
@@ -18,3 +18,10 @@ checkTime = (i) => {
 	};
 	return i;
 };
+
+showAmPm = () => {
+	if (amPm < 12) {
+		return "AM"
+	}
+	return "PM";
+}
