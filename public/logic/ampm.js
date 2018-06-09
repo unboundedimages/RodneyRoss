@@ -3,12 +3,26 @@ onload = amPm =() => {
 	let h = time.getHours();
 	let m = time.getMinutes();
 	let s = time.getSeconds();
+	let tz = h - 12;
 	m = checkTime(m);
 	s = checkTime(s);
+	
+	fixTime = () => {
+		if (h < 13) {
+			return h;
+		}
+		return tz;
+	}
 
+	showAmPm = () => {
+		if (h < 12) {
+			return "AM"
+		} 
+		return "PM";
+	}
 
 	document.getElementById('clock').innerHTML =
-	h + ":" + m + ":" + s + " " + showAmPm();
+	fixTime() + ":" + m + ":" + s + " " + showAmPm();
 	let t = setTimeout(amPm, 500);
 }
 
@@ -19,9 +33,4 @@ checkTime = (i) => {
 	return i;
 };
 
-showAmPm = () => {
-	if (amPm < 12) {
-		return "AM"
-	}
-	return "PM";
-}
+

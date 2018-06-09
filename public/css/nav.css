@@ -42,7 +42,7 @@ img, .med_chk {
 	margin-left: -0.5%;
 	margin-right: -0.5%;
 	/*padding-left:0.5%;*/
-	padding-top:0.5%;
+	/*padding-top:0.5%;*/
 }
 
 .dropdown {
@@ -266,12 +266,15 @@ iframe {
 	margin-left: 100px;
 }
 
-#clock {
+#clock, .drpbtn {
+	background-color: inherit; 
 	color: white;
-	font-size: 25px;
+	font-size: 18px;
 	float:right;
-	margin:6px;
-	margin-left:-55px;
+	/*margin:6px;*/
+	/*padding:0;*/
+	margin-left:-61px;
+	width:7%;
 }
 /*////////////////////////////////*/
 /*/////////// pdf ///////////////*/
