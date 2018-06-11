@@ -16,13 +16,13 @@ onload = amPm =() => {
 
 	showAmPm = () => {
 		if (h < 12) {
-			return "AM"
+			return "A"
 		} 
-		return "PM";
+		return "P";
 	}
 
 	document.getElementById('clock').innerHTML =
-	fixTime() + ":" + m + ":" + s + " " + showAmPm();
+	fixTime() + ":" + m + ":" + s + " " + '<b class="ur_Nme">' + showAmPm() + '</b>' + '<b class="i">M</b>';
 	let t = setTimeout(amPm, 500);
 }
 // add zero in front of numbers < 10
