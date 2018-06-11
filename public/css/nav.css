@@ -15,6 +15,7 @@
 	margin-right: 4%;
 }
 
+
 #bigChken {
 	max-height: auto;
 	width: 85%;
@@ -318,6 +319,17 @@ iframe {
 	text-align: right;
 	width: 75%;
 }
+
+@media screen and (max-width: 480px) {
+	#hello {float:left}
+	#home {display: none;}
+	#l_o {position: absolute; margin-left:73%; margin-top: 12.4%;}
+	#bigChken {position: absolute; padding-top: 300px; padding-left:40%; overflow-x: hidden;}
+	#quotes {text-align: left; font-size: 175%; padding-left: 10%}
+	#clock {position: absolute; width: 500px; margin-top: 120%; font-size: 51px; margin-left: -18%;}
+	/*#clockDiv {position: absolute; width: 500px; margin-top: 100px;}*/
+}
+
 
 /*////////////////////////////////*/
 /*/////////// pdf ///////////////*/
