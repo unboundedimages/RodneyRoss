@@ -1,18 +1,18 @@
 <div class="topnav">
 	<div>
 		<a class="active" href="#home">Home</a>
-		{{!-- <a href="#news">News</a> --}}
-		{{!-- <a href="#contact">Contact</a> --}}
-		<div id="time" ></div>
+		<div class="dropbtn">
+			<button class="inside_drpdown_btn" id="clock"></button>
+		</div>
 		<div id="l_o">
 			<a href="/logout"><b>Logout</b></a>
 		</div>
 		<div id="hello">
 			{{!-- <a href="#"><h3 id="hi">Hello {{userName}} welcome to my site.</h3></a> --}}
-			<a href="#">Hello <b id="ur_Nme">{{userName}}</b> welcome to my site.</a>
+			<a href="#">Hello <b class="ur_Nme">{{userName}}</b> welcome to my site.</a>
 		</div>
 		<div id="small_chk">
-			<img src="/images/chicken.png">
+			<!-- <img src="/images/chicken.png"> -->
 		</div>
 
 		<div class="dropdown" class="dropbtn">
@@ -62,7 +62,6 @@
 				<div class="buttonsss">
 					<button id="phone_btn" class="inside_drpdown_btn">Phone</button> 
 					<button id="email_btn" class="inside_drpdown_btn">Email</button> 
-					{{!-- <button id="linkedin_btn" class="inside_drpdown_btn">IN</button> --}}
 				</div>
 			</div>
 		</div> 
@@ -77,7 +76,9 @@
 				<div >
 					<a href="#" id="drp_clr_bdy">
 
-						Welcome to my page and thank you for taking the time to log in.  I am a Full Stack Web Developer and completed a Full Stack Web development program offered at The University of North Carolina - Charlotte.  The program focused on everything from basic front end langauges like HTML and CSS, to libraries such as Bootstrap and Materialize.  We learned DOM manupulation with vanilla javascript, then advanced to jQuery, Handlebars, and capped the curriculumn off with REACT JS.  We also learn database manage systems such as Google's Firebase, Mongo, and MySQL.  The biggest take away that I acquired from the class was become familiar with the docs, and then ask Google. More then likely someone else has had the same question. 
+						<P>
+							<h3 id="red_welcome">Welcome</h3> to my page and thank you for taking the time to log in.  I am a Full Stack Web Developer and completed a Full Stack Web development program offered at The University of North Carolina - Charlotte.  The program focused on everything from basic front end langauges like HTML and CSS, to libraries such as Bootstrap and Materialize.  We learned DOM manupulation with vanilla javascript, then advanced to jQuery, Handlebars, and capped the curriculumn off with REACT JS.  We also learn database manage systems such as Google's Firebase, Mongo, and MySQL.  The biggest take away that I acquired from the class was become familiar with the docs, and then ask Google. More then likely someone else has had the same question.
+						</P>
 
 						<p>
 							Since completion of of the course I continue to build my knowledge base and understanding, to write cleaner and more effective code.  This website is my personal play ground to practice as well as show case future deployed apps.  So please feel free to check back from time to time see what's new.
@@ -104,9 +105,10 @@
 						</p>
 
 						<p>
-							There have been many take great aways fron this project and if you've made it this far I want to say thank you for taking the time to read a little bit about me.  This is just a glimpse and I look forward to an opportunity that includes  you.  Positive vibes and Peace. 
-						</p>
+							There have been many great take aways fron this project and if you've made it this far I want to say thank you for taking the time to read a little bit about me.  This is just a glimpse and I look forward to an opportunity that includes  you.  Positive vibes and Peace. 
+						</p><br><br><br><br><br><br><br><br>
 
+						<div class="fade"></div>
 					</a>
 					<div class="med_chk">
 						<img src="/images/chicken.png">
@@ -117,9 +119,8 @@
 					<div class="buttonsss">
 						<button id="resume" class="inside_drpdown_btn">Resume</button>
 
-						<button class="inside_drpdown_btn">Future</button>
+						<button id="foto" class="inside_drpdown_btn">Fotographia</button>
 					</div>
-					{{!-- <a href="#" class="topnav">Future  </a> --}}
 				</div>
 			</div>
 		</div> 
@@ -128,6 +129,8 @@
 <div id="bigChken">
 	<img src="/images/chicken.png">
 </div>
-<iframe src="https://www.youtube.com/embed/0ir1l0K2ask" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<div id="quotes">"A man who has no imagination has no wings." -<h2>Muhammad <b class="ur_Nme">A</b><b class="l">l</b><b class="i">i</b></div>
+	{{!-- <iframe src="https://www.youtube.com/embed/0ir1l0K2ask" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> --}}
 
-<script type="text/javascript" src="logic/contact.js"></script>
+	<script type="text/javascript" src="logic/contact.js"></script>
+	<script type="text/javascript" src="logic/ampm.js"></script>

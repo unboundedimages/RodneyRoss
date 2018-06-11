@@ -36,6 +36,13 @@
 (resume = () => {
 	let resumeBtn = document.getElementById('resume');
 	resumeBtn.onclick = () => {
-		window.open('/images/Resume.pdf', 'newwindow', 'width=100%', 'height=auto'); return false;
+		window.open('/images/Resume.pdf', 'newwindow', 'width=140%', 'height=auto'); return false;
+	};
+})();
+
+(fotographia = () => {
+	let fotoBtn = document.getElementById('foto');
+	fotoBtn.onclick = () => {
+		window.open('http://www.unboundedimages.com', '_blank'); return false;
 	};
 })();
