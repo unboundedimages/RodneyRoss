@@ -320,13 +320,30 @@ iframe {
 	width: 75%;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) and (min-width: 361px) {
 	#hello {float:left}
 	#home {display: none;}
 	#l_o {position: absolute; margin-left:73%; margin-top: 12.4%;}
 	#bigChken {position: absolute; padding-top: 300px; padding-left:40%; overflow-x: hidden;}
 	#quotes {text-align: left; font-size: 175%; padding-left: 10%}
 	#clock {position: absolute; width: 500px; margin-top: 120%; font-size: 51px; margin-left: -18%;}
+	/*#clockDiv {position: absolute; width: 500px; margin-top: 100px;}*/
+}
+
+@media screen and (max-width: 321px) {
+	.topnav {margin-right:-19.5%; max-width: 112%}
+	.dropdown-content {width: 107%; right:-28px;}
+	.inside_drpdown_btn{margin-left: 6%;}
+	#contactTab {margin-left: 80px}	
+	#hello {float:left}
+	#home {position:absolute; margin-top: 48px;}
+	/*#aboutTab {margin-left: 1px;}*/
+	#l_o {position: absolute; margin-left:78%; margin-top: 15%; margin-right:-3%;}
+	#bigChken {position: fixed; top: 21%; width: 170%;}
+	/*#bigChken {position: absolute; margin-top: 108%; margin-left: 81%; width: 50%; overflow-x: hidden;}*/
+	.justify {text-align: right; font-size: 90%}
+	#quotes {position: fixed; bottom: 35%; right: 11%; text-align: right; font-size: 122%;}
+	#clock {position: fixed; width: 308px; left: 10%; bottom: 20%; font-size: 51px;}
 	/*#clockDiv {position: absolute; width: 500px; margin-top: 100px;}*/
 }
 
