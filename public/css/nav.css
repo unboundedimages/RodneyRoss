@@ -329,21 +329,23 @@ iframe {
 	#clock {position: absolute; width: 500px; margin-top: 120%; font-size: 51px; margin-left: -18%;}
 	/*#clockDiv {position: absolute; width: 500px; margin-top: 100px;}*/
 }
-
+/*///////iphone5/SE portrait orientatio//////////*/
 @media screen and (max-width: 321px) {
 	.topnav {margin-right:-19.5%; max-width: 112%}
+	.dropdown {position:static; float:right;}
 	.dropdown-content {width: 107%; right:-28px;}
 	.inside_drpdown_btn{margin-left: 6%;}
-	#contactTab {margin-left: 80px}	
-	#hello {float:left}
+	#contactTab {margin-right: 94px;}	
+	#hello {position:absolute; margin: 49px 0px 0px 0px;}
+	#hello_link {width:116.4%;};
 	#home {position:absolute; margin-top: 48px;}
 	/*#aboutTab {margin-left: 1px;}*/
-	#l_o {position: absolute; margin-left:78%; margin-top: 15%; margin-right:-3%;}
+	#l_o {position: absolute; margin-left:78%; margin-right:-3%;}
 	#bigChken {position: fixed; top: 21%; width: 170%;}
 	/*#bigChken {position: absolute; margin-top: 108%; margin-left: 81%; width: 50%; overflow-x: hidden;}*/
 	.justify {text-align: right; font-size: 90%}
-	#quotes {position: fixed; bottom: 35%; right: 11%; text-align: right; font-size: 122%;}
-	#clock {position: fixed; width: 308px; left: 10%; bottom: 20%; font-size: 51px;}
+	#quotes {position: fixed; bottom: 6%; right: 14%; text-align: right; font-size: 122%;}
+	#clock {position: fixed; width: 308px; left: 10%; bottom: 75%; font-size: 51px;}
 	/*#clockDiv {position: absolute; width: 500px; margin-top: 100px;}*/
 }
 
