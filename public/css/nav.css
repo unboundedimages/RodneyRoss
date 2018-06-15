@@ -308,6 +308,10 @@ iframe {
 	bottom: 0;
 	left: 0;
 	z-index: 10;
+}
+
+#clock2 {
+	display:none;
 }	
 
 #quotes {
@@ -320,14 +324,27 @@ iframe {
 	width: 75%;
 }
 
-@media screen and (max-width: 480px) and (min-width: 361px) {
-	#hello {float:left}
-	#home {display: none;}
-	#l_o {position: absolute; margin-left:73%; margin-top: 12.4%;}
-	#bigChken {position: absolute; padding-top: 300px; padding-left:40%; overflow-x: hidden;}
-	#quotes {text-align: left; font-size: 175%; padding-left: 10%}
-	#clock {position: absolute; width: 500px; margin-top: 120%; font-size: 51px; margin-left: -18%;}
-	/*#clockDiv {position: absolute; width: 500px; margin-top: 100px;}*/
+
+
+/*///////////iphone 7 plus Portrait Orientation /////////////*/
+@media screen and (max-width: 414px) and (min-width: 376px) {
+	.topnav {position: fixed; width: 97%}
+	.dropdown {position:static; float:right;}
+	.dropdown-content {width: 107%; right:-28px;}
+	.inside_drpdown_btn{margin-left: 6%;}
+	#contactTab {margin-right: 97px;}	
+	#hello {display:none;}
+	#hello2 {display: block; position:fixed; left: 31px; top: 65px;}
+	#hello_link {width:116.4%;  z-index: 3;};
+	#home {position:fixed; margin-top: 48px;}
+	#l_o {position: absolute; margin-left:78%; margin-right:-3%;}
+	#bigChken {position: fixed; top: 28%; width: 147%; left:15%;}
+	.justify {text-align: right; font-size: 90%}
+	#quotes {position: fixed; bottom: 2%; right: 18%; text-align: right; font-size: 122%;}
+	#clock {display:hidden;}
+	#clock2 {display:block; color:white; font-size: 70px; position:fixed; top:15%;}
+	.P {position: fixed; right: 180px; top:25%;}
+	.M {position: fixed; right: 120px; top:25%;}
 }
 /*///////iphone5/SE portrait orientatio//////////*/
 @media screen and (max-width: 321px) {
@@ -339,14 +356,11 @@ iframe {
 	#hello {position:absolute; margin: 49px 0px 0px 0px;}
 	#hello_link {width:116.4%;};
 	#home {position:absolute; margin-top: 48px;}
-	/*#aboutTab {margin-left: 1px;}*/
 	#l_o {position: absolute; margin-left:78%; margin-right:-3%;}
 	#bigChken {position: fixed; top: 21%; width: 170%;}
-	/*#bigChken {position: absolute; margin-top: 108%; margin-left: 81%; width: 50%; overflow-x: hidden;}*/
 	.justify {text-align: right; font-size: 90%}
 	#quotes {position: fixed; bottom: 6%; right: 14%; text-align: right; font-size: 122%;}
-	#clock {position: fixed; width: 308px; left: 10%; bottom: 75%; font-size: 51px;}
-	/*#clockDiv {position: absolute; width: 500px; margin-top: 100px;}*/
+	#clock {position: fixed; width: 308px; left: 10%; bottom: 75%; font-size: 52px;}
 }
 
 
