@@ -159,6 +159,8 @@ img, .med_chk {
 	color: #ffeb04;
 }
 
+/*.hide_me {display:none;}*/
+
 .buttonsss {
 	position:absolute;
 	/*margin-top:25.55%;*/ /*shrinks and stays relative original layout - good for mobile responsive..maybe*/
@@ -335,8 +337,19 @@ iframe {
 	.dropbtn {overflow: visible;}
 	.dropdown {position:static; float:left;}
 	.dropdown-content {width: 97%; right:6px; position:fixed; z-index:10;}
+	#how {left:5%; top:2%; position: absolute; margin-left: 0; width: 255px;}
+	.digits {
+		color:red;
+		/*font-weight: normal;*/
+		font-size: 21px;
+	}
+	.enjoy {margin-top: -5px;}	
+	#starburst {position:absolute; width:65%; top:324px; left:240px; z-index: 0; margin-left: 0; margin-top:0; transform: skewY(-23deg)skewX(60deg); -webkit-transform: skewY(-23deg)skewX(60deg);}
+	.buttonsss {top: 23px; left: 12px;}
+	.med_chk {position:absolute; bottom: 109px; width: 40%; z-index:2; right:-27px;}
 	/*.inside_drpdown_btn{margin-left: 6%;}*/
 	/*#contactTab {margin-right: 8px;}	*/
+	/*.hide_me { display:block; }*/
 	#hello {display:none;}
 	#hello2 {display: block; position:fixed; right: 102px; top: 21px;}
 	#hello_link {width:116.4%;  z-index: 3;};
