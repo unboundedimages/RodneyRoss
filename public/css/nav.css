@@ -159,239 +159,250 @@ img, .med_chk {
 	color: #ffeb04;
 }
 
-.buttonsss {
-	position:absolute;
-	/*margin-top:25.55%;*/ /*shrinks and stays relative original layout - good for mobile responsive..maybe*/
-	margin-top:349px;  /*stays in same location when screen resizes*/
-}
-/*Buttos inside of the nav dropdown area*/
-.inside_drpdown_btn {
-	position:relative;
-	background-color: red;
-	height: 48px;
-	outline: none;
-	width: 90px;
-	-webkit-transition-duration: 0.4s; /* Safari */
-	transition-duration: 0.4s;
-	overflow: hidden;
-	cursor: pointer;
-}
-
-.inside_drpdown_btn:after {
-	content:"";
-	background: yellow;
-	display: block;
-	position: absolute;
-	padding-top: 300%;
-	padding-left: 250%;
-	margin-left: -70px;
-	margin-top: -120%;
-	opacity: 0;
-	transition: all 1s
-}
-
-.inside_drpdown_btn:active:after {
-	padding: 0;
-	margin: 0;
-	opacity: 1;
-	transition: 0s
-}
-.inside_drpdown_btn:hover {
-	background-color: #700000;
-} 
-
-#how {
-	font-variant: small-caps;
-	/*font-size: 40%;*/
-	position:absolute;
-	margin-left:34%;
-	margin-top: 4%;
-	/*margin-left: -70px;*/
-}	
-
-#joke {
-	font-size: 11px;
-	font-weight:normal;
-}
-/*///make transition or animation for this div to slide down*/
-
-#email {
-	display: none;
-}
-
-.email_img {
-	height:auto;
-	width:215px;
-	margin-left: 20px;
-	margin-top: -15px;
-	margin-bottom: -60px;
-	padding-bottom: 33px
-}
-
-.digits {
-	color:red;
-	/*font-weight: normal;*/
-	font-size: 18px;
-}
-.enjoy {
-	font-size: 30px;
-	font-weight: bold;
-	/*margin-: -25px;*/
-}
-.hearts {
-	/*color: #2B794F;*/
-	/*text-shadow: 10px 14px 15px #552803, 1px 1px 2px black;*/
-	color: red; 
-}
-/*/////////////////////////////////////*/
-/*///////// sticky images /////////////*/
-/*/////////////////////////////////////*/
-
-#call_me {
-	display: none;
-	height: auto;
-	width: 307%;
-	margin-left:-10%;
-	margin-right: 60px;
-	margin-top: -25%;
-}
-
-#starburst {
-	height: auto;
-	width: 200%;
-	margin-right: 10px;
-	margin-left: 17%;
-	margin-top:-4%;
-	overflow: none;
-	position: static;
-}
-
-/*/////////////////////////////////////*/
-/*///////// i  frame      /////////////*/
-/*/////////////////////////////////////*/
-
-iframe {
-	margin-top: 100px;
-	position: relative;
-	height: 315px;
-	width: 530px;
-	margin-left: 100px;
-}
-
-#clock {
-	background-color: inherit; 
-	color: white;
-	font-size: 18px;
-	float: right;
-	margin-left: -4%;
-	width: 10%;
-}
-
-#red_welcome {
-	color:red;
-	display: inline-block;
-	margin: 0;
-}
-
-.fade {
-	content: "";
-	width: 100%;
-	height: 150px;
-	display: block;
-	position: absolute;
-	background: #ffeb04;
-	/*background: -webkit-gradient(linear, 0% 20% % 100%, from( #ffeb04 ), to(rgba(transparent)));*/
-	background: -webkit-linear-gradient(top, #ffeb0400, #ffeb04, #ffeb04);
-	background: -moz-linear-gradient(top, rgba(225, 235, 4, 1), rgba(225, 4, 4, 0.31));
-	background: -ms-linear-gradient(top, rgba(225, 235, 4, 1), rgba(225, 4, 4, 0.31));
-	background: -o-linear-gradient(top, rgba(1225, 235, 4, 1), rgba(225, 4, 4, 0.31));
-	bottom: 0;
-	left: 0;
-	z-index: 10;
-}
-
-#clock2 {
+/*.hide_me {
 	display:none;
-}	
+	}*/
 
-#quotes {
-	font-size: 200%;
-	height: auto;
-	margin-top:15%;
-	margin-left:6%;
-	padding-left: 16%;
-	text-align: right;
-	width: 75%;
-}
+	.buttonsss {
+		position:absolute;
+		/*margin-top:25.55%;*/ /*shrinks and stays relative original layout - good for mobile responsive..maybe*/
+		margin-top:349px;  /*stays in same location when screen resizes*/
+	}
+	/*Buttos inside of the nav dropdown area*/
+	.inside_drpdown_btn {
+		position:relative;
+		background-color: red;
+		height: 48px;
+		outline: none;
+		width: 90px;
+		-webkit-transition-duration: 0.4s; /* Safari */
+		transition-duration: 0.4s;
+		overflow: hidden;
+		cursor: pointer;
+	}
 
-#hello2 {
-	display: none; 
-}
+	.inside_drpdown_btn:after {
+		content:"";
+		background: yellow;
+		display: block;
+		position: absolute;
+		padding-top: 300%;
+		padding-left: 250%;
+		margin-left: -70px;
+		margin-top: -120%;
+		opacity: 0;
+		transition: all 1s
+	}
 
+	.inside_drpdown_btn:active:after {
+		padding: 0;
+		margin: 0;
+		opacity: 1;
+		transition: 0s
+	}
+	.inside_drpdown_btn:hover {
+		background-color: #700000;
+	} 
 
-/*///////////iphone 7 plus Portrait Orientation /////////////*/
-@media screen and (max-width: 414px) and (min-width: 376px) {
-	.topnav {position: fixed; width: 97%; overflow: visible;}
-	.dropbtn {overflow: visible;}
-	.dropdown {position:static; float:left;}
-	.dropdown-content {width: 97%; right:6px; position:fixed; z-index:10;}
-	/*.inside_drpdown_btn{margin-left: 6%;}*/
-	/*#contactTab {margin-right: 8px;}	*/
-	#hello {display:none;}
-	#hello2 {display: block; position:fixed; right: 102px; top: 21px;}
-	#hello_link {width:116.4%;  z-index: 3;};
-	#home {position:fixed; margin-top: 48px;}
-	#l_o {position: absolute; margin-left:78%; margin-right:-3%;}
-	#bigChken {position: fixed; top: 28%; width: 147%; left:15%; z-index: -1;}
-	.justify {text-align: right; font-size: 90%}
-	#quotes {position: fixed; bottom: 2%; right: 18%; text-align: right; font-size: 122%; z-index: -10;}
-	/*#clockDiv {display:none;}*/
-	#clock2 {display:block; color:white; font-size: 70px; position:fixed; top:15%; z-index:-10;}
-	.P {position: fixed; right: 180px; top:25%;}
-	.M {position: fixed; right: 120px; top:25%;}
-}
+	#how {
+		font-variant: small-caps;
+		/*font-size: 40%;*/
+		position:absolute;
+		margin-left:34%;
+		margin-top: 4%;
+		/*margin-left: -70px;*/
+	}	
 
-/*///////////iphone 6 Portrait Orientation /////////////*/
-@media screen and (max-width: 375px) and (min-width: 330px) {
-	.topnav {position: fixed; width: 97%; overflow: visible;}
-	.dropdown {position:static; float:right;}
-	.dropdown-content {width: 107%; right:-28px;}
-	.inside_drpdown_btn{margin-left: 6%;}
-	#contactTab {margin-right: 97px;}	
-	#hello {display:none;}
-	#hello2 {display: block; position:fixed; left: 31px; top: 65px;  z-index: -10;}
-	#hello_link {width:116.4%;  z-index: 3;};
-	#home {position:fixed; margin-top: 48px;}
-	#l_o {position: absolute; margin-left:78%; margin-right:-3%;}
-	#bigChken {position: fixed; top: 28%; width: 147%; left:15%;  z-index: -10;}
-	.justify {text-align: right; font-size: 90%}
-	#quotes {position: fixed; bottom: 0%; right: 18%; text-align: right; font-size: 122%;  z-index: -10;}
-	#clock {display:hidden;}
-	#clock2 {display:block; color:white; font-size: 70px; position:fixed; top:15%;  z-index: -10;}
-	.P {position: fixed; right: 180px; top:26%;}
-	.M {position: fixed; right: 120px; top:26%;}
+	#joke {
+		font-size: 11px;
+		font-weight:normal;
+	}
+	/*///make transition or animation for this div to slide down*/
 
-	/*///////iphone5/SE portrait orientatio//////////*/
-	@media screen and (max-width: 321px) {
-		.topnav {margin-right:-19.5%; max-width: 112%}
-		.dropdown {position:static; float:right;}
-		.dropdown-content {width: 107%; right:-28px;}
-		.inside_drpdown_btn{margin-left: 6%;}
-		#contactTab {margin-right: 94px;}	
-		#hello {position:absolute; margin: 49px 0px 0px 0px;}
-		#hello_link {width:116.4%;};
-		#home {position:absolute; margin-top: 48px;}
-		#l_o {position: absolute; margin-left:78%; margin-right:-3%;}
-		#bigChken {position: fixed; top: 21%; width: 170%;}
-		.justify {text-align: right; font-size: 90%}
-		#quotes {position: fixed; bottom: 6%; right: 14%; text-align: right; font-size: 122%;}
-		#clock {position: fixed; width: 308px; left: 10%; bottom: 75%; font-size: 52px;}
+	#email {
+		display: none;
+	}
+
+	.email_img {
+		height:auto;
+		width:215px;
+		margin-left: 20px;
+		margin-top: -15px;
+		margin-bottom: -60px;
+		padding-bottom: 33px
+	}
+
+	.digits {
+		color:red;
+		/*font-weight: normal;*/
+		font-size: 18px;
+	}
+	.enjoy {
+		font-size: 30px;
+		font-weight: bold;
+		/*margin-: -25px;*/
+	}
+	.hearts {
+		/*color: #2B794F;*/
+		/*text-shadow: 10px 14px 15px #552803, 1px 1px 2px black;*/
+		color: red; 
+	}
+	/*/////////////////////////////////////*/
+	/*///////// sticky images /////////////*/
+	/*/////////////////////////////////////*/
+
+	#call_me {
+		display: none;
+		height: auto;
+		width: 307%;
+		margin-left:-10%;
+		margin-right: 60px;
+		margin-top: -25%;
+	}
+
+	#starburst {
+		height: auto;
+		width: 200%;
+		margin-right: 10px;
+		margin-left: 17%;
+		margin-top:-4%;
+		overflow: none;
+		position: static;
+	}
+
+	/*/////////////////////////////////////*/
+	/*///////// i  frame      /////////////*/
+	/*/////////////////////////////////////*/
+
+	iframe {
+		margin-top: 100px;
+		position: relative;
+		height: 315px;
+		width: 530px;
+		margin-left: 100px;
+	}
+
+	#clock {
+		background-color: inherit; 
+		color: white;
+		font-size: 18px;
+		float: right;
+		margin-left: -4%;
+		width: 10%;
+	}
+
+	#red_welcome {
+		color:red;
+		display: inline-block;
+		margin: 0;
+	}
+
+	.fade {
+		content: "";
+		width: 100%;
+		height: 150px;
+		display: block;
+		position: absolute;
+		background: #ffeb04;
+		/*background: -webkit-gradient(linear, 0% 20% % 100%, from( #ffeb04 ), to(rgba(transparent)));*/
+		background: -webkit-linear-gradient(top, #ffeb0400, #ffeb04, #ffeb04);
+		background: -moz-linear-gradient(top, rgba(225, 235, 4, 1), rgba(225, 4, 4, 0.31));
+		background: -ms-linear-gradient(top, rgba(225, 235, 4, 1), rgba(225, 4, 4, 0.31));
+		background: -o-linear-gradient(top, rgba(1225, 235, 4, 1), rgba(225, 4, 4, 0.31));
+		bottom: 0;
+		left: 0;
+		z-index: 10;
+	}
+
+	#clock2 {
+		display:none;
+	}	
+
+	#quotes {
+		font-size: 200%;
+		height: auto;
+		margin-top:15%;
+		margin-left:6%;
+		padding-left: 16%;
+		text-align: right;
+		width: 75%;
+	}
+
+	#hello2 {
+		display: none; 
 	}
 
 
-	/*////////////////////////////////*/
-	/*/////////// pdf ///////////////*/
-	/*//////////////////////////////*/
+	/*///////////iphone 7 plus Portrait Orientation /////////////*/
+	@media screen and (max-width: 414px) and (min-width: 376px) {
+		.topnav {position: fixed; width: 97%; overflow: visible;}
+		.dropbtn {overflow: visible;}
+		.dropdown {position:static; float:left;}
+		.dropdown-content {width: 97%; right:6px; position:fixed; z-index:10;}
+		#how {left:5%; top:2%; position: absolute; margin-left: 0; width: 255px;}
+		.digits {
+			color:red;
+			/*font-weight: normal;*/
+			font-size: 18px;
+		}
+		/*.inside_drpdown_btn{margin-left: 6%;}*/
+		/*#contactTab {margin-right: 8px;}	*/
+		/*.hide_me { display:block; }*/
+		#hello {display:none;}
+		#hello2 {display: block; position:fixed; right: 102px; top: 21px;}
+		#hello_link {width:116.4%;  z-index: 3;};
+		#home {position:fixed; margin-top: 48px;}
+		#l_o {position: absolute; margin-left:78%; margin-right:-3%;}
+		#bigChken {position: fixed; top: 28%; width: 147%; left:15%; z-index: -1;}
+		.justify {text-align: right; font-size: 90%}
+		#quotes {position: fixed; bottom: 2%; right: 18%; text-align: right; font-size: 122%; z-index: -10;}
+		/*#clockDiv {display:none;}*/
+		#clock2 {display:block; color:white; font-size: 70px; position:fixed; top:15%; z-index:-10;}
+		.P {position: fixed; right: 180px; top:25%;}
+		.M {position: fixed; right: 120px; top:25%;}
+	}
+
+	/*///////////iphone 6 Portrait Orientation /////////////*/
+	@media screen and (max-width: 375px) and (min-width: 330px) {
+		.topnav {position: fixed; width: 97%; overflow: visible;}
+		.dropdown {position:static; float:right;}
+		.dropdown-content {width: 107%; right:-28px;}
+		.inside_drpdown_btn{margin-left: 6%;}
+		#contactTab {margin-right: 97px;}	
+		#hello {display:none;}
+		#hello2 {display: block; position:fixed; left: 31px; top: 65px;  z-index: -10;}
+		#hello_link {width:116.4%;  z-index: 3;};
+		#home {position:fixed; margin-top: 48px;}
+		#l_o {position: absolute; margin-left:78%; margin-right:-3%;}
+		#bigChken {position: fixed; top: 28%; width: 147%; left:15%;  z-index: -10;}
+		.justify {text-align: right; font-size: 90%}
+		#quotes {position: fixed; bottom: 0%; right: 18%; text-align: right; font-size: 122%;  z-index: -10;}
+		#clock {display:hidden;}
+		#clock2 {display:block; color:white; font-size: 70px; position:fixed; top:15%;  z-index: -10;}
+		.P {position: fixed; right: 180px; top:26%;}
+		.M {position: fixed; right: 120px; top:26%;}
+
+		/*///////iphone5/SE portrait orientatio//////////*/
+		@media screen and (max-width: 321px) {
+			.topnav {margin-right:-19.5%; max-width: 112%}
+			.dropdown {position:static; float:right;}
+			.dropdown-content {width: 107%; right:-28px;}
+			.inside_drpdown_btn{margin-left: 6%;}
+			#contactTab {margin-right: 94px;}	
+			#hello {position:absolute; margin: 49px 0px 0px 0px;}
+			#hello_link {width:116.4%;};
+			#home {position:absolute; margin-top: 48px;}
+			#l_o {position: absolute; margin-left:78%; margin-right:-3%;}
+			#bigChken {position: fixed; top: 21%; width: 170%;}
+			.justify {text-align: right; font-size: 90%}
+			#quotes {position: fixed; bottom: 6%; right: 14%; text-align: right; font-size: 122%;}
+			#clock {position: fixed; width: 308px; left: 10%; bottom: 75%; font-size: 52px;}
+		}
+
+
+		/*////////////////////////////////*/
+		/*/////////// pdf ///////////////*/
+		/*//////////////////////////////*/
 
 /*#resume {
 	position: absolute;
