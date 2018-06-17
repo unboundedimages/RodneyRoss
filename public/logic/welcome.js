@@ -6,14 +6,14 @@ window.onload = function welcomes() {
 		// let randd = Math.floor(6);
 		// document.getElementById("name2").innerHTML = welcome[rand];
 		//alternatively set this loop up with .map instead of random
-		document.getElementById("name2","name3").innerHTML = welcome[i ++];	
+		document.getElementById("name2","name3").innerHTML = '<span id= "salute">' + welcome[i ++] + '</span>';	
 		if (i == welcome.length) i=	0;
 	}, 2000);
 
 	let iAm = ["I am", "انا", "我是", "Меня зовут", "Yo soy", "Ich bin", "Sono", "Jag är", "Je suis"]
 	let r = 0;
 	setInterval(function() {
-		document.getElementById("me").innerHTML = iAm[r ++];
+		document.getElementById("me").innerHTML = '<span id= "i_am">' + iAm[r ++] + '</span>';
 		if (r == iAm.length) r=0;
 
 	}, 2000);			
