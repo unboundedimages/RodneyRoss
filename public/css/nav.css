@@ -367,6 +367,15 @@ iframe {
 		/*.s {position: fixed;}*/
 		.P {position: fixed; right: 180px; top:29%;}
 		.M {position: fixed; right: 123px; top:29%;}
+		/*/// Welcome Screen ///*/
+		.chicken {position: absolute; z-index:-2; width:89%; top:10%; opacity: 0.2; float:none; padding:0;}
+		.greetings {position: absolute; float:none; top:34px; left:40px; width: 151px; margin:0;}
+		#i_am {color:yellow;}
+		#salute {color:red;}
+		#rod {font-size: 533%; width: 362px; margin: 0;}
+		#me {position: absolute; top:53px; font-size: 322%; width:366px; height:auto;}
+		#name2 {position: absolute; top: 384px; font-size: 322%; width:366px; height:auto;}
+		.nameW {position: absolute; font-size: 351%; top: 157px;}
 	}
 
 	/*///////////iphone 6 Portrait Orientation /////////////*/
