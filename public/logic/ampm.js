@@ -26,7 +26,7 @@ window.onload = amPm =() => {
 	let t = setTimeout(amPm, 500);
 
 	document.getElementById('clock2').innerHTML =
-	fixTime() + ":" + m + ":" + s + " " + '<b class="ur_Nme">' + '<br>' + '<span class = "P" >' + showAmPm() + '</span>' + '</b>' + '<span class = "M" >' + '<b class="i">M</b>' + '</span>';
+	fixTime() + ":" + m + ":" + s + " " + " " + '<b class="ur_Nme">' + '<br>' + '<span class = "P" >' + showAmPm() + '</span>' + '</b>' + '<span class = "M" >' + '<b class="i">M</b>' + '</span>';
 	t;
 }
 // add zero in front of numbers < 10
