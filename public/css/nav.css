@@ -378,6 +378,14 @@ iframe {
 		#name2 {position: absolute; top: 384px; font-size: 322%; width:366px; height:auto; color:red;}
 		.nameW {position: absolute; font-size: 351%; top: 157px;}
 
+		/*/// Register Modal ///*/
+		#big_C {font-size: 241%}
+		.scroll {position:absolute; width:85%; float:none; margin:0 0 0 0; max-width: none; left:32px; top: 62px;}
+		.names {width:130px;}
+		.how {font-size: 21px;}
+		textarea {border-left: 1px solid #ebdf44; border-top: 1px solid #ebdf44;}
+
+
 		/*/// Failed login Modal ///*/
 		#myModal {position:absolute; width:386px; top:53px; padding:0; height:46%; left:14px; top: 133px;}
 		#modal-content {position:absolute; margin:0; width: 100%;}
