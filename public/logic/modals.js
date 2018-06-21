@@ -1,7 +1,7 @@
 onload = function modal(event) {
-	// console.log("+++++++++++++++++++++++++++++++++++++")
-	// console.log("+++++++++++++++++++++++++++++++++++++")
-	// console.log("this is modals event: ", event);
+	console.log("what does onload do", onload)
+
+
 	var modal = document.getElementById("myModal");
 	console.log("this is the modal var", modal)
 	// // Get the button that opens the modal
@@ -22,6 +22,11 @@ onload = function modal(event) {
 			}
 
 		}, 1000);
+		
+		// console.log("this is the sumbit event", event);
+		// setTimeout(function() {
+		// }, 2000);
+		// let popModal =  {pop: modal.style.display = "block"};
 	}
 
 	// // When the user clicks on <span> (x), close the modal

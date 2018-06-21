@@ -13,7 +13,7 @@ module.exports = function(app, passport) {
     app.get('/logout',authController.logout);
     app.post('/signin', passport.authenticate('local-signin', { //route for posting to /signin.
     	successRedirect: '/Port',
-    	failureRedirect: '/signin'
+    	failureRedirect: '/#signin'
     }
     ));
 
