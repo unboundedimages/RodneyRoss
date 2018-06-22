@@ -5,7 +5,7 @@ onload = function modal(event) {
 	var modal = document.getElementById("myModal");
 	console.log("this is the modal var", modal)
 	// // Get the button that opens the modal
-	var btn = document.getElementById("submit", "submit2") 
+	// var btn = document.getElementById("submit", "submit2") 
 
 	var myForm = document.getElementById("getForm")
 	
