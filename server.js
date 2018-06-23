@@ -46,6 +46,7 @@ app.use(session({
 app.use(passport.initialize());///////////////////////////////////
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, '/public'))); // for the css
+// app.use(express.static(path.join(__filename, '/public/logic/modals.js'))); 
 
 app.use(function(req, res, next) { // for logout - speaks to authcontrollers
 	res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
@@ -75,6 +76,9 @@ function(req, res){
     // The request will be redirected to LinkedIn for authentication, so this
     // function will not be called.
 });
+
+// app.get('modals', './public/logic')
+
 //models
 let models = require("./models");
 
