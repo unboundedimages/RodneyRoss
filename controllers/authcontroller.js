@@ -14,6 +14,12 @@ exports.signin = function(req, res) {
 	res.render('signin');
 
 }
+
+//controloler for welcome
+exports.modal = function(req,res) {
+	res.render('modal')
+}
+
 //controller for dashboard
 exports.Port = function(req, res) {
 	// console.log("this is req from authcontroller.js: ", req)

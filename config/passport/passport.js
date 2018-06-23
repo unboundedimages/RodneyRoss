@@ -114,7 +114,11 @@ passport.use('local-signin', new LocalStrategy(
 			if (!user) {
 				var modals = require("../../public/logic/modals.js")
 				console.log("wrong username or password");//add modal
-				return modals
+				// return modals
+				
+				return done(null, false, {
+					message: 'Incorrect password.'
+				});
 
 			}
 
@@ -125,11 +129,11 @@ passport.use('local-signin', new LocalStrategy(
 			if (!isValidPassword(user.password, password)) {
 				var modals = require("../../public/logic/modals.js")
 				console.log("wrong username or password");//add modal
-				return modals
+				// return modals
 
-				// return done(null, false, {
-				// 	message: 'Incorrect password.'
-				// });
+				return done(null, false, {
+					message: 'Incorrect password.'
+				});
 
 			}
 			// else {

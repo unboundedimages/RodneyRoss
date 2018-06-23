@@ -3,6 +3,7 @@ var authController = require('../controllers/authcontroller.js');
 module.exports = function(app, passport) {
 	app.get('/signup', authController.signup);
 	app.get('/signin', authController.signin);
+	app.get('/modal', authController.modal)
 	//route for posting signgup
 	app.post('/signup', passport.authenticate('local-signup', {
             successRedirect: '/Port', //this will change to a success page and then redirect to the sign in when this website is upgraded
@@ -13,7 +14,7 @@ module.exports = function(app, passport) {
     app.get('/logout',authController.logout);
     app.post('/signin', passport.authenticate('local-signin', { //route for posting to /signin.
     	successRedirect: '/Port',
-    	failureRedirect: '/signin'
+    	failureRedirect: '/modal'
     }
     ));
 
