@@ -388,7 +388,7 @@ iframe {
 
 		/*/// Failed login Modal ///*/
 		/*.modal {width:0;}*/
-		#myModal {position:absolute; width:234px; padding:0; height:33%; left:24px; top: 263px;}
+		#myModal {position:absolute; width:234px; padding:0; height:33%; left:86px; top: 236px;}
 		#modal-content {position:absolute; margin:0; width: 100%;}
 		.modal-header .modal-footer .modal-body {width:stretch;}
 		.modal_body_input {display:none;}
