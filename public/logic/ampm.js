@@ -1,6 +1,6 @@
 window.onload = amPm =() => {
 	let time = new Date();
-	let h = time.getHours();
+	let h = time.getHours() % 12 || 12;
 	let m = time.getMinutes();
 	let s = time.getSeconds();
 	let tz = h - 12;
@@ -14,7 +14,9 @@ window.onload = amPm =() => {
 		return tz;
 	}
 
-	showAmPm = () => {
+	showAmPm = (date) => {
+		let time= new Date();
+		let h = time.getHours()
 		if (h < 12) {
 			return "A"
 		} 

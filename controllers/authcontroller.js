@@ -10,6 +10,7 @@ var exports = module.exports = {}
  }
 //controller for sign in
 exports.signin = function(req, res) {
+	exports.logout;
 
 	res.render('signin');
 
