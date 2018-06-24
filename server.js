@@ -47,10 +47,10 @@ app.use(passport.initialize());///////////////////////////////////
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, '/public'))); // for the css
 
-app.use(function(req, res, next) { // for logout - speaks to authcontrollers
-	res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0', 'Expires', '0');
-	next();
-}); 
+// app.use(function(req, res, next) { // for logout - speaks to authcontrollers
+// 	res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
+// 	next();
+// }); 
 
 // For HBS
 app.set('views', './views')

@@ -22,7 +22,10 @@ module.exports = function(app, passport) {
 
     app.get('/modals', isLoggedIn, authController.modals);
 
-    app.post('/logout',authController.logout);
+    app.post('/logout',authController.logout, (req, res) => {
+    	req.logout();
+    	req.session.destroy((err) => res.redirect('/'));
+    });
 
 	//custom middleware to protect route
 	function isLoggedIn(req, res, next) {

@@ -14,6 +14,16 @@
 	<link rel="stylesheet" href="css/sign_in.css" type="text/css">
 	<link rel="stylesheet" href="css/modal.css" type="text/css">
 	<link rel="stylesheet" href="css/nav.css" type="text/css">
+	<script type="text/javascript">
+	function noBack()
+	{
+		window.history.forward()
+	}
+	noBack();
+	window.onload = noBack;
+	window.onpageshow = function(evt) { if (evt.persisted) noBack() }
+	window.onunload = function() { void (0) }
+	</script>
 </head>
 <body>
 	{{{body}}}
