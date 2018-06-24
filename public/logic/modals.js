@@ -1,48 +1,61 @@
-onsubmit = function modalPop(event) {
-	console.log("what does onsubmit do", onsubmit)
+// onload = function preventBack() { window.history.forward(); }
+// setTimeout("preventBack()", 0)
+// window.onunload = function () { null };
 
-	setTimeout(function(event){
-		event.preventDefault();
-// 	// 		var popup = modal.style.display = "block";
-// 	// 		if(popup === true) {
-// 	// 			return(popup)
-// 	// 		}
-}, 2000);
+// window = (function noBack()
+//          {
+//              window.history.forward()
+//          }
+//         noBack();
+//         window.onload = noBack;
+//         window.onpageshow = function(evt) { if (evt.persisted) noBack() }
+//         window.onunload = function() { void (0) }
 
-	modal.style.display = "block";
-	var modal = document.getElementById("myModal");
-	console.log("this is the modal var", modal)
-	// // Get the button that opens the modal
-	// var btn = document.getElementById("submit", "submit2") 
+// onsubmit = function modalPop(event) {
+// 	console.log("what does onsubmit do", onsubmit)
 
-	var myForm = document.getElementById("getForm")
-	
-	// // Get the <span> element that closes the modal
-	var span = document.getElementsByClassName("close")[0];
-	// modal.style.display = "block";
-	// // When user submits form, open modal if error
-	// myForm.onsubmit = function(event) {
-	// 	console.log("this is the sumbit event", event);
+// 	setTimeout(function(event){
+// 		event.preventDefault();
+// // 	// 		var popup = modal.style.display = "block";
+// // 	// 		if(popup === true) {
+// // 	// 			return(popup)
+// // 	// 		}
+// }, 2000);
 
-	// 	// console.log("this is the sumbit event", event);
-	// 	// setTimeout(function() {
-	// 	// }, 2000);
-	// 	// let popModal =  {pop: modal.style.display = "block"};
-	// }
+// 	modal.style.display = "block";
+// 	var modal = document.getElementById("myModal");
+// 	console.log("this is the modal var", modal)
+// 	// // Get the button that opens the modal
+// 	// var btn = document.getElementById("submit", "submit2") 
 
-	// // When the user clicks on <span> (x), close the modal
-	span.onclick = function(event) {
+// 	var myForm = document.getElementById("getForm")
 
-		modal.style.display = "none";
-	}
+// 	// // Get the <span> element that closes the modal
+// 	var span = document.getElementsByClassName("close")[0];
+// 	// modal.style.display = "block";
+// 	// // When user submits form, open modal if error
+// 	// myForm.onsubmit = function(event) {
+// 	// 	console.log("this is the sumbit event", event);
 
-	// // When the user clicks anywhere outside of the modal, close it
-	window.onclick = function(event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
-		}
-	}
+// 	// 	// console.log("this is the sumbit event", event);
+// 	// 	// setTimeout(function() {
+// 	// 	// }, 2000);
+// 	// 	// let popModal =  {pop: modal.style.display = "block"};
+// 	// }
 
-}
+// 	// // When the user clicks on <span> (x), close the modal
+// 	span.onclick = function(event) {
 
-// module.exports = { modal: "modal"}
+// 		modal.style.display = "none";
+// 	}
+
+// 	// // When the user clicks anywhere outside of the modal, close it
+// 	window.onclick = function(event) {
+// 		if (event.target == modal) {
+// 			modal.style.display = "none";
+// 		}
+// 	}
+
+// }
+
+// // module.exports = { modal: "modal"}

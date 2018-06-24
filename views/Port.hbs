@@ -1,3 +1,17 @@
+<script type="text/javascript">
+function pageLoaded()
+{
+	// alert("load event handler called.");
+}
+
+function pageUnloaded()
+{
+	// alert("unload event handler called.");
+}
+window.addEventListener("load", pageLoaded, false);
+window.addEventListener("unload", pageUnloaded, false);
+</script>
+
 <div class="topnav">
 	<div>
 		<a id="home" class="active" href="#home">Home</a>
@@ -34,7 +48,7 @@
 							</p>
 						</div>
 						<div class="enjoy">
-							<p>
+							{{!-- <p> --}}
 								<span class="hearts">
 									<strong>♥</strong>
 								</span> 
@@ -46,7 +60,7 @@
 								<span class="hearts">
 									<strong>♥</strong>
 								</div>
-							</p>
+							{{!-- </p> --}}
 						</span>
 					</div>
 					<a href="#" id="drp_clr_bdy">

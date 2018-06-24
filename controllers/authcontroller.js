@@ -10,12 +10,17 @@ var exports = module.exports = {}
  }
 //controller for sign in
 exports.signin = function(req, res) {
+	exports.logout;
 
 	res.render('signin');
 
 }
 
 //controloler for welcome
+exports.welcome = function(req,res) {
+	res.render('welcome')
+}
+
 exports.modal = function(req,res) {
 	res.render('modal')
 }
@@ -59,9 +64,16 @@ exports.logout = function(req, res, next) {
 	db.LogoutLog.create(req.body).then(function(dbLogoutLog){
 	});
 
+	req.logout();	
 	req.session.destroy(function(err) {
-		res.redirect('/');
+		// res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0')
+		res.clearCookie('connect.sid');
+		res.redirect('signin');
+		next();
+		
 	});   
+
+
 }
 
 exports.modals = function(req,res) {
