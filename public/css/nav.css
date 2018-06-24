@@ -333,19 +333,18 @@ iframe {
 /*///////////iphone 7 plus Landscape Orientation /////////////*/
 
 @media screen and (max-width: 736px) and (min-width: 718px) {
-	.topnav { width: 101%; }
+	.topnav { width: 101%; z-index:3; }
 	#clock { font-size: 15px }
 	.med_chk {position:absolute; top:32px; width:405px; padding:0;}
 	.buttonsss {margin-top: 264px;}
 	.fade {height: 386px; z-index: 0;}
 	#how {margin-top: 16px; margin-left: 42%}
 	#starburst {position:absolute; left:45px; top:13px; height: 633px; width:633px; z-index: -1; opacity: 0.1; margin: 0; padding:0;}
-	#bigStar {position: absolute; left: 120px; width: auto; top: -42px;}
-	.digits {
-		color:red;
-		/*font-weight: normal;*/
-		font-size: 25px;
-	}
+	#bigStar {position: absolute; left: 139px; width: auto; top: -20px; padding:0;}
+	.digits {color:red; font-size: 25px;}
+	.dropbtn {z-index: 1}
+	#joke {margin-left: 7px;}
+	#email {margin-bottom: 36px;}
 }
 
 
@@ -363,6 +362,8 @@ iframe {
 		/*font-weight: normal;*/
 		font-size: 21px;
 	}
+	#email {margin-bottom: 32px;}
+	#joke {margin-left: 7px;}
 	.enjoy {margin-top: -5px;}	
 	#starburst {position:absolute; width:65%; top:324px; left:240px; z-index: 0; margin-left: 0; margin-top:0; transform: skewY(-23deg)skewX(60deg); -webkit-transform: skewY(-23deg)skewX(60deg);}
 	.buttonsss {top: 23px; left: 12px;}
