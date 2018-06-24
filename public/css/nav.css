@@ -330,6 +330,24 @@ iframe {
 	display: none; 
 }
 
+/*///////////iphone 7 plus Landscape Orientation /////////////*/
+
+@media screen and (max-width: 736px) and (min-width: 718px) {
+	.topnav { width: 101%; }
+	#clock { font-size: 15px }
+	.med_chk {position:absolute; top:32px; width:405px; padding:0;}
+	.buttonsss {margin-top: 264px;}
+	.fade {height: 386px; z-index: 0;}
+	#how {margin-top: 16px; margin-left: 42%}
+	#starburst {position:absolute; left:45px; top:13px; height: 633px; width:633px; z-index: -1; opacity: 0.1; margin: 0; padding:0;}
+	#bigStar {position: absolute; left: 120px; width: auto; top: -42px;}
+	.digits {
+		color:red;
+		/*font-weight: normal;*/
+		font-size: 25px;
+	}
+}
+
 
 /*///////////iphone 7 plus Portrait Orientation /////////////*/
 @media screen and (max-width: 414px) and (min-width: 376px) {
@@ -388,7 +406,7 @@ iframe {
 
 		/*/// Failed login Modal ///*/
 		/*.modal {width:0;}*/
-		#myModal {position:absolute; width:234px; padding:0; height:33%; left:24px; top: 263px;}
+		#myModal {position:absolute; width:234px; padding:0; height:33%; left:86px; top: 236px;}
 		#modal-content {position:absolute; margin:0; width: 100%;}
 		.modal-header .modal-footer .modal-body {width:stretch;}
 		.modal_body_input {display:none;}
@@ -418,6 +436,34 @@ iframe {
 		.P {position: fixed; right: 180px; top:26%;}
 		.M {position: fixed; right: 120px; top:26%;}
 
+		/*/// Welcome Screen ///*/
+		.chicken {position: absolute; z-index:-2; width:89%; top:10%; opacity: 0.2; float:none; padding:0;}
+		.greetings {position: absolute; float:none; top:34px; left:40px; width: 151px; margin:0;}
+		#i_am {color:yellow;}
+		#salute {color:red;}
+		#rod {font-size: 533%; width: 362px; margin: 0;}
+		#me {position: absolute; top:53px; font-size: 322%; width:366px; height:auto; color:yellow;}
+		#name2 {position: absolute; top: 384px; font-size: 322%; width:366px; height:auto; color:red;}
+		.nameW {position: absolute; font-size: 351%; top: 157px;}
+
+		/*/// Register Form ///*/
+		#big_C {font-size: 241%}
+		.scroll {position:absolute; width:85%; float:none; margin:0 0 0 0; max-width: none; left:32px; top: 62px;}
+		.names {width:130px;}
+		.how {font-size: 21px;}
+		textarea {border-left: 1px solid #ebdf44; border-top: 1px solid #ebdf44;}
+
+
+		/*/// Failed login Modal ///*/
+		/*.modal {width:0;}*/
+		#myModal {position:absolute; width:234px; padding:0; height:33%; left:57px; top: 215px;}
+		#modal-content {position:absolute; margin:0; width: 100%;}
+		.modal-header .modal-footer .modal-body {width:stretch;}
+		.modal_body_input {display:none;}
+		.info1 {display: none;}
+		.info2 {display: block; font-size: 20px}
+		#myBtn2 {display:none;}
+
 		/*///////iphone5/SE portrait orientatio//////////*/
 		@media screen and (max-width: 321px) {
 			.topnav {margin-right:-19.5%; max-width: 112%}
@@ -436,6 +482,8 @@ iframe {
 			.l {color: #707070}
 		}
 
+
+		
 
 		/*////////////////////////////////*/
 		/*/////////// pdf ///////////////*/
