@@ -17,6 +17,10 @@ exports.signin = function(req, res) {
 }
 
 //controloler for welcome
+exports.welcome = function(req,res) {
+	res.render('welcome')
+}
+
 exports.modal = function(req,res) {
 	res.render('modal')
 }
@@ -55,14 +59,14 @@ exports.logout = function(req, res, next) {
 	).then(function(data, res) {
 		console.log(data);
 	});
+	req.session.destroy(function(err) {
+		res.redirect('welcome');
+	});   
 
 	req.body.logout_time = Date.now()
 	db.LogoutLog.create(req.body).then(function(dbLogoutLog){
 	});
 
-	req.session.destroy(function(err) {
-		res.redirect('/');
-	});   
 }
 
 exports.modals = function(req,res) {
