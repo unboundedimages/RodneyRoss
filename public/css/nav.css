@@ -374,6 +374,22 @@ iframe {
 	.home {color: white; width: 20%; padding-left: 3%;}
 	.backbutton {position: absolute; top: 453px; left:3px; z-index: -1; opacity: .4;}
 
+	/*/// Modal for Failed Login ///*/
+	/*.info1 {display: none;}
+	.info2 {display: block;	font-size: 20px;}
+	.modal_body_input {display:none;}
+	#myBtn2 {display:none;}
+	.modal-header .modal-footer .modal-body {width:stretch;}*/
+
+	#myModal {position:absolute; width:335px; padding:0; height:43%; left:244px; top: 57px;}
+	#modal-content {position:absolute; margin:0; width: 100%;}
+	.modal-header .modal-footer .modal-body {width:stretch;}
+	.modal-body {display:none;}
+	.modal_body_input {display:none;}
+	.info1 {display: none;}
+	.info2 {display: block; font-size: 20px}
+	#myBtn2 {display:none;}
+
 }
 
 
