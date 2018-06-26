@@ -4,6 +4,14 @@
 	/* text-align: center; */
 }
 
+#hello3 {
+	display:none;
+	font-size: 25px;
+	float: right;
+	/* text-align: center; */
+}
+
+
 #hi {
 	margin: 0;
 }
@@ -389,6 +397,11 @@ iframe {
 	.info1 {display: none;}
 	.info2 {display: block; font-size: 20px}
 	#myBtn2 {display:none;}
+
+	/*/// Navbar Greeting ///*/
+	#hello {display: none;}
+	#hello3 {display: block;}
+	/*#hello2 { position: fixed; top: 66px; left: 15px; font-size: 22px; display: block; font-variant: small-caps; background: linear-gradient(to right, yellow 0%, red 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}	*/
 
 }
 
