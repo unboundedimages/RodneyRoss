@@ -340,7 +340,7 @@ iframe {
 
 /*///////////iphone 7 plus Landscape Orientation /////////////*/
 
-@media screen and (max-width: 736px) and (min-width: 718px) {
+@media screen and (max-width: 736px) and (min-width: 660px) {
 	/*/// Main PORT page ///*/
 	.topnav { width: 101%; z-index:3; }
 	#clock { font-size: 15px }
@@ -383,12 +383,6 @@ iframe {
 	.backbutton {position: absolute; top: 453px; left:3px; z-index: -1; opacity: .4;}
 
 	/*/// Modal for Failed Login ///*/
-	/*.info1 {display: none;}
-	.info2 {display: block;	font-size: 20px;}
-	.modal_body_input {display:none;}
-	#myBtn2 {display:none;}
-	.modal-header .modal-footer .modal-body {width:stretch;}*/
-
 	#myModal {position:absolute; width:335px; padding:0; height:43%; left:244px; top: 57px;}
 	#modal-content {position:absolute; margin:0; width: 100%;}
 	.modal-header .modal-footer .modal-body {width:stretch;}
@@ -401,8 +395,16 @@ iframe {
 	/*/// Navbar Greeting ///*/
 	#hello {display: none;}
 	#hello3 {display: block;}
-	/*#hello2 { position: fixed; top: 66px; left: 15px; font-size: 22px; display: block; font-variant: small-caps; background: linear-gradient(to right, yellow 0%, red 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}	*/
+}
 
+
+/*///////////iphone 6 Landscape Orientation /////////////*/
+@media screen and (max-width: 680px) and (min-width: 666px) {
+	.scroll {float: none; position:absolute; right: 10px; max-width: none; width: 333px; left: 281px; margin-top: 0.3%; margin-right: 0; height:400px;}
+	.backbutton {top: 428px;}
+	textarea {height: 100px;}
+	.welcome {margin-top: 25px;}
+	.greetings {position: absolute; margin: 0; height: 288px; width: 439px; left: 288px; bottom: 53%;}
 }
 
 
@@ -415,141 +417,144 @@ iframe {
 	#drp_clr_bdy {max-width:80%; text-align: unset;}
 	.fade {bottom: 0%; z-index: 0; height: 61%;}
 	#how {left:12%; top:2%; position: absolute; margin-left: 0; width: 255px;}
-	.digits {
-		color:red;
-		/*font-weight: normal;*/
-		font-size: 21px;
-	}
+	.digits {color:red;	font-size: 21px;}
 	#email {margin-bottom: 32px;}
 	#joke {margin-left: 7px;}
 	.enjoy {margin-top: -5px;}	
 	#starburst {position:absolute; width:65%; top:324px; left:240px; z-index: 0; margin-left: 0; margin-top:0; transform: skewY(-23deg)skewX(60deg); -webkit-transform: skewY(-23deg)skewX(60deg);}
 	.buttonsss {top: 23px; left: 12px;}
 	.med_chk {position:absolute; bottom: 109px; width: 40%; z-index:2; right:-27px;}
-	/*.inside_drpdown_btn{margin-left: 6%;}*/
-	/*#contactTab {margin-right: 8px;}	*/
-	/*.hide_me { display:block; }*/
 	#hello {display:none;}
-	#hello2 {display: block; position:fixed; top: 66px; left: 19px; font-size: 20px; z-index: -1; font-variant: small-caps; background: linear-gradient(to right, yellow 0%, red 100%);-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;}
-		#hello_link {width:116.4%;  z-index: 3;};
-		#home {position:fixed; margin-top: 48px;}
-		#l_o {position: absolute; margin-left:78%; margin-right:-3%;}
-		#bigChken {position: fixed; top: 28%; width: 147%; left:15%; z-index: -1;}
-		.justify {text-align: right; font-size: 90%}
-		#quotes {position: fixed; bottom: 2%; right: 18%; text-align: right; font-size: 122%; z-index: -10;}
-		.l {color: #707070}
-		/*#clockDiv {display:none;}*/
-		#clock2 {display:block; color:white; font-size: 70px; position:fixed; top:18%; z-index:-10; left:9px;}
-		/*.s {position: fixed;}*/
-		.P {position: fixed; right: 180px; top:29%;}
-		.M {position: fixed; right: 123px; top:29%;}
-		
-		/*/// Welcome Screen ///*/
-		.chicken {position: absolute; z-index:-2; width:89%; top:10%; opacity: 0.2; float:none; padding:0;}
-		.greetings {position: absolute; float:none; top:34px; left:40px; width: 151px; margin:0;}
-		#i_am {color:yellow;}
-		#salute {color:red;}
-		#rod {font-size: 533%; width: 362px; margin: 0;}
-		#me {position: absolute; top:53px; font-size: 322%; width:366px; height:auto; color:yellow;}
-		#name2 {position: absolute; top: 384px; font-size: 322%; width:366px; height:auto; color:red;}
-		.nameW {position: absolute; font-size: 351%; top: 157px;}
-		
-		/*/// Sign In Screen ///*/
-		.si_name {margin-top: 18%; z-index: 10;}
-		/*/// Register Form ///*/
-		#big_C {font-size: 241%}
-		.scroll {position:absolute; width:85%; float:none; margin:0 0 0 0; max-width: none; left:32px; top: 62px;}
-		.names {width:130px;}
-		.how {font-size: 21px; font-variant: small-caps;}
-		textarea {border-left: 1px solid #ebdf44; border-top: 1px solid #ebdf44;}
-		.home {width:25%; padding-top: 10px;} 
-		.backbutton {padding-top: 47%; width: 31%;}
+	#hello2 {display: block; position:fixed; top: 66px; left: 19px; font-size: 20px; z-index: -1; font-variant: small-caps; background: linear-gradient(to right, yellow 0%, red 100%);-webkit-background-clip: text;	-webkit-text-fill-color: transparent;}
+	#hello_link {width:116.4%;  z-index: 3;};
+	#home {position:fixed; margin-top: 48px;}
+	#l_o {position: absolute; margin-left:78%; margin-right:-3%;}
+	#bigChken {position: fixed; top: 28%; width: 147%; left:15%; z-index: -1;}
+	.justify {text-align: right; font-size: 90%}
+	#quotes {position: fixed; bottom: 2%; right: 18%; text-align: right; font-size: 122%; z-index: -10;}
+	.l {color: #707070}
+	#clock2 {display:block; color:white; font-size: 70px; position:fixed; top:18%; z-index:-10; left:9px;}
+	/*.s {position: fixed;}*/
+	.P {position: fixed; right: 180px; top:29%;}
+	.M {position: fixed; right: 123px; top:29%;}
 
-		/*/// Failed login Modal ///*/
-		/*.modal {width:0;}*/
-		#myModal {position:absolute; width:234px; padding:0; height:33%; left:86px; top: 236px;}
-		#modal-content {position:absolute; margin:0; width: 100%;}
-		.modal-header .modal-footer .modal-body {width:stretch;}
-		.modal_body_input {display:none;}
-		.info1 {display: none;}
-		.info2 {display: block; font-size: 20px}
-		#myBtn2 {display:none;}
-	}
+	/*/// Welcome Screen ///*/
+	.chicken {position: absolute; z-index:-2; width:89%; top:10%; opacity: 0.2; float:none; padding:0;}
+	.greetings {position: absolute; float:none; top:34px; left:40px; width: 151px; margin:0;}
+	#i_am {color:yellow;}
+	#salute {color:red;}
+	#rod {font-size: 533%; width: 362px; margin: 0;}
+	#me {position: absolute; top:53px; font-size: 322%; width:366px; height:auto; color:yellow;}
+	#name2 {position: absolute; top: 384px; font-size: 322%; width:366px; height:auto; color:red;}
+	.nameW {position: absolute; font-size: 351%; top: 157px;}
 
-	/*///////////iphone 6 Portrait Orientation /////////////*/
-	@media screen and (max-width: 375px) and (min-width: 330px) {
-		.topnav {position: fixed; width: 97%; overflow: visible;}
+	/*/// Sign In Screen ///*/
+	.si_name {margin-top: 18%; z-index: 10;}
+	/*/// Register Form ///*/
+	#big_C {font-size: 241%}
+	.scroll {position:absolute; width:85%; float:none; margin:0 0 0 0; max-width: none; left:32px; top: 62px;}
+	.names {width:130px;}
+	.how {font-size: 21px; font-variant: small-caps;}
+	textarea {border-left: 1px solid #ebdf44; border-top: 1px solid #ebdf44;}
+	.home {width:25%; padding-top: 10px;} 
+	.backbutton {padding-top: 47%; width: 31%;}
+
+	/*/// Failed login Modal ///*/
+	/*.modal {width:0;}*/
+	#myModal {position:absolute; width:234px; padding:0; height:33%; left:86px; top: 236px;}
+	#modal-content {position:absolute; margin:0; width: 100%;}
+	.modal-header .modal-footer .modal-body {width:stretch;}
+	.modal_body_input {display:none;}
+	.info1 {display: none;}
+	.info2 {display: block; font-size: 20px}
+	#myBtn2 {display:none;}
+}
+
+
+
+/*///////////iphone 6 Portrait Orientation /////////////*/
+@media screen and (max-width: 375px) and (min-width: 330px) {
+	.topnav {position: fixed; width: 98%; left:0; overflow: visible;}
+	.dropbtn {overflow: visible;}
+	.dropdown {position:static; float:left;}
+	.dropdown-content {width: 100%; left:0px; position:fixed; z-index:10;}
+	#drp_clr_bdy {max-width:80%; text-align: unset;}
+	.fade {bottom: 0%; z-index: 0; height: 61%;}
+	#how {left:12%; top:2%; position: absolute; margin-left: 0; width: 255px;}
+	.digits {color:red;	font-size: 21px;}
+	#email {margin-bottom: 32px;}
+	#joke {margin-left: 7px;}
+	.enjoy {margin-top: -5px;}	
+	#starburst {position:absolute; width:59%; top:336px; left:236px; z-index: 0; margin-left: 0; margin-top:0; transform: skewY(-23deg)skewX(60deg); -webkit-transform: skewY(-23deg)skewX(60deg);}
+	.buttonsss {top: 23px; left: 12px;}
+	.med_chk {position:absolute; bottom: 109px; width: 40%; z-index:2; right:-27px;}
+	#hello {display:none;}
+	#hello2 {display: block; position:fixed; top: 66px; left: 19px; font-size: 20px; z-index: -1; font-variant: small-caps; background: linear-gradient(to right, yellow 0%, red 100%);-webkit-background-clip: text;	-webkit-text-fill-color: transparent;}
+	#hello_link {width:116.4%;  z-index: 3;};
+	#home {position:fixed; margin-top: 48px;}
+	#l_o {position: absolute; margin-left:78%; margin-right:-3%;}
+	#bigChken {position: fixed; top: 28%; width: 147%; left:15%; z-index: -1;}
+	.justify {text-align: right; font-size: 90%}
+	#quotes {position: fixed; bottom: 2%; right: 18%; text-align: right; font-size: 122%; z-index: -10;}
+	.l {color: #707070}
+	#clock2 {display:block; color:white; font-size: 70px; position:fixed; top:18%; z-index:-10; left:9px;}
+	/*.s {position: fixed;}*/
+	.P {position: fixed; right: 180px; top:29%;}
+	.M {position: fixed; right: 123px; top:29%;}
+
+	/*/// Welcome Screen ///*/
+	.chicken {position: absolute; z-index:-2; width:89%; top:10%; opacity: 0.2; float:none; padding:0;}
+	.greetings {position: absolute; float:none; top:34px; left:40px; width: 151px; margin:0;}
+	#i_am {color:yellow;}
+	#salute {color:red;}
+	#rod {font-size: 533%; width: 357px; margin: 0;}
+	#me {position: absolute; top:53px; font-size: 322%; width:327px; height:auto; color:yellow;}
+	#name2 {position: absolute; top: 384px; font-size: 322%; width:356px; height:auto; color:red;}
+	.nameW {position: absolute; font-size: 351%; top: 157px;}
+	.home {width:25%; padding-top: 10px;} 
+
+	/*/// Register Form ///*/
+	#big_C {font-size: 241%}
+	.scroll {position:absolute; width:90%; float:none; margin:0 0 0 0; max-width: none; left:32px; top: 62px;}
+	.names {width:130px;}
+	.how {font-size: 21px;}
+	textarea {border-left: 1px solid #ebdf44; border-top: 1px solid #ebdf44;}
+	.backbutton {padding-top: 47%; width: 31%;}
+
+
+	/*/// Failed login Modal ///*/
+	#myModal {position:absolute; width:234px; padding:0; height:33%; left:57px; top: 215px;}
+	#modal-content {position:absolute; margin:0; width: 100%;}
+	.modal-header .modal-footer .modal-body {width:stretch;}
+	.modal_body_input {display:none;}
+	.info1 {display: none;}
+	.info2 {display: block; font-size: 20px}
+	#myBtn2 {display:none;}
+
+	/*///////iphone5/SE portrait orientatio//////////*/
+	@media screen and (max-width: 321px) {
+		.topnav {margin-right:-19.5%; max-width: 112%}
 		.dropdown {position:static; float:right;}
 		.dropdown-content {width: 107%; right:-28px;}
 		.inside_drpdown_btn{margin-left: 6%;}
-		#contactTab {margin-right: 97px;}	
-		#hello {display:none;}
-		#hello2 {display: block; position:fixed; left: 31px; top: 65px;  z-index: -10;}
-		#hello_link {width:116.4%;  z-index: 3;};
-		#home {position:fixed; margin-top: 48px;}
+		#contactTab {margin-right: 94px;}	
+		#hello {position:absolute; margin: 49px 0px 0px 0px;}
+		#hello_link {width:116.4%;};
+		#home {position:absolute; margin-top: 48px;}
 		#l_o {position: absolute; margin-left:78%; margin-right:-3%;}
-		#bigChken {position: fixed; top: 28%; width: 147%; left:15%;  z-index: -10;}
+		#bigChken {position: fixed; top: 21%; width: 170%;}
 		.justify {text-align: right; font-size: 90%}
-		#quotes {position: fixed; bottom: 0%; right: 18%; text-align: right; font-size: 122%;  z-index: -10;}
-		#clock {display:hidden;}
-		#clock2 {display:block; color:white; font-size: 70px; position:fixed; top:15%;  z-index: -10;}
+		#quotes {position: fixed; bottom: 6%; right: 14%; text-align: right; font-size: 122%;}
+		#clock {position: fixed; width: 308px; left: 10%; bottom: 75%; font-size: 52px;}
 		.l {color: #707070}
-		.P {position: fixed; right: 180px; top:26%;}
-		.M {position: fixed; right: 120px; top:26%;}
-
-		/*/// Welcome Screen ///*/
-		.chicken {position: absolute; z-index:-2; width:89%; top:10%; opacity: 0.2; float:none; padding:0;}
-		.greetings {position: absolute; float:none; top:34px; left:40px; width: 151px; margin:0;}
-		#i_am {color:yellow;}
-		#salute {color:red;}
-		#rod {font-size: 533%; width: 362px; margin: 0;}
-		#me {position: absolute; top:53px; font-size: 322%; width:366px; height:auto; color:yellow;}
-		#name2 {position: absolute; top: 384px; font-size: 322%; width:366px; height:auto; color:red;}
-		.nameW {position: absolute; font-size: 351%; top: 157px;}
-
-		/*/// Register Form ///*/
-		#big_C {font-size: 241%}
-		.scroll {position:absolute; width:85%; float:none; margin:0 0 0 0; max-width: none; left:32px; top: 62px;}
-		.names {width:130px;}
-		.how {font-size: 21px;}
-		textarea {border-left: 1px solid #ebdf44; border-top: 1px solid #ebdf44;}
+	}
 
 
-		/*/// Failed login Modal ///*/
-		/*.modal {width:0;}*/
-		#myModal {position:absolute; width:234px; padding:0; height:33%; left:57px; top: 215px;}
-		#modal-content {position:absolute; margin:0; width: 100%;}
-		.modal-header .modal-footer .modal-body {width:stretch;}
-		.modal_body_input {display:none;}
-		.info1 {display: none;}
-		.info2 {display: block; font-size: 20px}
-		#myBtn2 {display:none;}
-
-		/*///////iphone5/SE portrait orientatio//////////*/
-		@media screen and (max-width: 321px) {
-			.topnav {margin-right:-19.5%; max-width: 112%}
-			.dropdown {position:static; float:right;}
-			.dropdown-content {width: 107%; right:-28px;}
-			.inside_drpdown_btn{margin-left: 6%;}
-			#contactTab {margin-right: 94px;}	
-			#hello {position:absolute; margin: 49px 0px 0px 0px;}
-			#hello_link {width:116.4%;};
-			#home {position:absolute; margin-top: 48px;}
-			#l_o {position: absolute; margin-left:78%; margin-right:-3%;}
-			#bigChken {position: fixed; top: 21%; width: 170%;}
-			.justify {text-align: right; font-size: 90%}
-			#quotes {position: fixed; bottom: 6%; right: 14%; text-align: right; font-size: 122%;}
-			#clock {position: fixed; width: 308px; left: 10%; bottom: 75%; font-size: 52px;}
-			.l {color: #707070}
-		}
 
 
-		
-
-		/*////////////////////////////////*/
-		/*/////////// pdf ///////////////*/
-		/*//////////////////////////////*/
+	/*////////////////////////////////*/
+	/*/////////// pdf ///////////////*/
+	/*//////////////////////////////*/
 
 /*#resume {
 	position: absolute;
