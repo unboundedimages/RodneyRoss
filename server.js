@@ -1,13 +1,13 @@
 const express = require ('express');
-app = express();
-passport = require ('passport');
-LinkedInStrategy = require('passport-linkedin-oauth2').Strategy;
-session = require ('express-session');
-bodyParser = require ('body-parser');
-env = require('dotenv').load();
-exphbs = require('express-handlebars');	
-PORT = process.env.PORT || 8080;
-path = require("path");
+var app = express();
+var passport = require ('passport');
+var LinkedInStrategy = require('passport-linkedin-oauth2').Strategy;
+var session = require ('express-session');
+var bodyParser = require ('body-parser');
+var env = require('dotenv').load();
+var exphbs = require('express-handlebars');	
+var PORT = process.env.PORT || 8080;
+var path = require("path");
 
 
 
