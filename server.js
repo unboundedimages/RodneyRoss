@@ -106,6 +106,7 @@ models.sequelize.sync({force: false}).then(function(){ //this line is relative t
 	console.log("handshake")
 }).catch(function(err){
 	console.log("No connection to db.")
+	console.log(err)
 });
 
   //test server
