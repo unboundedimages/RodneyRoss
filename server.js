@@ -92,9 +92,17 @@ require('./config/passport/passport.js')(passport, models.user, models.loginLog,
 // Sync to database
 models.sequelize.sync({force: false}).then(function(){ //this line is relative to user.js in the models folder setting the value to true will drop the db/table
 	database:"process.env.dbn"
-	app.listen(PORT, function() {
-		console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
-	});
+	// app.listen(PORT, function(){
+	// 	console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+	// });
+	app.listen(5000, function(err) {
+
+		if (!err)
+		console.log("Site is live");
+	else console.log(err);
+
+});
+
 	console.log("handshake")
 }).catch(function(err){
 	console.log("No connection to db.")
