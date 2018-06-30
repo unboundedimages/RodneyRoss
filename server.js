@@ -39,9 +39,12 @@ app.use(bodyParser.json());
 //For Passport
 app.use(session({
 	secret: process.env.secret,
-	// cookie:{maxAge:6000}, //need to work on cookie expiration so user doesn't remain logged in indefinitely
-	resave: true,
-	saveUninitialized: true     
+	cookie:{
+		maxAge:6000,
+		secure: true
+}, //need to work on cookie expiration so user doesn't remain logged in indefinitely
+resave: true,
+saveUninitialized: true     
 
 }));
 app.use(passport.initialize());///////////////////////////////////

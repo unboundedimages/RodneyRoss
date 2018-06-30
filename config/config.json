@@ -15,10 +15,10 @@
 		"dialect": "mysql"
 	},
 	"production": {
-		"username": "process.env.prdu",
-		"password": "process.env.prdp",
-		"database": "process.env.prddbn",
-		"host": "process.env.prdh",
+		username: process.env.prdu,
+		password: process.env.prdp,
+		database: process.env.prddbn,
+		host: process.env.prdh,
 		"dialect": "mysql"
 	}
 }
