@@ -1,13 +1,13 @@
 const express = require ('express');
-var app = express();
-var passport = require ('passport');
-var LinkedInStrategy = require('passport-linkedin-oauth2').Strategy;
-var session = require ('express-session');
-var bodyParser = require ('body-parser');
-var env = require('dotenv').load();
-var exphbs = require('express-handlebars');	
-var PORT = process.env.PORT || 8080;
-var path = require("path");
+app = express();
+passport = require ('passport');
+LinkedInStrategy = require('passport-linkedin-oauth2').Strategy;
+session = require ('express-session');
+bodyParser = require ('body-parser');
+env = require('dotenv').load();
+exphbs = require('express-handlebars');	
+PORT = process.env.PORT || 8080;
+path = require("path");
 
 
 
@@ -39,12 +39,9 @@ app.use(bodyParser.json());
 //For Passport
 app.use(session({
 	secret: process.env.secret,
-	cookie:{
-		maxAge:6000,
-		secure: true
-}, //need to work on cookie expiration so user doesn't remain logged in indefinitely
-resave: true,
-saveUninitialized: true     
+	// cookie:{maxAge:6000}, //need to work on cookie expiration so user doesn't remain logged in indefinitely
+	resave: true,
+	saveUninitialized: true     
 
 }));
 app.use(passport.initialize());///////////////////////////////////
@@ -95,21 +92,12 @@ require('./config/passport/passport.js')(passport, models.user, models.loginLog,
 // Sync to database
 models.sequelize.sync({force: false}).then(function(){ //this line is relative to user.js in the models folder setting the value to true will drop the db/table
 	database:"process.env.dbn"
-	// app.listen(PORT, function(){
-	// 	console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
-	// });
-	app.listen(5000, function(err) {
-
-		if (!err)
-		console.log("Site is live");
-	else console.log(err);
-
-});
-
+	app.listen(PORT, function() {
+		console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+	});
 	console.log("handshake")
 }).catch(function(err){
 	console.log("No connection to db.")
-	console.log(err)
 });
 
   //test server
