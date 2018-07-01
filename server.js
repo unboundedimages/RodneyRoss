@@ -75,7 +75,7 @@ passport.authenticate('linkedin'),
 function(req, res){
     // The request will be redirected to LinkedIn for authentication, so this
     // function will not be called.
-    // console.log("This linkedin isn't setup yet")
+    console.log("This linkedin isn't setup yet")
 });
 
 // app.get('modals', './public/logic')
