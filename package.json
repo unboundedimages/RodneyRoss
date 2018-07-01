@@ -1,55 +1,59 @@
 {
-  "name": "rodneyross",
-  "version": "1.0.0",
-  "description": "My personal website that will use node.js, mysql for db management, a 2 step authorization, cheerio scrapper, show my front end capabilities, as well as link to select apps I developed.\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dhave developed.",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/unboundedimages/RodneyRoss.git"
-  },
-  "keywords": [
-    "Rodney",
-    "Ross",
-    "RodneyRoss",
-    "RodRoss",
-    "Rod",
-    "Ross",
-    "Rod",
-    "Ross",
-    "Dev",
-    "passport",
-    "RodRossDev",
-    "MySql\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C",
-    "\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
-    "\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
-    "\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[D\u001b[D\u001b[C\u001b[D",
-    "\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
-    "\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
-    "\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[B\u001b[C"
-  ],
-  "author": "Rodney Ross",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/unboundedimages/RodneyRoss/issues"
-  },
-  "homepage": "https://github.com/unboundedimages/RodneyRoss#readme",
-  "dependencies": {
-    "bcrypt-nodejs": "0.0.3",
-    "body-parser": "^1.18.2",
-    "dotenv": "^5.0.1",
-    "express": "^4.16.3",
-    "express-handlebars": "^3.0.0",
-    "express-session": "^1.15.6",
-    "mysql": "^2.15.0",
-    "mysql2": "^1.5.3",
-    "passport": "^0.4.0",
-    "passport-linkedin-oauth2": "^1.5.0",
-    "passport-local": "^1.0.0",
-    "path": "^0.12.7",
-    "sequelize": "^4.37.6"
-  }
+	"name": "rodneyross",
+	"version": "1.0.0",
+	"description": "My personal website that will use node.js, mysql for db management, a 2 step authorization, cheerio scrapper, show my front end capabilities, as well as link to select apps I developed.\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dhave developed.",
+	"engines": {
+		"node": "9.11.1",
+		"npm":"6.1.0"
+	},
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/unboundedimages/RodneyRoss.git"
+	},
+	"keywords": [
+		"Rodney",
+		"Ross",
+		"RodneyRoss",
+		"RodRoss",
+		"Rod",
+		"Ross",
+		"Rod",
+		"Ross",
+		"Dev",
+		"passport",
+		"RodRossDev",
+		"MySql\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C",
+		"\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
+		"\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
+		"\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[D\u001b[D\u001b[C\u001b[D",
+		"\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
+		"\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
+		"\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[B\u001b[C"
+	],
+	"author": "Rodney Ross",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/unboundedimages/RodneyRoss/issues"
+	},
+	"homepage": "https://github.com/unboundedimages/RodneyRoss#readme",
+	"dependencies": {
+		"bcrypt-nodejs": "0.0.3",
+		"body-parser": "^1.18.2",
+		"dotenv": "^5.0.1",
+		"express": "^4.16.3",
+		"express-handlebars": "^3.0.0",
+		"express-session": "^1.15.6",
+		"mysql": "^2.15.0",
+		"mysql2": "^1.5.3",
+		"passport": "^0.4.0",
+		"passport-linkedin-oauth2": "^1.5.0",
+		"passport-local": "^1.0.0",
+		"path": "^0.12.7",
+		"sequelize": "^4.37.6"
+	}
 }
