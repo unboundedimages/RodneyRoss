@@ -11,7 +11,7 @@
 		"username": "",
 		"password": null,
 		"database": "",
-		"host": "",
+		"host": "127.0.0.1",
 		"dialect": "mysql"
 	},
 	"production": {
@@ -19,6 +19,8 @@
 		"password": "vptbyrfd6e6qb6cz",
 		"database": "tph2punwk5exyn68",
 		"host": "o677vxfi8ok6exrd.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-		"dialect": "mysql"
+		"dialect": "mysql",
+		"timezone": "-04:00",
+		"operatorsAliases": false  
 	}
 }
