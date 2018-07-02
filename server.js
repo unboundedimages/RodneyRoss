@@ -1,7 +1,7 @@
 const express = require ('express');
 const app = express();
 const passport = require ('passport');
-const LinkedInStrategy = require('passport-linkedin-oauth2').Strategy;
+// const LinkedInStrategy = require('passport-linkedin-oauth2').Strategy;
 const session = require ('express-session');
 const bodyParser = require ('body-parser');
 const env = require('dotenv').load();
