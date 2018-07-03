@@ -8,16 +8,16 @@
 		"operatorsAliases": false    
 	},
 	"test": {
-		"username": "",
+		"username": "root",
 		"password": null,
-		"database": "",
+		"database": "mysql",
 		"host": "127.0.0.1",
 		"dialect": "mysql"
 	},
 	"production": {
-		"username": "un6vqxlt6x68bxv7",
-		"password": "vptbyrfd6e6qb6cz",
-		"database": "tph2punwk5exyn68",
+		"username": "process.env.prdu",
+		"password": " process.env.prdp",
+		"database": "process.env.prddbn",
 		"host": "o677vxfi8ok6exrd.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
 		"dialect": "mysql",
 		"timezone": "-04:00",
