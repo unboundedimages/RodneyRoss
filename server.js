@@ -40,7 +40,7 @@ app.use(bodyParser.json());
 app.use(session({
 	secret: process.env.secret,
 	// cookie:{maxAge:6000}, //need to work on cookie expiration so user doesn't remain logged in indefinitely
-	resave: true,
+	resave: false,
 	saveUninitialized: true     
 
 }));
@@ -70,13 +70,13 @@ app.get('/', function(req, res) {
 
 });
 
-app.get('/auth/linkedin',
-passport.authenticate('linkedin'),
-function(req, res){
-    // The request will be redirected to LinkedIn for authentication, so this
-    // function will not be called.
-    // console.log("This linkedin isn't setup yet")
-});
+// app.get('/auth/linkedin',
+// passport.authenticate('linkedin'),
+// function(req, res){
+//     // The request will be redirected to LinkedIn for authentication, so this
+//     // function will not be called.
+//     // console.log("This linkedin isn't setup yet")
+// });
 
 // app.get('modals', './public/logic')
 
