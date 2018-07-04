@@ -354,6 +354,7 @@ iframe {
 	.dropbtn {z-index: 1}
 	#joke {margin-left: 7px;}
 	#email {margin-bottom: 36px;}
+	.email_img {padding-bottom: 33px;}
 	#quotes {margin-top: 9%;}
 
 	/*/// Signin Page ///*/
