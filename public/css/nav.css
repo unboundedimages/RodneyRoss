@@ -363,9 +363,10 @@ iframe {
 	#regi_button {position: absolute; top: 263px;}
 
 	/*/// Welcome Page ///*/
-	.greetings {position: absolute; margin:0; height: 288px; width: 439px; left:288px; bottom:246px;}
+	.greetings {position: absolute; margin:0; height: 288px; width: 439px; left:288px; bottom:246px; padding:0; top:-13px;}
 	.nameW {font-size: 261%; padding:0; width:70%; margin-top: 37px}
-	#me {margin-bottom: -24%; padding-top: 24%;}
+	#me {margin-bottom: -24%; padding: 0;}
+	/*#me {margin-bottom: -24%; padding-top: 24%;}*/
 	#rod {
 		font-size: 467%; width: 362px; margin-bottom: -7%;
 		background: linear-gradient(to right, yellow 0%, red 100%);-webkit-background-clip: text;
